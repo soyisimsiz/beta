@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sıkça Sorulan Sorular | Beta Yapı İnşaat</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* GENEL AYARLAR (Ana Siteyle Aynı) */
+        :root {
+            --ana-renk: #0f172a;
+            --vurgu-renk: #f59e0b;
+            --beyaz: #ffffff;
+            --gri: #f3f4f6;
+            --whatsapp-yesili: #25d366;
+        }
+        body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #333; line-height: 1.6; background-color: var(--gri); }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; padding: 0; }
+        
+        /* HEADER */
+        header {
+            background: var(--ana-renk);
+            color: var(--beyaz);
+            padding: 0.5rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 90%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        .logo { display: flex; align-items: center; gap: 15px; }
+        .logo img { height: 50px; width: auto; }
+        .logo span { font-size: 1.5rem; font-weight: bold; color: var(--vurgu-renk); text-transform: uppercase; letter-spacing: 1px; }
+
+        nav ul { display: flex; gap: 20px; }
+        nav a { font-weight: 500; transition: color 0.3s; }
+        nav a:hover { color: var(--vurgu-renk); }
+
+        /* SSS İÇERİK ALANI */
+        .page-header {
+            margin-top: 80px; /* Header altı boşluk */
+            background: var(--ana-renk);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+        .page-header h1 { margin: 0; font-size: 2.5rem; }
+        
+        .faq-container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 0 20px;
+            min-height: 50vh; /* Sayfa boş kalmasın */
+        }
+
+        /* AKORDEON STİLİ */
+        .accordion-item { 
+            background: var(--beyaz);
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+        
+        .accordion-button {
+            background: var(--beyaz);
+            border: none;
+            width: 100%;
+            text-align: left;
+            padding: 20px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: var(--ana-renk);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s;
+        }
+        .accordion-button:hover { background: #f9f9f9; color: var(--vurgu-renk); }
+        .accordion-button::after {
+            content: '\002B'; /* Artı işareti */
+            font-size: 1.5rem;
+            color: var(--vurgu-renk);
+            font-weight: bold;
+        }
+        .accordion-button.active::after {
+            content: '\2212'; /* Eksi işareti */
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            background: #fdfdfd;
+            border-top: 1px solid #eee;
+        }
+        .accordion-content p {
+            padding: 20px;
+            margin: 0;
+            color: #555;
+        }
+
+        /* FOOTER */
+        .footer { background: var(--ana-renk); color: var(--beyaz); padding: 50px 10% 20px; text-align: center; margin-top: 50px; }
+        .contact-info { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; margin-bottom: 40px; }
+        .contact-item i { color: var(--vurgu-renk); font-size: 1.5rem; margin-bottom: 10px; }
+        .copyright { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; font-size: 0.9rem; color: #aaa; }
+
+        /* WHATSAPP */
+        .whatsapp-float {
+            position: fixed; width: 60px; height: 60px; bottom: 25px; right: 25px;
+            background-color: var(--whatsapp-yesili); color: #FFF; border-radius: 50px;
+            text-align: center; font-size: 35px; box-shadow: 2px 2px 3px #999;
+            z-index: 10000; display: flex; align-items: center; justify-content: center;
+            transition: transform 0.3s;
+        }
+        .whatsapp-float:hover { transform: scale(1.1); }
+
+        @media (max-width: 768px) {
+            nav { display: none; } 
+            .header { justify-content: center; }
+            .logo span { font-size: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="image_0.png" alt="BETA YAPI İNŞAAT Logo">
+            <span>BETA YAPI İNŞAAT</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Anasayfa</a></li>
+                <li><a href="index.html#hizmetler">Hizmetler</a></li>
+                <li><a href="sss.html" style="color: var(--vurgu-renk);">SSS</a></li>
+                <li><a href="#iletisim">İletişim</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="page-header">
+        <h1>Sıkça Sorulan Sorular</h1>
+        <p>Aklınıza takılan tüm soruların cevapları burada.</p>
+    </div>
+
+    <div class="faq-container">
+        <div class="accordion">
+            <div class="accordion-item">
+                <button class="accordion-button">Prefabrik evler kışın ısınma sorunu yaratır mı?</button>
+                <div class="accordion-content">
+                    <p>Kesinlikle hayır. Beta Yapı olarak duvarlarda yüksek yoğunluklu taş yünü ve EPS yalıtım malzemeleri kullanıyoruz. Bu sayede evlerimiz yazın serin, kışın sıcak tutar ve geleneksel betonarme binalara göre %40'a varan enerji tasarrufu sağlar.</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-button">Çelik evler depreme karşı güvenli mi?</button>
+                <div class="accordion-content">
+                    <p>Çelik evler, esnek yapıları ve hafif iskelet sistemleri sayesinde deprem anında kırılmak yerine esneyerek enerjiyi sönümler. Türkiye gibi deprem kuşakları için en güvenli yapı modellerinden biridir.</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-button">Ruhsat işlemleriyle siz mi ilgileniyorsunuz?</button>
+                <div class="accordion-content">
+                    <p>Prefabrik ve çelik yapılar da imar izni gerektirir. Biz size projenin statik ve mimari çizimlerini hazırlayıp sunuyoruz. Ruhsat başvurusu arsa sahibi tarafından yapılmakla birlikte, tüm süreçte size teknik danışmanlık sağlıyoruz.</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-button">Teslim süresi ne kadar?</button>
+                <div class="accordion-content">
+                    <p>Projenin büyüklüğüne göre değişmekle birlikte; ortalama bir prefabrik evin üretimi ve kurulumu 15 ile 30 gün arasında tamamlanıp anahtar teslim hale getirilmektedir.</p>
+                </div>
+            </div>
+             <div class="accordion-item">
+                <button class="accordion-button">Kendi projemizi çizip getirebilir miyiz?</button>
+                <div class="accordion-content">
+                    <p>Elbette! Standart modellerimizin dışına çıkarak, arsanıza ve hayallerinize en uygun tasarımı birlikte projelendirebiliriz. Özel tasarım hizmetimiz mevcuttur.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="iletisim" class="footer">
+        <h2>Bize Ulaşın</h2>
+        <p style="margin-bottom: 30px;">Sorularınız ve proje talepleriniz için 7/24 hizmetinizdeyiz.</p>
+        
+        <div class="contact-info">
+            <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <p>+90 554 312 75 09</p>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <p>info@betayapi.com</p>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <p>Çanakkale / Merkez</p>
+            </div>
+        </div>
+
+        <div class="copyright">
+            &copy; 2026 Beta Yapı İnşaat. Tüm Hakları Saklıdır.
+        </div>
+    </footer>
+
+    <a href="https://wa.me/905543127509" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        var acc = document.getElementsByClassName("accordion-button");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                } 
+            });
+        }
+    </script>
+
+</body>
+</html>

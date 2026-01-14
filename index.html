@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beta Yapı İnşaat | Çelik & Prefabrik Yapı Sistemleri</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* GENEL AYARLAR */
+        :root {
+            --ana-renk: #0f172a;
+            --vurgu-renk: #f59e0b;
+            --beyaz: #ffffff;
+            --gri: #f3f4f6;
+            --whatsapp-yesili: #25d366;
+        }
+        body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #333; line-height: 1.6; overflow-x: hidden; }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; padding: 0; margin: 0; }
+        
+        /* HEADER */
+        header {
+            background: var(--ana-renk); color: var(--beyaz); padding: 1rem 5%;
+            display: flex; justify-content: space-between; align-items: center;
+            position: fixed; width: 90%; left: 0; right: 0; margin: auto; top: 0;
+            z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.3); flex-wrap: wrap;
+        }
+        .logo { display: flex; align-items: center; gap: 15px; }
+        .logo img { height: 50px; width: auto; }
+        .logo span { font-size: 1.5rem; font-weight: bold; color: var(--vurgu-renk); text-transform: uppercase; letter-spacing: 1px; }
+
+        /* Masaüstü Menü */
+        nav ul { display: flex; gap: 20px; }
+        nav a { font-weight: 500; transition: color 0.3s; }
+        nav a:hover { color: var(--vurgu-renk); }
+        .menu-toggle { display: none; font-size: 1.8rem; cursor: pointer; color: var(--vurgu-renk); }
+
+        /* HERO */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover; background-position: center; background-attachment: fixed;
+            display: flex; flex-direction: column; justify-content: center; align-items: center;
+            text-align: center; color: var(--beyaz); padding: 0 20px;
+        }
+        .hero h1 { font-size: 3rem; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+        .hero p { font-size: 1.2rem; max-width: 600px; margin-bottom: 30px; }
+        .btn {
+            background: var(--vurgu-renk); color: var(--ana-renk); padding: 15px 30px;
+            font-weight: bold; border-radius: 5px; transition: transform 0.3s;
+        }
+        .btn:hover { transform: translateY(-3px); background: #d97706; }
+
+        /* İSTATİSTİK SAYAÇLARI */
+        .stats {
+            background: var(--vurgu-renk); color: var(--ana-renk);
+            padding: 40px 10%; display: flex; justify-content: space-around;
+            flex-wrap: wrap; text-align: center; gap: 20px;
+        }
+        .stat-item h3 { font-size: 2.5rem; margin: 0; font-weight: 800; }
+        .stat-item p { margin: 0; font-weight: 600; font-size: 1.1rem; text-transform: uppercase; }
+
+        /* SERVICES */
+        .services { padding: 80px 10%; background: var(--gri); text-align: center; }
+        .services h2 { color: var(--ana-renk); font-size: 2rem; margin-bottom: 40px; }
+        .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .card { 
+            background: var(--beyaz); padding: 30px; border-radius: 10px; 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s; 
+            display: block; height: 100%; box-sizing: border-box;
+        }
+        .card:hover { transform: translateY(-10px); }
+        .card i.main-icon { font-size: 3rem; color: var(--vurgu-renk); margin-bottom: 20px; }
+        .card h3 { color: var(--ana-renk); }
+        .pdf-link {
+            color: var(--vurgu-renk); font-weight: bold; margin-top: 15px;
+            display: inline-block; border: 2px solid var(--vurgu-renk);
+            padding: 5px 15px; border-radius: 20px; font-size: 0.9rem;
+        }
+        .card:hover .pdf-link { background: var(--vurgu-renk); color: white; }
+
+        /* SÜREÇ */
+        .process { padding: 80px 10%; background: var(--beyaz); text-align: center; }
+        .process h2 { color: var(--ana-renk); font-size: 2rem; margin-bottom: 50px; }
+        .process-container { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px; position: relative; }
+        .process-container::before {
+            content: ''; position: absolute; top: 40px; left: 0; right: 0; height: 2px;
+            background: #ddd; z-index: 0; display: none;
+        }
+        @media(min-width: 992px) { .process-container::before { display: block; } }
+        
+        .process-step { flex: 1; position: relative; z-index: 1; min-width: 200px; }
+        .step-icon {
+            width: 80px; height: 80px; background: var(--ana-renk); color: white;
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            font-size: 2rem; margin: 0 auto 20px; border: 5px solid var(--beyaz);
+            box-shadow: 0 0 0 3px var(--vurgu-renk);
+        }
+        .process-step h3 { margin-bottom: 10px; color: var(--ana-renk); }
+        .process-step p { color: #666; font-size: 0.9rem; }
+
+        /* ABOUT */
+        .about { padding: 80px 10%; display: flex; flex-wrap: wrap; align-items: center; gap: 40px; background: var(--gri); }
+        .about-text { flex: 1; }
+        .about-text h2 { color: var(--ana-renk); font-size: 2rem; }
+        .about-img { flex: 1; }
+        .about-img img { width: 100%; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+
+        /* FOOTER */
+        .footer { background: var(--ana-renk); color: var(--beyaz); padding: 50px 10% 20px; text-align: center; }
+        .contact-info { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; margin-bottom: 40px; }
+        .contact-item i { color: var(--vurgu-renk); font-size: 1.5rem; margin-bottom: 10px; }
+        .copyright { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; font-size: 0.9rem; color: #aaa; }
+
+        /* WHATSAPP */
+        .whatsapp-float {
+            position: fixed; width: 60px; height: 60px; bottom: 25px; right: 25px;
+            background-color: var(--whatsapp-yesili); color: #FFF; border-radius: 50px;
+            text-align: center; font-size: 35px; box-shadow: 2px 2px 3px #999;
+            z-index: 10000; display: flex; align-items: center; justify-content: center;
+            transition: transform 0.3s;
+        }
+        .whatsapp-float:hover { transform: scale(1.1); }
+
+        @media (max-width: 768px) {
+            header { width: 90%; padding: 1rem 5%; }
+            .hero h1 { font-size: 2rem; }
+            .logo span { font-size: 1.1rem; }
+            .whatsapp-float { bottom: 20px; right: 20px; width: 50px; height: 50px; font-size: 28px; }
+            .menu-toggle { display: block; }
+            nav { display: none; width: 100%; margin-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); }
+            nav.aktif { display: block; }
+            nav ul { flex-direction: column; align-items: center; gap: 15px; padding: 10px 0; }
+            .stats { flex-direction: column; gap: 30px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="image_0.png" alt="BETA YAPI İNŞAAT Logo">
+            <span>BETA YAPI İNŞAAT</span>
+        </div>
+        <div class="menu-toggle" onclick="menuyuAcKapa()">
+            <i class="fas fa-bars"></i>
+        </div>
+        <nav id="ana-menu">
+            <ul>
+                <li><a href="#">Anasayfa</a></li>
+                <li><a href="#hizmetler">Hizmetler</a></li>
+                <li><a href="sss.html">SSS</a></li>
+                <li><a href="iletisim.html">İletişim</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Hayallerinizdeki Evi İnşa Ediyoruz</h1>
+        <p>Beta Yapı olarak çelik ev, prefabrik ve konteyner çözümleriyle modern, dayanıklı ve ekonomik yaşam alanları sunuyoruz.</p>
+        <a href="teklif.html" class="btn">Teklif Alın</a>
+    </section>
+
+    <div class="stats">
+        <div class="stat-item">
+            <h3 class="counter" data-target="150">0</h3>
+            <p>Tamamlanan Proje</p>
+        </div>
+        <div class="stat-item">
+            <h3 class="counter" data-target="12">0</h3>
+            <p>Yıllık Tecrübe</p>
+        </div>
+        <div class="stat-item">
+            <h3 class="counter" data-target="500">0</h3>
+            <p>Mutlu Müşteri</p>
+        </div>
+        <div class="stat-item">
+            <h3 class="counter" data-target="81">0</h3>
+            <p>Hizmet Verilen İl</p>
+        </div>
+    </div>
+
+    <section id="hizmetler" class="services">
+        <h2>Hizmetlerimiz</h2>
+        <div class="service-grid">
+            <div class="card">
+                <i class="fas fa-home main-icon"></i>
+                <h3>Çelik Ev Sistemleri</h3>
+                <p>Depreme dayanıklı, uzun ömürlü ve modern tasarımlı hafif çelik yapılar üretiyoruz.</p>
+            </div>
+            <a href="katalog.pdf" target="_blank" class="card">
+                <i class="fas fa-layer-group main-icon"></i>
+                <h3>Prefabrik Yapılar</h3>
+                <p>Hızlı kurulum avantajı ve ekonomik fiyatlarla her mevsime uygun prefabrik evler.</p>
+                <span class="pdf-link"><i class="fas fa-file-pdf"></i> Kataloğu İncele</span>
+            </a>
+            <a href="konteyner.pdf" target="_blank" class="card">
+                <i class="fas fa-box main-icon"></i>
+                <h3>Konteyner Çözümleri</h3>
+                <p>Ofis, şantiye veya yaşam alanı için özel tasarım konteyner üretim ve modifikasyonu.</p>
+                <span class="pdf-link"><i class="fas fa-file-pdf"></i> Kataloğu İncele</span>
+            </a>
+        </div>
+    </section>
+
+    <section class="process">
+        <h2>Nasıl Çalışıyoruz?</h2>
+        <div class="process-container">
+            <div class="process-step">
+                <div class="step-icon"><i class="fas fa-comments"></i></div>
+                <h3>1. Tanışma & Proje</h3>
+                <p>Hayalinizdeki evi dinliyor, arsanıza en uygun projeyi birlikte çiziyoruz.</p>
+            </div>
+            <div class="process-step">
+                <div class="step-icon"><i class="fas fa-file-contract"></i></div>
+                <h3>2. Sözleşme</h3>
+                <p>Şeffaf bir sözleşme ile kullanılacak tüm malzemeleri ve teslim tarihini garanti altına alıyoruz.</p>
+            </div>
+            <div class="process-step">
+                <div class="step-icon"><i class="fas fa-tools"></i></div>
+                <h3>3. Üretim & Montaj</h3>
+                <p>Fabrikada hazırlanan parçaları arsanızda uzman ekibimizle hızla kuruyoruz.</p>
+            </div>
+            <div class="process-step">
+                <div class="step-icon"><i class="fas fa-key"></i></div>
+                <h3>4. Anahtar Teslim</h3>
+                <p>Evinizi temizleyip, oturuma hazır bir şekilde size teslim ediyoruz.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="hakkimizda" class="about">
+        <div class="about-img">
+            <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?auto=format&fit=crop&w=800&q=80" alt="Modern Ev">
+        </div>
+        <div class="about-text">
+            <h2>Neden Beta Yapı?</h2>
+            <p>Sektördeki tecrübemizle, müşterilerimize sadece bir bina değil, güvenli ve huzurlu bir yaşam alanı sunuyoruz.</p>
+            <p>Projelerimizde kullandığımız yüksek kaliteli malzemeler ve uzman işçiliğimiz ile hayalinizdeki evi gerçeğe dönüştürüyoruz. Hızlı teslimat ve müşteri memnuniyeti garantisiyle çalışıyoruz.</p>
+        </div>
+    </section>
+
+    <footer id="iletisim" class="footer">
+        <h2>Bize Ulaşın</h2>
+        <p style="margin-bottom: 30px;">Sorularınız ve proje talepleriniz için 7/24 hizmetinizdeyiz.</p>
+        <div class="contact-info">
+            <div class="contact-item"><i class="fas fa-phone"></i><p>+90 554 312 75 09</p></div>
+            <div class="contact-item"><i class="fas fa-envelope"></i><p>info@betayapi.com</p></div>
+            <div class="contact-item"><i class="fas fa-map-marker-alt"></i><p>Çanakkale / Merkez</p></div>
+        </div>
+        <div class="copyright">© 2026 Beta Yapı İnşaat. Tüm Hakları Saklıdır.</div>
+    </footer>
+
+    <a href="https://wa.me/905543127509" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+    <script>
+        // Mobil Menü Kodu
+        function menuyuAcKapa() {
+            var menu = document.getElementById("ana-menu");
+            menu.classList.toggle("aktif");
+        }
+
+        // Sayaç Animasyon Kodu
+        const counters = document.querySelectorAll('.counter');
+        const speed = 200;
+
+        counters.forEach(counter => {
+            const updateCount = () => {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText;
+                const inc = target / speed;
+
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + inc);
+                    setTimeout(updateCount, 1);
+                } else {
+                    counter.innerText = target;
+                }
+            };
+            updateCount();
+        });
+    </script>
+
+</body>
+</html>
