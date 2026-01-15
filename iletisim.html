@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>İletişim | Beta Yapı İnşaat</title>
+    <meta name="description" content="Çanakkale ve ilçelerinde prefabrik ev, çelik konstrüksiyon ve konteyner hizmetleri. Bize ulaşın: 0554 312 75 09">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        /* GENEL AYARLAR (Ana Siteyle Aynı) */
+        /* GENEL AYARLAR */
         :root {
             --ana-renk: #0f172a;
             --vurgu-renk: #f59e0b;
@@ -33,7 +34,7 @@
         nav a { font-weight: 500; transition: color 0.3s; }
         nav a:hover { color: var(--vurgu-renk); }
 
-        /* İLETİŞİM SAYFASI ÖZEL TASARIM */
+        /* İLETİŞİM SAYFASI TASARIMI */
         .page-header {
             margin-top: 80px;
             background: var(--ana-renk);
@@ -49,7 +50,7 @@
             margin: 50px auto;
             padding: 0 20px;
             display: grid;
-            grid-template-columns: 1fr 1fr; /* İki sütun: Bilgi ve Harita */
+            grid-template-columns: 1fr 1fr;
             gap: 40px;
         }
 
@@ -76,15 +77,25 @@
         .contact-text h3 { margin: 0 0 5px 0; font-size: 1.1rem; color: var(--ana-renk); }
         .contact-text p { margin: 0; color: #666; }
 
-        /* HARİTA */
-        .map-box {
-            height: 100%;
-            min-height: 400px;
+        /* HİZMET BÖLGELERİ KUTUSU (Harita Yerine) */
+        .service-areas {
+            background: var(--ana-renk);
+            color: white;
+            padding: 40px;
             border-radius: 10px;
-            overflow: hidden;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
-        iframe { width: 100%; height: 100%; border: 0; }
+        .service-areas h3 { color: var(--vurgu-renk); margin-top: 0; font-size: 1.5rem; margin-bottom: 20px; }
+        .area-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        .area-item { display: flex; align-items: center; gap: 10px; font-size: 1.1rem; }
+        .area-item i { color: var(--vurgu-renk); }
 
         /* FOOTER */
         .footer { background: var(--ana-renk); color: var(--beyaz); padding: 50px 10% 20px; text-align: center; margin-top: 50px; }
@@ -101,7 +112,7 @@
         .whatsapp-float:hover { transform: scale(1.1); }
 
         @media (max-width: 768px) {
-            .contact-container { grid-template-columns: 1fr; } /* Mobilde alt alta olsun */
+            .contact-container { grid-template-columns: 1fr; }
             nav { display: none; } 
             .header { justify-content: center; }
             .logo span { font-size: 1.2rem; }
@@ -127,7 +138,7 @@
 
     <div class="page-header">
         <h1>Bize Ulaşın</h1>
-        <p>Projeleriniz için bir kahve içmeye bekleriz.</p>
+        <p>Projeleriniz için 7/24 hizmetinizdeyiz.</p>
     </div>
 
     <div class="contact-container">
@@ -135,8 +146,8 @@
             <div class="contact-row">
                 <div class="contact-icon"><i class="fas fa-phone"></i></div>
                 <div class="contact-text">
-                    <h3>Telefon</h3>
-                    <p>+90 554 312 75 09</p>
+                    <h3>Telefon / WhatsApp</h3>
+                    <p>+90 533 553 75 29</p>
                 </div>
             </div>
             <div class="contact-row">
@@ -147,29 +158,33 @@
                 </div>
             </div>
             <div class="contact-row">
-                <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
-                <div class="contact-text">
-                    <h3>Adres</h3>
-                    <p>Çanakkale / Merkez</p>
-                </div>
-            </div>
-            <div class="contact-row">
                 <div class="contact-icon"><i class="fas fa-clock"></i></div>
                 <div class="contact-text">
                     <h3>Çalışma Saatleri</h3>
-                    <p>Pzt - Cmt: 09:00 - 18:00</p>
+                    <p>Her Gün: 08:00 - 20:00</p>
                 </div>
             </div>
         </div>
 
-        <div class="map-box">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12179.940643642392!2d26.39293455541992!3d40.1555029!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14b1a9d701053155%3A0x7d01306633642340!2zw4dhbmFra2FsZSwgw4dhbmFra2FsZSBNZXJrZXovw4dhbmFra2FsZQ!5e0!3m2!1str!2str!4v1700000000000!5m2!1str!2str" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="service-areas">
+            <h3><i class="fas fa-map-marked-alt"></i> Hizmet Bölgelerimiz</h3>
+            <p style="margin-bottom: 20px; opacity: 0.9;">Çanakkale merkezli ekibimizle tüm bölgeye nakliye ve kurulum hizmeti sunuyoruz.</p>
+            <div class="area-list">
+                <div class="area-item"><i class="fas fa-check"></i> Çanakkale Merkez</div>
+                <div class="area-item"><i class="fas fa-check"></i> Biga</div>
+                <div class="area-item"><i class="fas fa-check"></i> Çan</div>
+                <div class="area-item"><i class="fas fa-check"></i> Ezine</div>
+                <div class="area-item"><i class="fas fa-check"></i> Gelibolu</div>
+                <div class="area-item"><i class="fas fa-check"></i> Lapseki</div>
+                <div class="area-item"><i class="fas fa-check"></i> Ayvacık</div>
+                <div class="area-item"><i class="fas fa-check"></i> Bayramiç</div>
+            </div>
         </div>
     </div>
 
     <footer class="footer">
         <div class="copyright">
-            &copy; 2026 Beta Yapı İnşaat. Tüm Hakları Saklıdır.
+            © 2026 Beta Yapı İnşaat. Tüm Hakları Saklıdır.
         </div>
     </footer>
 
