@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maliyet Hesapla | Beta Yapı İnşaat</title>
+    <meta name="description" content="Hayalinizdeki evin tahmini maliyetini saniyeler içinde hesaplayın. Prefabrik, Çelik Ev ve Konteyner fiyat hesaplama aracı.">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* GENEL AYARLAR */
+        :root {
+            --ana-renk: #0f172a;
+            --vurgu-renk: #f59e0b;
+            --beyaz: #ffffff;
+            --gri: #f3f4f6;
+            --yesil: #25d366;
+        }
+        body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: var(--gri); color: #333; line-height: 1.6; }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; padding: 0; margin: 0; }
+
+        /* HEADER */
+        header {
+            background: var(--ana-renk); color: var(--beyaz); padding: 1rem 5%;
+            display: flex; justify-content: space-between; align-items: center;
+            position: fixed; width: 90%; left: 0; right: 0; margin: auto; top: 0;
+            z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        .logo { display: flex; align-items: center; gap: 15px; }
+        .logo img { height: 50px; width: auto; }
+        .logo span { font-size: 1.5rem; font-weight: bold; color: var(--vurgu-renk); text-transform: uppercase; letter-spacing: 1px; }
+        nav ul { display: flex; gap: 20px; }
+        nav a { font-weight: 500; transition: color 0.3s; }
+        nav a:hover { color: var(--vurgu-renk); }
+
+        /* HESAPLAMA KUTUSU */
+        .calculator-section {
+            padding: 120px 20px 50px; /* Header payı */
+            min-height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .calculator-box {
+            background: var(--beyaz);
+            width: 100%;
+            max-width: 600px;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .calculator-box h1 { text-align: center; color: var(--ana-renk); margin-bottom: 30px; }
+        .calculator-box p { text-align: center; color: #666; margin-bottom: 30px; }
+
+        .input-group { margin-bottom: 25px; }
+        label { display: block; font-weight: bold; margin-bottom: 10px; color: var(--ana-renk); }
+        
+        /* Select Tasarımı */
+        select {
+            width: 100%; padding: 15px; border: 2px solid #eee; border-radius: 8px;
+            font-size: 1rem; cursor: pointer; background: white;
+        }
+
+        /* Slider Tasarımı */
+        .range-container { position: relative; }
+        input[type=range] {
+            width: 100%; cursor: pointer; margin-top: 10px;
+        }
+        .range-value {
+            text-align: center; font-size: 1.5rem; font-weight: bold; color: var(--vurgu-renk); margin-top: 10px;
+        }
+
+        /* SONUÇ ALANI */
+        .result-box {
+            background: #f8fafc;
+            border: 2px dashed var(--vurgu-renk);
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            margin-top: 30px;
+            display: none; /* Başlangıçta gizli */
+        }
+        .price-tag {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--ana-renk);
+            margin: 10px 0;
+        }
+        .disclaimer { font-size: 0.8rem; color: #999; margin-top: 10px; }
+
+        /* BUTONLAR */
+        .btn-calc {
+            width: 100%; padding: 15px; background: var(--ana-renk); color: white;
+            border: none; border-radius: 8px; font-size: 1.1rem; font-weight: bold;
+            cursor: pointer; transition: 0.3s;
+        }
+        .btn-calc:hover { background: #1e293b; }
+
+        .btn-offer {
+            display: inline-block; margin-top: 15px; padding: 10px 25px;
+            background: var(--vurgu-renk); color: var(--ana-renk); border-radius: 5px;
+            font-weight: bold; text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            nav { display: none; }
+            .header { justify-content: center; }
+            .calculator-box { padding: 20px; }
+            .price-tag { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="image_0.png" alt="BETA YAPI İNŞAAT Logo">
+            <span>BETA YAPI İNŞAAT</span>
+        </div>
+        <nav>
+<ul>
+    <li><a href="#">Anasayfa</a></li>
+    <li><a href="hesapla.html" style="color: var(--vurgu-renk); font-weight:bold;">Fiyat Hesapla</a></li> 
+    <li><a href="#hizmetler">Hizmetler</a></li>
+    <li><a href="sss.html">SSS</a></li>
+    <li><a href="iletisim.html">İletişim</a></li>
+</ul>
+        </nav>
+    </header>
+
+    <section class="calculator-section">
+        <div class="calculator-box">
+            <h1><i class="fas fa-calculator"></i> Maliyet Hesapla</h1>
+            <p>Hayalinizdeki yapı özelliklerini seçin, tahmini anahtar teslim fiyat aralığını hemen öğrenin.</p>
+
+            <div class="input-group">
+                <label>Yapı Türü Seçiniz</label>
+                <select id="yapiTuru">
+                    <option value="celik">Hafif Çelik Ev (Lüks)</option>
+                    <option value="prefabrik">Prefabrik Ev (Standart)</option>
+                    <option value="konteyner">Konteyner Yaşam Alanı</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label>Metrekare: <span id="m2Value" style="color:var(--vurgu-renk)">80</span> m²</label>
+                <div class="range-container">
+                    <input type="range" id="metrekare" min="20" max="200" value="80" step="5" oninput="guncelleM2()">
+                </div>
+            </div>
+
+            <button class="btn-calc" onclick="hesapla()">Fiyatı Göster</button>
+
+            <div id="sonucAlani" class="result-box">
+                <span>Tahmini Anahtar Teslim Fiyat:</span>
+                <div class="price-tag" id="fiyatMetni">0 TL</div>
+                <p class="disclaimer">* Bu fiyatlar ortalama piyasa koşullarına göre tahminidir. Kesin fiyat arazi koşulları ve malzeme seçimine göre değişebilir.</p>
+                <a href="teklif.html" class="btn-offer">Net Teklif Alın <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Metrekare yazısını güncelleyen fonksiyon
+        function guncelleM2() {
+            var slider = document.getElementById("metrekare");
+            var output = document.getElementById("m2Value");
+            output.innerHTML = slider.value;
+        }
+
+        // Fiyat Hesaplama Fonksiyonu
+        function hesapla() {
+            var tur = document.getElementById("yapiTuru").value;
+            var m2 = document.getElementById("metrekare").value;
+            
+            // BURASI ÇOK ÖNEMLİ: METREKARE BAŞINA BİRİM FİYATLAR (TL)
+            // Buradaki rakamları kendi fiyat politikanıza göre değiştirebilirsiniz.
+            var birimFiyat = 0;
+
+            if (tur == "celik") {
+                birimFiyat = 15000; // Çelik m2 fiyatı
+            } else if (tur == "prefabrik") {
+                birimFiyat = 10000; // Prefabrik m2 fiyatı
+            } else if (tur == "konteyner") {
+                birimFiyat = 7500;  // Konteyner m2 fiyatı
+            }
+
+            // Hesaplama Formülü
+            var toplamFiyat = m2 * birimFiyat;
+            
+            // Fiyatı biraz aralıklı göstermek için (Min - Max) mantığı
+            var minFiyat = toplamFiyat * 0.95; // %5 altı
+            var maxFiyat = toplamFiyat * 1.05; // %5 üstü
+
+            // Sayıları formatla (Örn: 850.000 TL gibi)
+            var formatliMin = minFiyat.toLocaleString("tr-TR", { maximumFractionDigits: 0 });
+            var formatliMax = maxFiyat.toLocaleString("tr-TR", { maximumFractionDigits: 0 });
+
+            // Ekrana Yazdır
+            document.getElementById("fiyatMetni").innerHTML = formatliMin + " ₺ - " + formatliMax + " ₺";
+            document.getElementById("sonucAlani").style.display = "block";
+    <a href="https://wa.me/90 533 553 75 29" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        }
+    </script>
+
+</body>
+</html>
