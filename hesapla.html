@@ -24,22 +24,27 @@
             background: var(--ana-renk); color: var(--beyaz); padding: 1rem 5%;
             display: flex; justify-content: space-between; align-items: center;
             position: fixed; width: 90%; left: 0; right: 0; margin: auto; top: 0;
-            z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.3); flex-wrap: wrap;
         }
         .logo { display: flex; align-items: center; gap: 15px; }
         .logo img { height: 50px; width: auto; }
         .logo span { font-size: 1.5rem; font-weight: bold; color: var(--vurgu-renk); text-transform: uppercase; letter-spacing: 1px; }
+        
+        /* Masaüstü Menü */
         nav ul { display: flex; gap: 20px; }
         nav a { font-weight: 500; transition: color 0.3s; }
         nav a:hover { color: var(--vurgu-renk); }
+        
+        /* Mobil Menü Butonu */
+        .menu-toggle { display: none; font-size: 1.8rem; cursor: pointer; color: var(--vurgu-renk); }
 
         /* HESAPLAMA KUTUSU */
         .calculator-section {
-            padding: 120px 20px 50px; /* Header payı */
+            padding: 120px 20px 50px;
             min-height: 80vh;
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
         }
 
         .calculator-box {
@@ -51,25 +56,25 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
 
-        .calculator-box h1 { text-align: center; color: var(--ana-renk); margin-bottom: 30px; }
-        .calculator-box p { text-align: center; color: #666; margin-bottom: 30px; }
+        .calculator-box h1 { text-align: center; color: var(--ana-renk); margin-bottom: 10px; }
+        .calculator-box p { text-align: center; color: #666; margin-bottom: 30px; font-size: 0.95rem; }
 
         .input-group { margin-bottom: 25px; }
         label { display: block; font-weight: bold; margin-bottom: 10px; color: var(--ana-renk); }
         
-        /* Select Tasarımı */
         select {
             width: 100%; padding: 15px; border: 2px solid #eee; border-radius: 8px;
-            font-size: 1rem; cursor: pointer; background: white;
+            font-size: 1rem; cursor: pointer; background: white; outline: none;
         }
+        select:focus { border-color: var(--vurgu-renk); }
 
         /* Slider Tasarımı */
-        .range-container { position: relative; }
+        .range-container { position: relative; padding: 10px 0; }
         input[type=range] {
-            width: 100%; cursor: pointer; margin-top: 10px;
+            width: 100%; cursor: pointer; margin-top: 10px; accent-color: var(--vurgu-renk);
         }
-        .range-value {
-            text-align: center; font-size: 1.5rem; font-weight: bold; color: var(--vurgu-renk); margin-top: 10px;
+        .m2-display {
+            font-size: 1.2rem; font-weight: bold; color: var(--vurgu-renk);
         }
 
         /* SONUÇ ALANI */
@@ -81,34 +86,50 @@
             border-radius: 10px;
             margin-top: 30px;
             display: none; /* Başlangıçta gizli */
+            animation: fadeIn 0.5s;
         }
         .price-tag {
-            font-size: 2.5rem;
+            font-size: 2rem;
             font-weight: 800;
             color: var(--ana-renk);
             margin: 10px 0;
         }
-        .disclaimer { font-size: 0.8rem; color: #999; margin-top: 10px; }
+        .disclaimer { font-size: 0.8rem; color: #999; margin-top: 10px; line-height: 1.4; }
 
-        /* BUTONLAR */
         .btn-calc {
             width: 100%; padding: 15px; background: var(--ana-renk); color: white;
             border: none; border-radius: 8px; font-size: 1.1rem; font-weight: bold;
             cursor: pointer; transition: 0.3s;
         }
-        .btn-calc:hover { background: #1e293b; }
+        .btn-calc:hover { background: #1e293b; transform: translateY(-2px); }
 
         .btn-offer {
-            display: inline-block; margin-top: 15px; padding: 10px 25px;
+            display: inline-block; margin-top: 15px; padding: 12px 30px;
             background: var(--vurgu-renk); color: var(--ana-renk); border-radius: 5px;
             font-weight: bold; text-decoration: none;
         }
 
+        /* Footer */
+        .footer { background: var(--ana-renk); color: var(--beyaz); padding: 50px 10% 20px; text-align: center; }
+        .copyright { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; font-size: 0.9rem; color: #aaa; }
+
+        /* WhatsApp */
+        .whatsapp-float { position: fixed; width: 60px; height: 60px; bottom: 25px; right: 25px; background-color: var(--whatsapp-yesili); color: #FFF; border-radius: 50px; text-align: center; font-size: 35px; box-shadow: 2px 2px 3px #999; z-index: 10000; display: flex; align-items: center; justify-content: center; transition: transform 0.3s; }
+        .whatsapp-float:hover { transform: scale(1.1); }
+
+        /* Animasyon */
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* MOBİL UYUM */
         @media (max-width: 768px) {
-            nav { display: none; }
-            .header { justify-content: center; }
-            .calculator-box { padding: 20px; }
-            .price-tag { font-size: 2rem; }
+            header { width: 90%; padding: 1rem 5%; }
+            .logo span { font-size: 1.1rem; }
+            .whatsapp-float { bottom: 20px; right: 20px; width: 50px; height: 50px; font-size: 28px; }
+            .menu-toggle { display: block; }
+            nav { display: none; width: 100%; margin-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); }
+            nav.aktif { display: block; }
+            nav ul { flex-direction: column; align-items: center; gap: 15px; padding: 10px 0; }
+            .price-tag { font-size: 1.5rem; }
         }
     </style>
 </head>
@@ -119,21 +140,24 @@
             <img src="image_0.png" alt="BETA YAPI İNŞAAT Logo">
             <span>BETA YAPI İNŞAAT</span>
         </div>
-        <nav>
-<ul>
-    <li><a href="#">Anasayfa</a></li>
-    <li><a href="hesapla.html" style="color: var(--vurgu-renk); font-weight:bold;">Fiyat Hesapla</a></li> 
-    <li><a href="#hizmetler">Hizmetler</a></li>
-    <li><a href="sss.html">SSS</a></li>
-    <li><a href="iletisim.html">İletişim</a></li>
-</ul>
+        <div class="menu-toggle" onclick="menuyuAcKapa()">
+            <i class="fas fa-bars"></i>
+        </div>
+        <nav id="ana-menu">
+            <ul>
+                <li><a href="index.html">Anasayfa</a></li>
+                <li><a href="hesapla.html" style="color: var(--vurgu-renk);">Hesapla</a></li>
+                <li><a href="index.html#hizmetler">Hizmetler</a></li>
+                <li><a href="sss.html">SSS</a></li>
+                <li><a href="iletisim.html">İletişim</a></li>
+            </ul>
         </nav>
     </header>
 
     <section class="calculator-section">
         <div class="calculator-box">
             <h1><i class="fas fa-calculator"></i> Maliyet Hesapla</h1>
-            <p>Hayalinizdeki yapı özelliklerini seçin, tahmini anahtar teslim fiyat aralığını hemen öğrenin.</p>
+            <p>Aşağıdan yapı türünü ve büyüklüğünü seçerek tahmini anahtar teslim fiyat aralığını görün.</p>
 
             <div class="input-group">
                 <label>Yapı Türü Seçiniz</label>
@@ -145,63 +169,80 @@
             </div>
 
             <div class="input-group">
-                <label>Metrekare: <span id="m2Value" style="color:var(--vurgu-renk)">80</span> m²</label>
+                <label>Büyüklük: <span id="m2Value" class="m2-display">80</span> m²</label>
                 <div class="range-container">
-                    <input type="range" id="metrekare" min="20" max="200" value="80" step="5" oninput="guncelleM2()">
+                    <input type="range" id="metrekare" min="20" max="200" value="80" step="5">
                 </div>
             </div>
 
-            <button class="btn-calc" onclick="hesapla()">Fiyatı Göster</button>
+            <button class="btn-calc" onclick="hesapla()">Fiyatı Hesapla</button>
 
             <div id="sonucAlani" class="result-box">
-                <span>Tahmini Anahtar Teslim Fiyat:</span>
+                <span>Tahmini Fiyat Aralığı:</span>
                 <div class="price-tag" id="fiyatMetni">0 TL</div>
-                <p class="disclaimer">* Bu fiyatlar ortalama piyasa koşullarına göre tahminidir. Kesin fiyat arazi koşulları ve malzeme seçimine göre değişebilir.</p>
+                <p class="disclaimer">* Bu fiyatlar ortalama piyasa koşullarına göre, arsa hariç anahtar teslim tahminidir. Kesin fiyat için projelendirme gerekir.</p>
                 <a href="teklif.html" class="btn-offer">Net Teklif Alın <i class="fas fa-arrow-right"></i></a>
             </div>
         </div>
     </section>
 
+    <footer class="footer">
+        <div class="copyright">
+            © 2026 Beta Yapı İnşaat. Tüm Hakları Saklıdır. | Tel: +90 533 553 75 29
+        </div>
+    </footer>
+
+    <a href="https://wa.me/905335537529" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
     <script>
-        // Metrekare yazısını güncelleyen fonksiyon
-        function guncelleM2() {
-            var slider = document.getElementById("metrekare");
-            var output = document.getElementById("m2Value");
-            output.innerHTML = slider.value;
+        // Mobil Menü Açma/Kapama
+        function menuyuAcKapa() {
+            var menu = document.getElementById("ana-menu");
+            menu.classList.toggle("aktif");
         }
 
-        // Fiyat Hesaplama Fonksiyonu
+        // Metrekare yazısını anlık güncelleme
+        const slider = document.getElementById("metrekare");
+        const output = document.getElementById("m2Value");
+        
+        slider.oninput = function() {
+            output.innerHTML = this.value;
+        }
+
+        // Fiyat Hesaplama Mantığı
         function hesapla() {
+            // Seçilen değerleri al
             var tur = document.getElementById("yapiTuru").value;
-            var m2 = document.getElementById("metrekare").value;
+            var m2 = parseInt(document.getElementById("metrekare").value);
             
-            // BURASI ÇOK ÖNEMLİ: METREKARE BAŞINA BİRİM FİYATLAR (TL)
-            // Buradaki rakamları kendi fiyat politikanıza göre değiştirebilirsiniz.
-            var birimFiyat = 0;
+            // --- FİYAT LİSTESİ (Burayı değiştirebilirsin) ---
+            // m2 başına TL fiyatlarıdır
+            var fiyatlar = {
+                "celik": 15000,      // Çelik m2 fiyatı
+                "prefabrik": 10000,  // Prefabrik m2 fiyatı
+                "konteyner": 7500    // Konteyner m2 fiyatı
+            };
 
-            if (tur == "celik") {
-                birimFiyat = 15000; // Çelik m2 fiyatı
-            } else if (tur == "prefabrik") {
-                birimFiyat = 10000; // Prefabrik m2 fiyatı
-            } else if (tur == "konteyner") {
-                birimFiyat = 7500;  // Konteyner m2 fiyatı
-            }
+            var birimFiyat = fiyatlar[tur];
 
-            // Hesaplama Formülü
+            // Hesaplama
             var toplamFiyat = m2 * birimFiyat;
             
-            // Fiyatı biraz aralıklı göstermek için (Min - Max) mantığı
-            var minFiyat = toplamFiyat * 0.95; // %5 altı
-            var maxFiyat = toplamFiyat * 1.05; // %5 üstü
+            // Aralık belirleme (%5 altı ve üstü)
+            var minFiyat = toplamFiyat * 0.95; 
+            var maxFiyat = toplamFiyat * 1.05;
 
-            // Sayıları formatla (Örn: 850.000 TL gibi)
+            // Sayıları formatla (noktalı şekilde yaz)
             var formatliMin = minFiyat.toLocaleString("tr-TR", { maximumFractionDigits: 0 });
             var formatliMax = maxFiyat.toLocaleString("tr-TR", { maximumFractionDigits: 0 });
 
-            // Ekrana Yazdır
+            // Ekrana yazdır
             document.getElementById("fiyatMetni").innerHTML = formatliMin + " ₺ - " + formatliMax + " ₺";
+            
+            // Kutuyu görünür yap
             document.getElementById("sonucAlani").style.display = "block";
-    <a href="https://wa.me/90 533 553 75 29" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
         }
     </script>
 
