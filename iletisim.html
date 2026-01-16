@@ -59,6 +59,9 @@
             padding: 40px;
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
         .contact-row {
             display: flex;
@@ -77,25 +80,15 @@
         .contact-text h3 { margin: 0 0 5px 0; font-size: 1.1rem; color: var(--ana-renk); }
         .contact-text p { margin: 0; color: #666; }
 
-        /* HİZMET BÖLGELERİ KUTUSU (Harita Yerine) */
-        .service-areas {
-            background: var(--ana-renk);
-            color: white;
-            padding: 40px;
+        /* HARİTA KUTUSU (Geri Geldi) */
+        .map-box {
+            height: 100%;
+            min-height: 400px;
             border-radius: 10px;
+            overflow: hidden;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
         }
-        .service-areas h3 { color: var(--vurgu-renk); margin-top: 0; font-size: 1.5rem; margin-bottom: 20px; }
-        .area-list {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-        }
-        .area-item { display: flex; align-items: center; gap: 10px; font-size: 1.1rem; }
-        .area-item i { color: var(--vurgu-renk); }
+        iframe { width: 100%; height: 100%; border: 0; }
 
         /* FOOTER */
         .footer { background: var(--ana-renk); color: var(--beyaz); padding: 50px 10% 20px; text-align: center; margin-top: 50px; }
@@ -147,7 +140,8 @@
                 <div class="contact-icon"><i class="fas fa-phone"></i></div>
                 <div class="contact-text">
                     <h3>Telefon / WhatsApp</h3>
-                    <p>+90 533 553 75 29</p>
+                    <p>+90 554 312 75 09</p>
+                    <P>+90 533 553 75 29</P>
                 </div>
             </div>
             <div class="contact-row">
@@ -155,6 +149,13 @@
                 <div class="contact-text">
                     <h3>E-posta</h3>
                     <p>info@betayapi.com</p>
+                </div>
+            </div>
+            <div class="contact-row">
+                <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                <div class="contact-text">
+                    <h3>Hizmet Bölgesi</h3>
+                    <p>Çanakkale ve Tüm İlçeleri</p>
                 </div>
             </div>
             <div class="contact-row">
@@ -166,19 +167,8 @@
             </div>
         </div>
 
-        <div class="service-areas">
-            <h3><i class="fas fa-map-marked-alt"></i> Hizmet Bölgelerimiz</h3>
-            <p style="margin-bottom: 20px; opacity: 0.9;">Çanakkale merkezli ekibimizle tüm bölgeye nakliye ve kurulum hizmeti sunuyoruz.</p>
-            <div class="area-list">
-                <div class="area-item"><i class="fas fa-check"></i> Çanakkale Merkez</div>
-                <div class="area-item"><i class="fas fa-check"></i> Biga</div>
-                <div class="area-item"><i class="fas fa-check"></i> Çan</div>
-                <div class="area-item"><i class="fas fa-check"></i> Ezine</div>
-                <div class="area-item"><i class="fas fa-check"></i> Gelibolu</div>
-                <div class="area-item"><i class="fas fa-check"></i> Lapseki</div>
-                <div class="area-item"><i class="fas fa-check"></i> Ayvacık</div>
-                <div class="area-item"><i class="fas fa-check"></i> Bayramiç</div>
-            </div>
+        <div class="map-box">
+            <iframe src="https://maps.google.com/maps?q=%C3%87anakkale&t=&z=9&ie=UTF8&iwloc=&output=embed" allowfullscreen></iframe>
         </div>
     </div>
 
@@ -188,7 +178,7 @@
         </div>
     </footer>
 
-    <a href="https://wa.me/905543127509" class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/90 533 553 75 29" class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
 
