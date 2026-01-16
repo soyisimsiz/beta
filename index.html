@@ -282,6 +282,209 @@
             updateCount();
         });
     </script>
+<style>
+    /* Chat Butonu Tasarımı */
+    .chat-btn {
+        position: fixed; bottom: 90px; right: 25px;
+        background: linear-gradient(135deg, var(--ana-renk), #1e293b);
+        color: white; width: 60px; height: 60px; border-radius: 50%;
+        display: flex; align-items: center; justify-content: center;
+        font-size: 28px; box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+        cursor: pointer; z-index: 9999; transition: all 0.3s;
+        border: 2px solid var(--vurgu-renk);
+    }
+    .chat-btn:hover { transform: scale(1.1) rotate(10deg); }
+    
+    /* Bildirim Işığı */
+    .chat-notification {
+        position: absolute; top: 0; right: 0; width: 14px; height: 14px;
+        background: #ef4444; border-radius: 50%; border: 2px solid white;
+        animation: pulse 2s infinite;
+    }
 
+    /* Chat Penceresi */
+    .chat-box {
+        position: fixed; bottom: 100px; right: 25px;
+        width: 360px; height: 500px; background: white;
+        border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        display: none; flex-direction: column; overflow: hidden; z-index: 10000;
+        font-family: 'Segoe UI', sans-serif; border: 1px solid #eee;
+    }
+    
+    /* Başlık Kısmı */
+    .chat-header {
+        background: var(--ana-renk); color: white; padding: 20px;
+        display: flex; align-items: center; justify-content: space-between;
+        border-bottom: 3px solid var(--vurgu-renk);
+    }
+    .chat-header h4 { margin: 0; font-size: 1.1rem; font-weight: bold; }
+    .chat-header span { font-size: 0.8rem; opacity: 0.8; }
+    .close-chat { cursor: pointer; font-size: 1.2rem; transition: 0.2s; }
+    .close-chat:hover { transform: rotate(90deg); color: var(--vurgu-renk); }
+
+    /* Mesaj Alanı */
+    .chat-messages {
+        flex: 1; padding: 20px; overflow-y: auto; background: #f8fafc;
+        display: flex; flex-direction: column; gap: 15px;
+        scroll-behavior: smooth;
+    }
+    
+    /* Mesaj Baloncukları */
+    .msg { max-width: 85%; padding: 12px 16px; border-radius: 15px; font-size: 0.95rem; line-height: 1.4; position: relative; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+    
+    .bot-msg { 
+        background: white; color: #333; align-self: flex-start; 
+        border-bottom-left-radius: 2px; border: 1px solid #e2e8f0;
+    }
+    .bot-msg::before {
+        content: '🤖'; position: absolute; top: -25px; left: 0; font-size: 1.2rem;
+    }
+    
+    .user-msg { 
+        background: var(--vurgu-renk); color: var(--ana-renk); align-self: flex-end; 
+        border-bottom-right-radius: 2px; font-weight: 600;
+    }
+
+    /* Yazma Alanı */
+    .chat-input-area {
+        padding: 15px; background: white; border-top: 1px solid #eee; display: flex; gap: 10px; align-items: center;
+    }
+    .chat-input-area input {
+        flex: 1; padding: 12px 15px; border: 1px solid #ddd; border-radius: 25px; outline: none; transition: 0.3s;
+    }
+    .chat-input-area input:focus { border-color: var(--vurgu-renk); box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.1); }
+    .chat-input-area button {
+        background: var(--ana-renk); color: white; border: none;
+        width: 45px; height: 45px; border-radius: 50%; cursor: pointer;
+        transition: 0.3s; display: flex; align-items: center; justify-content: center;
+    }
+    .chat-input-area button:hover { background: var(--vurgu-renk); transform: scale(1.1); }
+
+    @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.2); } 100% { transform: scale(1); } }
+    
+    /* Mobilde Tam Ekran Olmasın ama düzgün görünsün */
+    @media (max-width: 480px) {
+        .chat-box { width: 90%; right: 5%; bottom: 80px; height: 60vh; }
+    }
+</style>
+
+<div class="chat-btn" onclick="toggleChat()">
+    <i class="fas fa-comment-dots"></i>
+    <div class="chat-notification"></div>
+</div>
+
+<div class="chat-box" id="chatBox">
+    <div class="chat-header">
+        <div>
+            <h4>Beta Asistan</h4>
+            <span>● Çevrimiçi (Yapay Zeka)</span>
+        </div>
+        <div class="close-chat" onclick="toggleChat()"><i class="fas fa-times"></i></div>
+    </div>
+    
+    <div class="chat-messages" id="chatMessages">
+        <div class="msg bot-msg">
+            Merhaba! 👋 Ben Beta Yapı'nın sanal asistanıyım. <br><br>
+            Size çelik evler, prefabrik fiyatları veya teknik konularda yardımcı olabilirim. Ne sormak istersiniz?
+        </div>
+    </div>
+    
+    <div class="chat-input-area">
+        <input type="text" id="userInput" placeholder="Bir şeyler yazın..." onkeypress="handleEnter(event)">
+        <button onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
+    </div>
+</div>
+
+<script>
+    // Pencereyi Aç/Kapa
+    function toggleChat() {
+        var chatBox = document.getElementById("chatBox");
+        if (chatBox.style.display === "none" || chatBox.style.display === "") {
+            chatBox.style.display = "flex";
+            document.getElementById("userInput").focus(); // Otomatik odaklan
+        } else {
+            chatBox.style.display = "none";
+        }
+    }
+
+    // Enter Tuşu Desteği
+    function handleEnter(e) {
+        if (e.key === 'Enter') sendMessage();
+    }
+
+    // Mesaj Gönderme
+    function sendMessage() {
+        var input = document.getElementById("userInput");
+        var message = input.value.trim();
+        if (message === "") return;
+
+        // Kullanıcı mesajını ekrana bas
+        addMessage(message, 'user-msg');
+        input.value = "";
+
+        // "Yazıyor..." animasyonu ekle (Gerçekçilik için)
+        var chatMessages = document.getElementById("chatMessages");
+        var typing = document.createElement("div");
+        typing.className = "msg bot-msg";
+        typing.id = "typingIndicator";
+        typing.innerHTML = "<i>Yazıyor...</i>";
+        chatMessages.appendChild(typing);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+
+        // Cevabı hesapla ve gecikmeli gönder
+        setTimeout(() => {
+            document.getElementById("typingIndicator").remove();
+            var response = findBestResponse(message.toLowerCase());
+            addMessage(response, 'bot-msg');
+        }, 800); // 0.8 saniye bekleme süresi
+    }
+
+    // Mesajı Ekrana Ekleme
+    function addMessage(text, className) {
+        var chatMessages = document.getElementById("chatMessages");
+        var msgDiv = document.createElement("div");
+        msgDiv.className = "msg " + className;
+        msgDiv.innerHTML = text;
+        chatMessages.appendChild(msgDiv);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    // --- YAPAY ZEKA MANTIĞI (BEYİN) ---
+    function findBestResponse(input) {
+        
+        // 1. Fiyat ve Maliyet Soruları
+        if (input.includes("fiyat") || input.includes("kaç para") || input.includes("maliyet") || input.includes("hesap") || input.includes("tl")) {
+            return "Fiyatlarımız metrekareye ve malzeme kalitesine göre değişiyor. <br><br>👉 <b><a href='hesapla.html' style='color:#f59e0b; text-decoration:none;'>Buraya tıklayarak</a></b> Maliyet Hesaplama aracımızı kullanabilir, saniyeler içinde tahmini fiyat alabilirsiniz.";
+        }
+
+        // 2. Konum ve Hizmet Bölgesi
+        if (input.includes("nerede") || input.includes("yeriniz") || input.includes("adres") || input.includes("hangi il") || input.includes("istanbul") || input.includes("izmir")) {
+            return "Merkezimiz <b>Çanakkale</b>'dedir. <br><br>Hizmet bölgelerimiz: Biga, Çan, Ezine, Gelibolu, Lapseki ve tüm Çanakkale çevresidir.";
+        }
+
+        // 3. Teknik Sorular (Deprem, Ömür, Yalıtım)
+        if (input.includes("deprem") || input.includes("sağlam") || input.includes("ömür") || input.includes("yalıtım") || input.includes("soğuk")) {
+            return "Yapılarımız hafif çelik teknolojisiyle üretildiği için <b>depreme karşı son derece güvenlidir.</b> <br><br>Yüksek yoğunluklu taş yünü yalıtımı sayesinde kışın sıcak, yazın serin olur. Yapı ömrü betonarme binalar gibi uzundur.";
+        }
+
+        // 4. İletişim ve Telefon
+        if (input.includes("telefon") || input.includes("numara") || input.includes("ara") || input.includes("whatsapp")) {
+            return "Bize hemen ulaşın: <br>📞 <b>0533 553 75 29</b> <br><br>Veya sağ alttaki WhatsApp butonuna basarak direkt yazabilirsiniz.";
+        }
+        
+        // 5. Süre
+        if (input.includes("süre") || input.includes("gün") || input.includes("ne zaman") || input.includes("teslim")) {
+            return "Ortalama bir yapıyı fabrikada üretip arsanızda kurmamız <b>15 ile 30 gün</b> arasında sürmektedir.";
+        }
+
+        // 6. Selamlaşma
+        if (input.includes("merhaba") || input.includes("selam") || input.includes("günaydın") || input.includes("iyi günler")) {
+            return "Merhabalar! Size nasıl yardımcı olabilirim? Prefabrik evler, fiyatlar veya teknik detaylar hakkında sorabilirsiniz.";
+        }
+
+        // 7. Anlaşılmayan Durumlar (Fallback)
+        return "Bu konuda size en doğru bilgiyi vermek için sizi uzmanımıza yönlendirmek isterim. <br><br>Lütfen şu numaradan bizi arayın: <b>0533 553 75 29</b>";
+    }
+</script>
 </body>
 </html>
