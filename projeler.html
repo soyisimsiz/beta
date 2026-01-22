@@ -4,8 +4,161 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projelerimiz - Beta Yapı İnşaat</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        /* --- GENEL AYARLAR --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* --- MENÜ (NAVBAR) TASARIMI --- */
+        header {
+            background-color: #2c3e50; /* Koyu lacivert */
+            color: #fff;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo a {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #fff;
+            letter-spacing: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links li a {
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links li a:hover,
+        .nav-links li a.active {
+            color: #e67e22; /* Turuncu vurgu */
+        }
+
+        /* --- PROJELER BÖLÜMÜ TASARIMI --- */
+        .projects-page-content {
+            padding: 60px 20px;
+            min-height: 80vh; /* Sayfanın dolu görünmesi için */
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        /* Kart Tasarımı */
+        .project-card {
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-image {
+            height: 200px;
+            background-color: #ddd; /* Resim yüklenmezse gri görünsün */
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .project-info {
+            padding: 20px;
+        }
+
+        .project-info h3 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+            color: #2c3e50;
+        }
+
+        .category {
+            color: #e67e22;
+            font-size: 0.85rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .description {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: #222;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+    </style>
 </head>
 <body>
 
@@ -23,56 +176,283 @@
         </nav>
     </header>
 
-    <section class="projects-page-content" style="padding-top: 100px;"> <div class="container">
+    <section class="projects-page-content">
+        <div class="container">
             <div class="section-title">
-                <h2>Tüm Projelerimiz</h2>
-                <p>Çanakkale ve çevresinde tamamladığımız prefabrik, çelik ve konteyner referanslarımız.</p>
+                <h2>Tamamlanan Projelerimiz</h2>
+                <p>Çanakkale ve çevresinde hayata geçirdiğimiz referans projeler.</p>
             </div>
 
             <div class="projects-grid">
                 
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="https://via.placeholder.com/600x400?text=Prefabrik+Villa" alt="Prefabrik Villa">
-                        <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                        <img src="https://via.placeholder.com/400x300?text=Guzelyali+Villa" alt="Villa Projesi">
                     </div>
                     <div class="project-info">
                         <h3>Güzelyalı Villa</h3>
-                        <p class="category">Çelik Ev</p>
-                        <p class="description">Modern, dayanıklı ve estetik çelik konstrüksiyon yapı.</p>
+                        <span class="category">Çelik Ev</span>
+                        <p class="description">Güzelyalı sahil bandında modern mimari ile inşa edilen 3+1 çelik ev projesi.</p>
                     </div>
                 </div>
 
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="https://via.placeholder.com/600x400?text=Konteyner+Ofis" alt="Konteyner Ofis">
-                        <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                        <img src="https://via.placeholder.com/400x300?text=Santiye+Ofisi" alt="Ofis Projesi">
                     </div>
                     <div class="project-info">
                         <h3>Biga Şantiye Ofisi</h3>
-                        <p class="category">Konteyner</p>
-                        <p class="description">Hızlı kurulum ofis ve yaşam konteynerleri.</p>
+                        <span class="category">Konteyner</span>
+                        <p class="description">İzolasyonlu, dört mevsim kullanıma uygun şantiye ofis çözümü.</p>
                     </div>
                 </div>
 
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="https://via.placeholder.com/600x400?text=Bağ+Evi" alt="Bağ Evi">
-                        <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                        <img src="https://via.placeholder.com/400x300?text=Bag+Evi" alt="Bağ Evi">
                     </div>
                     <div class="project-info">
                         <h3>Ezine Bağ Evi</h3>
-                        <p class="category">Prefabrik</p>
-                        <p class="description">Doğa ile uyumlu ekonomik bağ evi çözümleri.</p>
+                        <span class="category">Prefabrik</span>
+                        <p class="description">Doğa ile iç içe, hızlı kurulumlu ve ekonomik bağ evi projesi.</p>
                     </div>
                 </div>
-
-                 </div>
+                
+                </div>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 Beta Yapı İnşaat. Tüm hakları saklıdır.</p>
+        <p>&copy; 2026 Beta Yapı İnşaat - Çanakkale. Tüm hakları saklıdır.</p>
+    </footer>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projelerimiz - Beta Yapı İnşaat</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        /* --- GENEL AYARLAR --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* --- MENÜ (NAVBAR) TASARIMI --- */
+        header {
+            background-color: #2c3e50; /* Koyu lacivert */
+            color: #fff;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo a {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #fff;
+            letter-spacing: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links li a {
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links li a:hover,
+        .nav-links li a.active {
+            color: #e67e22; /* Turuncu vurgu */
+        }
+
+        /* --- PROJELER BÖLÜMÜ TASARIMI --- */
+        .projects-page-content {
+            padding: 60px 20px;
+            min-height: 80vh; /* Sayfanın dolu görünmesi için */
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        /* Kart Tasarımı */
+        .project-card {
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-image {
+            height: 200px;
+            background-color: #ddd; /* Resim yüklenmezse gri görünsün */
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .project-info {
+            padding: 20px;
+        }
+
+        .project-info h3 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+            color: #2c3e50;
+        }
+
+        .category {
+            color: #e67e22;
+            font-size: 0.85rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .description {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: #222;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">BETA YAPI</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Anasayfa</a></li>
+                <li><a href="index.html#hakkimizda">Hakkımızda</a></li>
+                <li><a href="projeler.html" class="active">Projelerimiz</a></li>
+                <li><a href="index.html#iletisim">İletişim</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="projects-page-content">
+        <div class="container">
+            <div class="section-title">
+                <h2>Tamamlanan Projelerimiz</h2>
+                <p>Çanakkale ve çevresinde hayata geçirdiğimiz referans projeler.</p>
+            </div>
+
+            <div class="projects-grid">
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x300?text=Guzelyali+Villa" alt="Villa Projesi">
+                    </div>
+                    <div class="project-info">
+                        <h3>Güzelyalı Villa</h3>
+                        <span class="category">Çelik Ev</span>
+                        <p class="description">Güzelyalı sahil bandında modern mimari ile inşa edilen 3+1 çelik ev projesi.</p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x300?text=Santiye+Ofisi" alt="Ofis Projesi">
+                    </div>
+                    <div class="project-info">
+                        <h3>Biga Şantiye Ofisi</h3>
+                        <span class="category">Konteyner</span>
+                        <p class="description">İzolasyonlu, dört mevsim kullanıma uygun şantiye ofis çözümü.</p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x300?text=Bag+Evi" alt="Bağ Evi">
+                    </div>
+                    <div class="project-info">
+                        <h3>Ezine Bağ Evi</h3>
+                        <span class="category">Prefabrik</span>
+                        <p class="description">Doğa ile iç içe, hızlı kurulumlu ve ekonomik bağ evi projesi.</p>
+                    </div>
+                </div>
+                
+                </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Beta Yapı İnşaat - Çanakkale. Tüm hakları saklıdır.</p>
     </footer>
 
 </body>
