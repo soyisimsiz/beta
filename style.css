@@ -1,0 +1,233 @@
+/* =========================================
+   1. GENEL AYARLAR VE DEĞİŞKENLER
+   ========================================= */
+:root {
+    --ana-renk: #0f172a;      /* Koyu Lacivert */
+    --vurgu-renk: #f59e0b;    /* Turuncu */
+    --beyaz: #ffffff;
+    --gri: #f3f4f6;
+    --whatsapp-yesili: #25d366;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+    background-color: var(--gri);
+}
+
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; padding: 0; margin: 0; }
+
+/* =========================================
+   2. HEADER (ÜST MENÜ)
+   ========================================= */
+header {
+    background: var(--ana-renk);
+    color: var(--beyaz);
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 90%;
+    left: 0; right: 0; margin: auto; top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.logo { display: flex; align-items: center; gap: 15px; }
+.logo img { height: 50px; width: auto; }
+.logo span {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--vurgu-renk);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+nav ul { display: flex; gap: 20px; }
+nav a { font-weight: 500; transition: color 0.3s; }
+nav a:hover, nav a.active { color: var(--vurgu-renk); }
+
+.menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--vurgu-renk);
+}
+
+/* =========================================
+   3. FOOTER (ALT BİLGİ)
+   ========================================= */
+.footer {
+    background: var(--ana-renk);
+    color: var(--beyaz);
+    padding: 50px 10% 20px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.contact-item i {
+    color: var(--vurgu-renk);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.copyright {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 20px;
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+/* =========================================
+   4. WHATSAPP & CHATBOT STİLLERİ
+   ========================================= */
+.whatsapp-float {
+    position: fixed; width: 60px; height: 60px; bottom: 25px; right: 25px;
+    background-color: var(--whatsapp-yesili); color: #FFF; border-radius: 50px;
+    text-align: center; font-size: 35px; box-shadow: 2px 2px 3px #999;
+    z-index: 9000; display: flex; align-items: center; justify-content: center;
+    transition: transform 0.3s;
+}
+.whatsapp-float:hover { transform: scale(1.1); }
+
+.chat-btn {
+    position: fixed; bottom: 90px; right: 25px;
+    background: linear-gradient(135deg, var(--ana-renk), #1e293b);
+    color: white; width: 60px; height: 60px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 28px; box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    cursor: pointer; z-index: 9999; transition: all 0.3s;
+    border: 2px solid var(--vurgu-renk);
+}
+.chat-btn:hover { transform: scale(1.1) rotate(10deg); }
+
+.chat-notification {
+    position: absolute; top: 0; right: 0; width: 14px; height: 14px;
+    background: #ef4444; border-radius: 50%; border: 2px solid white;
+    animation: pulse 2s infinite;
+}
+
+.chat-box {
+    position: fixed; bottom: 100px; right: 25px;
+    width: 360px; height: 500px; background: white;
+    border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    display: none; flex-direction: column; overflow: hidden;
+    z-index: 10000; font-family: 'Segoe UI', sans-serif; border: 1px solid #eee;
+}
+
+.chat-header {
+    background: var(--ana-renk); color: white; padding: 20px;
+    display: flex; align-items: center; justify-content: space-between;
+    border-bottom: 3px solid var(--vurgu-renk);
+}
+.chat-header h4 { margin: 0; font-size: 1.1rem; font-weight: bold; }
+
+.chat-messages {
+    flex: 1; padding: 20px; overflow-y: auto; background: #f8fafc;
+    display: flex; flex-direction: column; gap: 15px; scroll-behavior: smooth;
+}
+
+.msg {
+    max-width: 85%; padding: 12px 16px; border-radius: 15px;
+    font-size: 0.95rem; line-height: 1.4; position: relative;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+.bot-msg {
+    background: white; color: #333; align-self: flex-start;
+    border-bottom-left-radius: 2px; border: 1px solid #e2e8f0;
+}
+.user-msg {
+    background: var(--vurgu-renk); color: var(--ana-renk);
+    align-self: flex-end; border-bottom-right-radius: 2px; font-weight: 600;
+}
+
+.chat-input-area {
+    padding: 15px; background: white; border-top: 1px solid #eee;
+    display: flex; gap: 10px; align-items: center;
+}
+.chat-input-area input {
+    flex: 1; padding: 12px 15px; border: 1px solid #ddd; border-radius: 25px;
+    outline: none; transition: 0.3s;
+}
+.chat-input-area button {
+    background: var(--ana-renk); color: white; border: none;
+    width: 45px; height: 45px; border-radius: 50%; cursor: pointer;
+    transition: 0.3s; display: flex; align-items: center; justify-content: center;
+}
+
+@keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.2); } 100% { transform: scale(1); } }
+
+/* =========================================
+   5. PROJELER SAYFASI ÖZEL (Gallery)
+   ========================================= */
+.page-header {
+    background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1920&q=80');
+    background-size: cover; background-position: center;
+    padding: 150px 20px 80px; text-align: center; color: white;
+}
+.page-header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+
+.projects-container { max-width: 1200px; margin: 50px auto; padding: 0 20px; }
+.gallery-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background: white; border-radius: 10px; overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; position: relative;
+}
+.project-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.15); }
+
+.project-img-wrapper { position: relative; height: 250px; overflow: hidden; }
+.project-img-wrapper img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+.project-card:hover .project-img-wrapper img { transform: scale(1.1); }
+
+.project-tag {
+    position: absolute; top: 15px; right: 15px;
+    background: var(--vurgu-renk); color: var(--ana-renk);
+    padding: 5px 12px; font-size: 0.8rem; font-weight: bold;
+    border-radius: 20px; z-index: 2;
+}
+
+.project-content { padding: 25px; }
+.project-content h3 { margin: 0 0 10px; color: var(--ana-renk); font-size: 1.4rem; }
+.project-content p { color: #666; font-size: 0.95rem; margin-bottom: 15px; }
+.project-location {
+    display: flex; align-items: center; gap: 8px; font-size: 0.85rem;
+    color: #888; border-top: 1px solid #eee; padding-top: 15px;
+}
+
+/* =========================================
+   6. MOBİL UYUMLULUK (Responsive)
+   ========================================= */
+@media (max-width: 768px) {
+    header { width: 90%; padding: 1rem 5%; }
+    .logo span { font-size: 1.1rem; }
+    .menu-toggle { display: block; }
+    
+    nav { display: none; width: 100%; margin-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); }
+    nav.aktif { display: block; }
+    nav ul { flex-direction: column; align-items: center; gap: 15px; padding: 10px 0; }
+    
+    .page-header { padding-top: 120px; }
+    .whatsapp-float { bottom: 20px; right: 20px; width: 50px; height: 50px; font-size: 28px; }
+}
+
+@media (max-width: 480px) {
+    .chat-box { width: 90%; right: 5%; bottom: 80px; height: 60vh; }
+}

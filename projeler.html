@@ -1,229 +1,227 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LH5TFSY70G"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-LH5TFSY70G');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projelerimiz - Beta Yapı İnşaat</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Projelerimiz | Beta Yapı İnşaat</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     
-    <style>
-        /* --- GENEL AYARLAR --- */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-            line-height: 1.6;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        ul {
-            list-style: none;
-        }
-
-        /* --- MENÜ (NAVBAR) TASARIMI --- */
-        header {
-            background-color: #2c3e50; /* Koyu lacivert */
-            color: #fff;
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .logo a {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #fff;
-            letter-spacing: 2px;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 20px;
-        }
-
-        .nav-links li a {
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        .nav-links li a:hover,
-        .nav-links li a.active {
-            color: #e67e22; /* Turuncu vurgu */
-        }
-
-        /* --- PROJELER BÖLÜMÜ TASARIMI --- */
-        .projects-page-content {
-            padding: 60px 20px;
-            min-height: 80vh; /* Sayfanın dolu görünmesi için */
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .section-title h2 {
-            font-size: 2.5rem;
-            color: #2c3e50;
-            margin-bottom: 10px;
-        }
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        /* Kart Tasarımı */
-        .project-card {
-            background: #fff;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .project-image {
-            height: 200px;
-            background-color: #ddd; /* Resim yüklenmezse gri görünsün */
-            position: relative;
-            overflow: hidden;
-        }
-
-        .project-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .project-info {
-            padding: 20px;
-        }
-
-        .project-info h3 {
-            font-size: 1.2rem;
-            margin-bottom: 5px;
-            color: #2c3e50;
-        }
-
-        .category {
-            color: #e67e22;
-            font-size: 0.85rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            margin-bottom: 10px;
-            display: block;
-        }
-
-        .description {
-            font-size: 0.9rem;
-            color: #666;
-        }
-
-        /* --- FOOTER --- */
-        footer {
-            background-color: #222;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-            margin-top: 50px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
 
     <header>
+        <a href="index.html" class="logo">
+            <img src="image_1.png" alt="BETA YAPI Logo">
+            <span>BETA YAPI İNŞAAT</span>
+        </a>
+
+        <div class="menu-toggle" onclick="menuyuAcKapa()">
+            <i class="fas fa-bars"></i>
+        </div>
         <nav id="ana-menu">
-        <ul>
-            <li><a href="index.html">Anasayfa</a></li>
-            <li><a href="hesapla.html"> Fiyat Hesapla</a></li>
-            <li><a href="index.html#hizmetler">Hizmetler</a></li>
-            <li><a href="sss.html">SSS</a></li>
-            <li><a href="iletisim.html">İletişim</a></li>
-            <li><a href="projeler.html">Projelerimiz</a></li>
-        </ul>
-    </nav>
+            <ul>
+                <li><a href="index.html">Anasayfa</a></li>
+                <li><a href="hesapla.html">Fiyat Hesapla</a></li>
+                <li><a href="index.html#hizmetler">Hizmetler</a></li>
+                <li><a href="sss.html">SSS</a></li>
+                <li><a href="iletisim.html">İletişim</a></li>
+                <li><a href="projeler.html" class="active">Projelerimiz</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <section class="projects-page-content">
-        <div class="container">
-            <div class="section-title">
-                <h2>Tamamlanan Projelerimiz</h2>
-                <p>Çanakkale ve çevresinde hayata geçirdiğimiz referans projeler.</p>
+    <div class="page-header">
+        <h1>Projelerimiz</h1>
+        <p>Kalite ve güvenle inşa ettiğimiz, Çanakkale'ye değer katan referans projelerimizi inceleyin.</p>
+    </div>
+
+    <div class="projects-container">
+        <div class="gallery-grid">
+            
+            <div class="project-card">
+                <div class="project-tag">Çelik Villa</div>
+                <div class="project-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1600596542815-e32c0ee32497?auto=format&fit=crop&w=800&q=80" alt="Güzelyalı Villa">
+                </div>
+                <div class="project-content">
+                    <h3>Güzelyalı Villa Projesi</h3>
+                    <p>Modern mimari ile tasarlanmış, 140m² dubleks hafif çelik yapı. Yüksek ısı yalıtımı ile 4 mevsim konfor.</p>
+                    <div class="project-location">
+                        <i class="fas fa-map-marker-alt"></i> Güzelyalı, Çanakkale
+                    </div>
+                </div>
             </div>
 
-            <div class="projects-grid">
-                
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://via.placeholder.com/400x300?text=Guzelyali+Villa" alt="Villa Projesi">
-                    </div>
-                    <div class="project-info">
-                        <h3>Güzelyalı Villa</h3>
-                        <span class="category">Çelik Ev</span>
-                        <p class="description">Güzelyalı sahil bandında modern mimari ile inşa edilen 3+1 çelik ev projesi.</p>
+            <div class="project-card">
+                <div class="project-tag">Prefabrik</div>
+                <div class="project-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?auto=format&fit=crop&w=800&q=80" alt="Ezine Bağ Evi">
+                </div>
+                <div class="project-content">
+                    <h3>Ezine Bağ Evi</h3>
+                    <p>Doğayla iç içe, 2+1 planında 80m² ekonomik prefabrik ev çözümü. 15 günde anahtar teslim kurulum.</p>
+                    <div class="project-location">
+                        <i class="fas fa-map-marker-alt"></i> Ezine, Çanakkale
                     </div>
                 </div>
+            </div>
 
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://via.placeholder.com/400x300?text=Santiye+Ofisi" alt="Ofis Projesi">
-                    </div>
-                    <div class="project-info">
-                        <h3>Biga Şantiye Ofisi</h3>
-                        <span class="category">Konteyner</span>
-                        <p class="description">İzolasyonlu, dört mevsim kullanıma uygun şantiye ofis çözümü.</p>
+            <div class="project-card">
+                <div class="project-tag">Konteyner</div>
+                <div class="project-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" alt="Ofis Konteyner">
+                </div>
+                <div class="project-content">
+                    <h3>Biga Şantiye Ofisi</h3>
+                    <p>Birleşimli konteyner sistemiyle oluşturulan, yönetim ofisi ve yemekhane kompleksi.</p>
+                    <div class="project-location">
+                        <i class="fas fa-map-marker-alt"></i> Biga, Çanakkale
                     </div>
                 </div>
+            </div>
 
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://via.placeholder.com/400x300?text=Bag+Evi" alt="Bağ Evi">
-                    </div>
-                    <div class="project-info">
-                        <h3>Ezine Bağ Evi</h3>
-                        <span class="category">Prefabrik</span>
-                        <p class="description">Doğa ile iç içe, hızlı kurulumlu ve ekonomik bağ evi projesi.</p>
+             <div class="project-card">
+                <div class="project-tag">Çelik Yapı</div>
+                <div class="project-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1628624747186-a941fd536de7?auto=format&fit=crop&w=800&q=80" alt="Lapseki Yazlık">
+                </div>
+                <div class="project-content">
+                    <h3>Lapseki Yazlık Ev</h3>
+                    <p>Deniz kenarında, geniş verandalı tek katlı çelik ev projesi. Özel dış cephe kaplaması kullanıldı.</p>
+                    <div class="project-location">
+                        <i class="fas fa-map-marker-alt"></i> Lapseki, Çanakkale
                     </div>
                 </div>
-                
-                </div>
+            </div>
+
         </div>
-    </section>
+    </div>
 
-    <footer>
-        <p>&copy; 2026 Beta Yapı İnşaat - Çanakkale. Tüm hakları saklıdır.</p>
+    <footer id="iletisim" class="footer">
+        <h2>Bize Ulaşın</h2>
+        <p style="margin-bottom: 30px;">Sorularınız ve proje talepleriniz için 7/24 hizmetinizdeyiz.</p>
+        <div class="contact-info">
+            <div class="contact-item"><i class="fas fa-phone"></i><p>+90 533 553 75 29</p></div>
+            <div class="contact-item"><i class="fas fa-envelope"></i><p>info@betayapi.com</p></div>
+            <div class="contact-item"><i class="fas fa-map-marker-alt"></i><p>Çanakkale / Merkez</p></div>
+        </div>
+        <div class="copyright">© 2026 Beta Yapı İnşaat. Tüm Hakları Saklıdır.</div>
     </footer>
 
+    <a href="https://wa.me/905335537529" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+    <div class="chat-btn" onclick="toggleChat()">
+        <i class="fas fa-comment-dots"></i>
+        <div class="chat-notification"></div>
+    </div>
+    
+    <div class="chat-box" id="chatBox">
+        <div class="chat-header">
+            <div>
+                <h4>Beta Asistan</h4>
+                <span>● Çevrimiçi (Yapay Zeka)</span>
+            </div>
+            <div class="close-chat" onclick="toggleChat()"><i class="fas fa-times"></i></div>
+        </div>
+        
+        <div class="chat-messages" id="chatMessages">
+            <div class="msg bot-msg">
+                Merhaba! 👋 Ben Beta Yapı'nın sanal asistanıyım. <br><br>
+                Size çelik evler, prefabrik fiyatları veya teknik konularda yardımcı olabilirim. Ne sormak istersiniz?
+            </div>
+        </div>
+        
+        <div class="chat-input-area">
+            <input type="text" id="userInput" placeholder="Bir şeyler yazın..." onkeypress="handleEnter(event)">
+            <button onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <script>
+        // Mobil Menü Kodu
+        function menuyuAcKapa() {
+            var menu = document.getElementById("ana-menu");
+            menu.classList.toggle("aktif");
+        }
+
+        // --- CHATBOT SCRIPTS ---
+        function toggleChat() {
+            var chatBox = document.getElementById("chatBox");
+            if (chatBox.style.display === "none" || chatBox.style.display === "") {
+                chatBox.style.display = "flex";
+                document.getElementById("userInput").focus();
+            } else {
+                chatBox.style.display = "none";
+            }
+        }
+
+        function handleEnter(e) {
+            if (e.key === 'Enter') sendMessage();
+        }
+
+        function sendMessage() {
+            var input = document.getElementById("userInput");
+            var message = input.value.trim();
+            if (message === "") return;
+
+            addMessage(message, 'user-msg');
+            input.value = "";
+
+            var chatMessages = document.getElementById("chatMessages");
+            var typing = document.createElement("div");
+            typing.className = "msg bot-msg";
+            typing.id = "typingIndicator";
+            typing.innerHTML = "<i>Yazıyor...</i>";
+            chatMessages.appendChild(typing);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+
+            setTimeout(() => {
+                document.getElementById("typingIndicator").remove();
+                var response = findBestResponse(message.toLowerCase());
+                addMessage(response, 'bot-msg');
+            }, 800);
+        }
+
+        function addMessage(text, className) {
+            var chatMessages = document.getElementById("chatMessages");
+            var msgDiv = document.createElement("div");
+            msgDiv.className = "msg " + className;
+            msgDiv.innerHTML = text;
+            chatMessages.appendChild(msgDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        function findBestResponse(input) {
+            if (input.includes("fiyat") || input.includes("kaç para") || input.includes("maliyet") || input.includes("hesap") || input.includes("tl")) {
+                return "Fiyatlarımız metrekareye ve malzeme kalitesine göre değişiyor. <br><br>👉 <b><a href='hesapla.html' style='color:#f59e0b; text-decoration:none;'>Buraya tıklayarak</a></b> Maliyet Hesaplama aracımızı kullanabilir, saniyeler içinde tahmini fiyat alabilirsiniz.";
+            }
+            if (input.includes("nerede") || input.includes("yeriniz") || input.includes("adres") || input.includes("hangi il") || input.includes("istanbul") || input.includes("izmir")) {
+                return "Merkezimiz <b>Çanakkale</b>'dedir. <br><br>Hizmet bölgelerimiz: Biga, Çan, Ezine, Gelibolu, Lapseki ve tüm Çanakkale çevresidir.";
+            }
+            if (input.includes("deprem") || input.includes("sağlam") || input.includes("ömür") || input.includes("yalıtım") || input.includes("soğuk")) {
+                return "Yapılarımız hafif çelik teknolojisiyle üretildiği için <b>depreme karşı son derece güvenlidir.</b> <br><br>Yüksek yoğunluklu taş yünü yalıtımı sayesinde kışın sıcak, yazın serin olur. Yapı ömrü betonarme binalar gibi uzundur.";
+            }
+            if (input.includes("telefon") || input.includes("numara") || input.includes("ara") || input.includes("whatsapp")) {
+                return "Bize hemen ulaşın: <br>📞 <b>0533 553 75 29</b> <br><br>Veya sağ alttaki WhatsApp butonuna basarak direkt yazabilirsiniz.";
+            }
+            if (input.includes("süre") || input.includes("gün") || input.includes("ne zaman") || input.includes("teslim")) {
+                return "Ortalama bir yapıyı fabrikada üretip arsanızda kurmamız <b>15 ile 30 gün</b> arasında sürmektedir.";
+            }
+            if (input.includes("merhaba") || input.includes("selam") || input.includes("günaydın") || input.includes("iyi günler")) {
+                return "Merhabalar! Size nasıl yardımcı olabilirim? Prefabrik evler, fiyatlar veya teknik detaylar hakkında sorabilirsiniz.";
+            }
+            return "Bu konuda size en doğru bilgiyi vermek için sizi uzmanımıza yönlendirmek isterim. <br><br>Lütfen şu numaradan bizi arayın: <b>0533 553 75 29</b>";
+        }
+    </script>
 </body>
 </html>
