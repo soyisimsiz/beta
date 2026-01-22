@@ -53,8 +53,17 @@
   </footer>
 
   <script>
-    function menuyuAcKapa() {
-      document.getElementById("ana-menu").classList.toggle("aktif");
+  function menuyuAcKapa() {
+    document.getElementById("ana-menu").classList.toggle("aktif");
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const galeriKutusu = document.getElementById("projeListesi");
+
+    // Eğer bu uyarı gelirse: id yanlış yerde / yok / başka sayfadasın
+    if (!galeriKutusu) {
+      console.error('HATA: "projeListesi" ID bulunamadı.');
+      return;
     }
 
     const tumProjeler = [
@@ -82,23 +91,13 @@
         konum: "Biga, Çanakkale",
         aciklama: "Yönetim ofisi ve yemekhaneden oluşan şantiye çözümü."
       }
-
-      /* YENİ PROJE EKLEMEK İÇİN BURANIN ALTINA EKLE
-      ,
-      {
-        baslik: "YENİ PROJE",
-        kategori: "Kategori",
-        slug: "kategori-slug",
-        resim: "galeri/ornek.jpg",
-        konum: "Konum",
-        aciklama: "Açıklama"
-      }
-      */
     ];
 
-    const galeriKutusu = document.getElementById("projeListesi");
+    // önce temizle (eski basım varsa)
+    galeriKutusu.innerHTML = "";
 
     tumProjeler.forEach((proje) => {
+      // galeri.html aynı klasörde değilse burayı düzeltmen gerekir
       const hedefUrl = `galeri.html?kategori=${encodeURIComponent(proje.slug)}`;
 
       galeriKutusu.insertAdjacentHTML("beforeend", `
@@ -117,7 +116,5 @@
         </a>
       `);
     });
-  </script>
-
-</body>
-</html>
+  });
+</script>
