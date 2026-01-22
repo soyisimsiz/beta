@@ -425,6 +425,35 @@
 
     // Mesaj Gönderme
     function sendMessage() {
+        async function getAIResponse(message) {
+    const chatMessages = document.getElementById("chatMessages");
+
+    try {
+        const r = await fetch("https://kole.ggg-talha.workers.dev", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ message })
+        });
+
+        const data = await r.json();
+
+        // typing indicator kaldır
+        const t = document.getElementById("typingIndicator");
+        if (t) t.remove();
+
+        if (!r.ok) {
+            addMessage("Şu an geçici bir yoğunluk var. Lütfen biraz sonra tekrar deneyin.", "bot-msg");
+            return;
+        }
+
+        addMessage(data.reply || "Cevap alınamadı.", "bot-msg");
+    } catch (e) {
+        const t = document.getElementById("typingIndicator");
+        if (t) t.remove();
+        addMessage("Bağlantı hatası. Lütfen tekrar deneyin.", "bot-msg");
+    }
+}
+
         var input = document.getElementById("userInput");
         var message = input.value.trim();
         if (message === "") return;
@@ -442,12 +471,8 @@
         chatMessages.appendChild(typing);
         chatMessages.scrollTop = chatMessages.scrollHeight;
 
-        // Cevabı hesapla ve gecikmeli gönder
-        setTimeout(() => {
-            document.getElementById("typingIndicator").remove();
-            var response = findBestResponse(message.toLowerCase());
-            addMessage(response, 'bot-msg');
-        }, 800); // 0.8 saniye bekleme süresi
+  // Gerçek AI'dan cevap al
+getAIResponse(message);
     }
 
     // Mesajı Ekrana Ekleme
@@ -458,43 +483,6 @@
         msgDiv.innerHTML = text;
         chatMessages.appendChild(msgDiv);
         chatMessages.scrollTop = chatMessages.scrollHeight;
-    }
-
-    // --- YAPAY ZEKA MANTIĞI (BEYİN) ---
-    function findBestResponse(input) {
-        
-        // 1. Fiyat ve Maliyet Soruları
-        if (input.includes("fiyat") || input.includes("kaç para") || input.includes("maliyet") || input.includes("hesap") || input.includes("tl")) {
-            return "Fiyatlarımız metrekareye ve malzeme kalitesine göre değişiyor. <br><br>👉 <b><a href='hesapla.html' style='color:#f59e0b; text-decoration:none;'>Buraya tıklayarak</a></b> Maliyet Hesaplama aracımızı kullanabilir, saniyeler içinde tahmini fiyat alabilirsiniz.";
-        }
-
-        // 2. Konum ve Hizmet Bölgesi
-        if (input.includes("nerede") || input.includes("yeriniz") || input.includes("adres") || input.includes("hangi il") || input.includes("istanbul") || input.includes("izmir")) {
-            return "Merkezimiz <b>Çanakkale</b>'dedir. <br><br>Hizmet bölgelerimiz: Biga, Çan, Ezine, Gelibolu, Lapseki ve tüm Çanakkale çevresidir.";
-        }
-
-        // 3. Teknik Sorular (Deprem, Ömür, Yalıtım)
-        if (input.includes("deprem") || input.includes("sağlam") || input.includes("ömür") || input.includes("yalıtım") || input.includes("soğuk")) {
-            return "Yapılarımız hafif çelik teknolojisiyle üretildiği için <b>depreme karşı son derece güvenlidir.</b> <br><br>Yüksek yoğunluklu taş yünü yalıtımı sayesinde kışın sıcak, yazın serin olur. Yapı ömrü betonarme binalar gibi uzundur.";
-        }
-
-        // 4. İletişim ve Telefon
-        if (input.includes("telefon") || input.includes("numara") || input.includes("ara") || input.includes("whatsapp")) {
-            return "Bize hemen ulaşın: <br>📞 <b>0533 553 75 29</b> <br><br>Veya sağ alttaki WhatsApp butonuna basarak direkt yazabilirsiniz.";
-        }
-        
-        // 5. Süre
-        if (input.includes("süre") || input.includes("gün") || input.includes("ne zaman") || input.includes("teslim")) {
-            return "Ortalama bir yapıyı fabrikada üretip arsanızda kurmamız <b>15 ile 30 gün</b> arasında sürmektedir.";
-        }
-
-        // 6. Selamlaşma
-        if (input.includes("merhaba") || input.includes("selam") || input.includes("günaydın") || input.includes("iyi günler")) {
-            return "Merhabalar! Size nasıl yardımcı olabilirim? Prefabrik evler, fiyatlar veya teknik detaylar hakkında sorabilirsiniz.";
-        }
-
-        // 7. Anlaşılmayan Durumlar (Fallback)
-        return "Bu konuda size en doğru bilgiyi vermek için sizi uzmanımıza yönlendirmek isterim. <br><br>Lütfen şu numaradan bizi arayın: <b>0533 553 75 29</b>";
     }
 </script>
 </body>
