@@ -28,11 +28,29 @@ const tumProjeler = [
     // YENİ PROJEYİ BURAYA EKLEYECEKSİN (Örnek boş şablon aşağıda)
     /*
     {
-        baslik: "YENİ PROJE ADI",
-        kategori: "Çelik / Prefabrik",
-        resim: "resimler/yeni-resim.jpg",
-        konum: "İlçe, İl",
-        aciklama: "Proje açıklaması buraya..."
+        const tumProjeler = [
+    {
+        baslik: "Güzelyalı Modern Çelik Villa",
+        kategori: "Çelik Villa",
+        resim: "https://images.unsplash.com/photo-1600596542815-e32c0ee32497?auto=format&fit=crop&w=800&q=80",
+        konum: "Güzelyalı, Çanakkale",
+        aciklama: "Deniz manzaralı, 140m² kullanım alanına sahip, yüksek ısı yalıtımlı dubleks çelik konstrüksiyon villa projemiz."
+    },
+    {
+        baslik: "Ezine Doğa Bağ Evi",
+        kategori: "Prefabrik",
+        resim: "https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?auto=format&fit=crop&w=800&q=80",
+        konum: "Ezine, Çanakkale",
+        aciklama: "Zeytinlikler arasında, doğayla uyumlu 2+1 planında, verandasıyla keyifli bir yaşam sunan ekonomik prefabrik ev."
+    },
+    {
+        baslik: "Biga Şantiye Ofis Kompleksi",
+        kategori: "Konteyner",
+        resim: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80",
+        konum: "Biga, Çanakkale",
+        aciklama: "Birleşimli konteyner sistemi ile oluşturulan; yönetim ofisi, yemekhane ve yatakhaneden oluşan şantiye çözümü."
+    }
+];
     },
     */
 ];
