@@ -54,69 +54,119 @@
 
     <a href="https://wa.me/905335537529" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
 
-    <script>
-        // 1. Menü Aç/Kapa
-        function menuyuAcKapa() {
-            document.getElementById("ana-menu").classList.toggle("aktif");
-        }
+   <!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Projelerimiz</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        // 2. PROJE LİSTESİ (Burayı düzenleyerek yeni proje ekleyebilirsin)
-        const tumProjeler = [
-            {
-                baslik: "Güzelyalı Modern Çelik Villa",
-                kategori: "Çelik Villa",
-                resim: "galeri/ornek-celik-ev.jpg",
-                konum: "Güzelyalı, Çanakkale",
-                aciklama: "Deniz manzaralı, 140m² kullanım alanına sahip dubleks çelik villa."
-            },
-            {
-                baslik: "Ezine Doğa Bağ Evi",
-                kategori: "Prefabrik",
-                resim: "galeri/ornek-prefabrik-ev.jpg",
-                konum: "Ezine, Çanakkale",
-                aciklama: "Zeytinlikler arasında, doğayla uyumlu 2+1 prefabrik ev."
-            },
-            {
-                baslik: "Biga Şantiye Ofis Kompleksi",
-                kategori: "Konteyner",
-                resim: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80",
-                konum: "Biga, Çanakkale",
-                aciklama: "Yönetim ofisi ve yemekhaneden oluşan şantiye çözümü."
-            }
-            // YENİ PROJE EKLEMEK İÇİN BURANIN ALTINA YAPIŞTIR
-            /*
-            ,
-            {
-                baslik: "YENİ PROJE",
-                kategori: "Kategori",
-                resim: "resim.jpg",
-                konum: "Konum",
-                aciklama: "Açıklama"
-            }
-            */
-        ];
+  <style>
+    body { font-family: Arial, sans-serif; background:#f6f7fb; margin:0; }
+    .container { max-width:1200px; margin:auto; padding:24px; }
 
-        // 3. Ekrana Basma İşlemi
-        const galeriKutusu = document.getElementById('projeListesi');
-        
-        tumProjeler.forEach(proje => {
-            const yeniKart = `
-                <div class="project-card">
-                    <div class="project-tag">${proje.kategori}</div>
-                    <div class="project-img-wrapper">
-                        <img src="${proje.resim}" alt="${proje.baslik}">
-                    </div>
-                    <div class="project-content">
-                        <h3>${proje.baslik}</h3>
-                        <p>${proje.aciklama}</p>
-                        <div class="project-location">
-                            <i class="fas fa-map-marker-alt"></i> ${proje.konum}
-                        </div>
-                    </div>
-                </div>
-            `;
-            galeriKutusu.innerHTML += yeniKart;
-        });
-    </script>
+    .projects {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:20px;
+    }
+
+    .project-card {
+      display:block;
+      background:#fff;
+      border-radius:16px;
+      overflow:hidden;
+      text-decoration:none;
+      color:#111;
+      border:1px solid #e5e7ef;
+      transition:.2s;
+    }
+
+    .project-card:hover { transform:translateY(-4px); }
+
+    .project-tag {
+      position:absolute;
+      margin:12px;
+      background:#f4b000;
+      color:#000;
+      padding:6px 12px;
+      border-radius:20px;
+      font-size:12px;
+      font-weight:600;
+    }
+
+    .project-img-wrapper { height:220px; overflow:hidden; }
+    .project-img-wrapper img {
+      width:100%; height:100%; object-fit:cover;
+    }
+
+    .project-content { padding:16px; }
+    .project-content h3 { margin:0 0 8px; }
+    .project-location { font-size:13px; color:#666; margin-top:8px; }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+  <h1>Projelerimiz</h1>
+  <div id="projeListesi" class="projects"></div>
+</div>
+
+<script>
+  // Menü Aç/Kapa (varsa)
+  function menuyuAcKapa() {
+    document.getElementById("ana-menu")?.classList.toggle("aktif");
+  }
+
+  // PROJELER
+  const tumProjeler = [
+    {
+      baslik: "Güzelyalı Modern Çelik Villa",
+      kategori: "Çelik Villa",
+      slug: "celik-villa",
+      resim: "galeri/ornek-celik-ev.jpg",
+      konum: "Güzelyalı, Çanakkale",
+      aciklama: "Deniz manzaralı, 140m² kullanım alanına sahip dubleks çelik villa."
+    },
+    {
+      baslik: "Ezine Doğa Bağ Evi",
+      kategori: "Prefabrik",
+      slug: "prefabrik",
+      resim: "galeri/ornek-prefabrik-ev.jpg",
+      konum: "Ezine, Çanakkale",
+      aciklama: "Zeytinlikler arasında, doğayla uyumlu 2+1 prefabrik ev."
+    },
+    {
+      baslik: "Biga Şantiye Ofis Kompleksi",
+      kategori: "Konteyner",
+      slug: "konteyner",
+      resim: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80",
+      konum: "Biga, Çanakkale",
+      aciklama: "Yönetim ofisi ve yemekhaneden oluşan şantiye çözümü."
+    }
+  ];
+
+  const galeriKutusu = document.getElementById("projeListesi");
+
+  tumProjeler.forEach(proje => {
+    const hedefUrl = `galeri.html?kategori=${proje.slug}`;
+
+    galeriKutusu.insertAdjacentHTML("beforeend", `
+      <a class="project-card" href="${hedefUrl}">
+        <div class="project-tag">${proje.kategori}</div>
+        <div class="project-img-wrapper">
+          <img src="${proje.resim}" alt="${proje.baslik}">
+        </div>
+        <div class="project-content">
+          <h3>${proje.baslik}</h3>
+          <p>${proje.aciklama}</p>
+          <div class="project-location">${proje.konum}</div>
+        </div>
+      </a>
+    `);
+  });
+</script>
+
 </body>
 </html>
