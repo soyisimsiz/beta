@@ -63,8 +63,8 @@
       baslik: "Çelik Ev Galerisi",
       aciklama: "Çelik villa ve çelik ev projeleri",
       resimler: [
-        "galeri/celik-villa/1.jpg",
-        "galeri/celik-villa/2.jpg"
+        "galeri/ornek-celik-ev.jpg",
+        "galeri/ornek-celik-ev.jpg"
       ]
     },
     "prefabrik": {
