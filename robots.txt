@@ -1,0 +1,11 @@
+# Beta Yapı İnşaat - robots.txt
+# https://betayapinsaat.com.tr
+
+User-agent: *
+Allow: /
+
+# Sitemap konumu
+Sitemap: https://betayapinsaat.com.tr/sitemap.xml
+
+# Gereksiz sayfaları engelle
+Disallow: /cdn-cgi/
