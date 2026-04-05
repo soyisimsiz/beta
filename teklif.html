@@ -15,22 +15,56 @@
     <title>Teklif Alın | Beta Yapı İnşaat</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        :root { --ana-renk: #0f172a; --vurgu-renk: #f59e0b; --beyaz: #ffffff; --gri: #f3f4f6; }
-        body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: var(--gri); color: #333; }
-        header { background: var(--ana-renk); color: var(--beyaz); padding: 1rem 5%; text-align: center; }
-        .logo { font-size: 1.5rem; font-weight: bold; color: var(--vurgu-renk); }
-        .container { max-width: 600px; margin: 50px auto; background: var(--beyaz); padding: 40px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        :root { --ana-renk: #0f172a; --vurgu-renk: #f59e0b; --beyaz: #ffffff; --gri: #f3f4f6; --whatsapp-yesili: #25d366; }
+        body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: var(--gri); color: #333; overflow-x: hidden; }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; padding: 0; margin: 0; }
+
+        header {
+            background: var(--ana-renk); color: var(--beyaz); padding: 1rem 5%;
+            display: flex; justify-content: space-between; align-items: center;
+            position: fixed; width: 90%; left: 0; right: 0; margin: auto; top: 0;
+            z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.3); flex-wrap: wrap;
+        }
+        .logo { display: flex; align-items: center; gap: 15px; }
+        .logo img { height: 50px; width: auto; }
+        .logo span { font-size: 1.5rem; font-weight: bold; color: var(--vurgu-renk); text-transform: uppercase; letter-spacing: 1px; }
+        nav ul { display: flex; gap: 20px; }
+        nav a { font-weight: 500; transition: color 0.3s; }
+        nav a:hover { color: var(--vurgu-renk); }
+        .menu-toggle { display: none; font-size: 1.8rem; cursor: pointer; color: var(--vurgu-renk); }
+
+        .container { max-width: 600px; margin: 110px auto 50px; background: var(--beyaz); padding: 40px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
         h2 { text-align: center; color: var(--ana-renk); margin-bottom: 20px; }
         p.description { text-align: center; margin-bottom: 30px; color: #666; }
         .form-group { margin-bottom: 20px; }
         label { display: block; margin-bottom: 8px; font-weight: bold; }
         input, textarea, select { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-size: 1rem; box-sizing: border-box; }
+        input:focus, textarea:focus, select:focus { border-color: var(--vurgu-renk); outline: none; }
         button { width: 100%; padding: 15px; background: var(--vurgu-renk); color: var(--ana-renk); border: none; font-size: 1.1rem; font-weight: bold; border-radius: 5px; cursor: pointer; transition: background 0.3s; }
         button:hover { background: #d97706; }
         .alt-contact { margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee; text-align: center; }
         .phone-box { background: #e0f2fe; color: #0369a1; padding: 15px; border-radius: 5px; margin-top: 10px; font-weight: bold; font-size: 1.2rem; }
         .back-link { display: block; text-align: center; margin-top: 20px; color: #666; text-decoration: underline; }
-        @media (max-width: 768px) { .container { margin: 20px; padding: 20px; } }
+
+        .whatsapp-float {
+            position: fixed; width: 60px; height: 60px; bottom: 25px; right: 25px;
+            background-color: var(--whatsapp-yesili); color: #FFF; border-radius: 50px;
+            text-align: center; font-size: 35px; box-shadow: 2px 2px 3px #999;
+            z-index: 10000; display: flex; align-items: center; justify-content: center;
+            transition: transform 0.3s;
+        }
+        .whatsapp-float:hover { transform: scale(1.1); }
+
+        @media (max-width: 768px) {
+            .logo span { font-size: 1.1rem; }
+            .menu-toggle { display: block; }
+            nav { display: none; width: 100%; margin-top: 15px; border-top: 1px solid rgba(255,255,255,0.1); }
+            nav.aktif { display: block; }
+            nav ul { flex-direction: column; align-items: center; gap: 15px; padding: 10px 0; }
+            .container { margin: 100px 15px 30px; padding: 25px 20px; }
+            .whatsapp-float { bottom: 20px; right: 20px; width: 50px; height: 50px; font-size: 28px; }
+        }
     </style>
 </head>
 <body>
@@ -77,5 +111,15 @@
         </div>
         <a href="index.html" class="back-link">← Anasayfaya Dön</a>
     </div>
+
+    <a href="https://wa.me/905335537529" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp ile iletişime geçin">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        function menuyuAcKapa() {
+            document.getElementById("ana-menu").classList.toggle("aktif");
+        }
+    </script>
 </body>
 </html>

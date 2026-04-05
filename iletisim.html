@@ -33,7 +33,7 @@
             background: var(--ana-renk); color: var(--beyaz); padding: 1rem 5%;
             display: flex; justify-content: space-between; align-items: center;
             position: fixed; width: 90%; left: 0; right: 0; margin: auto; top: 0;
-            z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.3); flex-wrap: wrap;
         }
         .logo { display: flex; align-items: center; gap: 15px; }
         .logo img { height: 50px; width: auto; }
@@ -42,6 +42,7 @@
         nav ul { display: flex; gap: 20px; }
         nav a { font-weight: 500; transition: color 0.3s; }
         nav a:hover { color: var(--vurgu-renk); }
+        .menu-toggle { display: none; font-size: 1.8rem; cursor: pointer; color: var(--vurgu-renk); }
 
         /* İLETİŞİM SAYFASI TASARIMI */
         .page-header {
@@ -115,9 +116,13 @@
 
         @media (max-width: 768px) {
             .contact-container { grid-template-columns: 1fr; }
-            nav { display: none; } 
-            .header { justify-content: center; }
-            .logo span { font-size: 1.2rem; }
+            .logo span { font-size: 1.1rem; }
+            .menu-toggle { display: block; }
+            nav { display: none; width: 100%; margin-top: 15px; border-top: 1px solid rgba(255,255,255,0.1); }
+            nav.aktif { display: block; }
+            nav ul { flex-direction: column; align-items: center; gap: 15px; padding: 10px 0; }
+            .map-box { min-height: 280px; }
+            .whatsapp-float { bottom: 20px; right: 20px; width: 50px; height: 50px; font-size: 28px; }
         }
     </style>
 </head>
@@ -192,9 +197,14 @@
         </div>
     </footer>
 
-    <a href="https://wa.me/905335537529" class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/905335537529" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp ile iletişime geçin">
         <i class="fab fa-whatsapp"></i>
     </a>
 
+    <script>
+        function menuyuAcKapa() {
+            document.getElementById("ana-menu").classList.toggle("aktif");
+        }
+    </script>
 </body>
 </html>
