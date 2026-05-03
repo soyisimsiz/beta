@@ -1,0 +1,22 @@
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "SORU METNİ BURAYA",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "CEVAP METNİ BURAYA"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "İKİNCİ SORU METNİ",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "İKİNCİ CEVAP METNİ"
+      }
+    }
+  ]
+}

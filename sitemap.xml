@@ -46,6 +46,100 @@
     <priority>0.6</priority>
   </url>
 
+  <!-- ANA LANDING PAGES (SEO) -->
+  <url>
+    <loc>https://betayapinsaat.com.tr/prefabrik-ev-canakkale.html</loc>
+    <lastmod>2026-05-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://betayapinsaat.com.tr/celik-ev-canakkale.html</loc>
+    <lastmod>2026-05-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://betayapinsaat.com.tr/konteyner-ev-canakkale.html</loc>
+    <lastmod>2026-05-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- İLÇE SAYFALARI -->
+  <url>
+    <loc>https://betayapinsaat.com.tr/biga-prefabrik-ev.html</loc>
+    <lastmod>2026-05-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://betayapinsaat.com.tr/gelibolu-prefabrik-ev.html</loc>
+    <lastmod>2026-05-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://betayapinsaat.com.tr/ezine-prefabrik-ev.html</loc>
+    <lastmod>2026-05-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://betayapinsaat.com.tr/ayvacik-prefabrik-ev.html</loc>
+    <lastmod>2026-05-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://betayapinsaat.com.tr/lapseki-prefabrik-ev.html</loc>
+    <lastmod>2026-05-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://betayapinsaat.com.tr/can-celik-ev.html</loc>
+    <lastmod>2026-05-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://betayapinsaat.com.tr/bayramic-celik-ev.html</loc>
+    <lastmod>2026-05-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://betayapinsaat.com.tr/yenice-celik-ev.html</loc>
+    <lastmod>2026-05-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://betayapinsaat.com.tr/eceabat-konteyner-ev.html</loc>
+    <lastmod>2026-05-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://betayapinsaat.com.tr/bozcaada-konteyner-ev.html</loc>
+    <lastmod>2026-05-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://betayapinsaat.com.tr/gokceada-konteyner-ev.html</loc>
+    <lastmod>2026-05-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://betayapinsaat.com.tr/merkez-prefabrik-ev.html</loc>
+    <lastmod>2026-05-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- BLOG -->
   <url>
     <loc>https://betayapinsaat.com.tr/blog.html</loc>
@@ -86,6 +180,66 @@
   <url>
     <loc>https://betayapinsaat.com.tr/blog-celik-ev-omru.html</loc>
     <lastmod>2026-04-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://betayapinsaat.com.tr/prefabrik-ev-fiyatlari-2026.html</loc>
+    <lastmod>2026-05-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://betayapinsaat.com.tr/celik-ev-mi-prefabrik-ev-mi.html</loc>
+    <lastmod>2026-05-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://betayapinsaat.com.tr/konteyner-ev-ruhsat-rehberi.html</loc>
+    <lastmod>2026-05-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://betayapinsaat.com.tr/canakkale-prefabrik-ev-kurulum-sureci.html</loc>
+    <lastmod>2026-05-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://betayapinsaat.com.tr/prefabrik-ev-avantajlari-dezavantajlari.html</loc>
+    <lastmod>2026-05-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://betayapinsaat.com.tr/deprem-bolgesinde-celik-ev.html</loc>
+    <lastmod>2026-05-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://betayapinsaat.com.tr/konteyner-ev-yalitim-rehberi.html</loc>
+    <lastmod>2026-05-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://betayapinsaat.com.tr/prefabrik-villa-modelleri.html</loc>
+    <lastmod>2026-05-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://betayapinsaat.com.tr/tiny-house-vs-konteyner-ev.html</loc>
+    <lastmod>2026-05-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://betayapinsaat.com.tr/prefabrik-ev-bakim-rehberi.html</loc>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

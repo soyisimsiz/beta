@@ -1,0 +1,42 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Prefabrik Ev – Beta Yapı İnşaat",
+  "description": "Çanakkale ve çevresinde anahtar teslim prefabrik ev çözümleri. Hafif çelik karkas, depreme dayanıklı, enerji verimli, 50 m² ile 180 m² arası modeller.",
+  "brand": {
+    "@type": "Brand",
+    "name": "Beta Yapı İnşaat"
+  },
+  "manufacturer": {
+    "@type": "Organization",
+    "name": "Beta Yapı İnşaat",
+    "url": "https://betayapinsaat.com.tr"
+  },
+  "category": "Prefabrik Ev",
+  "image": "https://betayapinsaat.com.tr/images/prefabrik-ev.jpg",
+  "url": "https://betayapinsaat.com.tr/prefabrik-ev-canakkale/",
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "TRY",
+    "lowPrice": "850000",
+    "highPrice": "3500000",
+    "offerCount": "6",
+    "availability": "https://schema.org/InStock",
+    "seller": {
+      "@type": "Organization",
+      "name": "Beta Yapı İnşaat"
+    }
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "93",
+    "bestRating": "5"
+  },
+  "additionalProperty": [
+    {"@type": "PropertyValue", "name": "Yapı Sistemi", "value": "Hafif Çelik Karkas"},
+    {"@type": "PropertyValue", "name": "Deprem Yönetmeliği", "value": "TBDY 2018 Uyumlu"},
+    {"@type": "PropertyValue", "name": "Garanti Süresi", "value": "2 Yıl Yapısal Garanti"},
+    {"@type": "PropertyValue", "name": "Kurulum Süresi", "value": "30-45 İş Günü"}
+  ]
+}

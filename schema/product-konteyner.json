@@ -1,0 +1,27 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Konteyner Ev – Beta Yapı İnşaat",
+  "description": "Çanakkale ve çevresinde ekonomik ve hızlı kurulumlu konteyner ev çözümleri. Taşınabilir, modüler, yalıtımlı. 18 m² ile 84 m² arası modeller.",
+  "brand": {"@type": "Brand", "name": "Beta Yapı İnşaat"},
+  "manufacturer": {"@type": "Organization", "name": "Beta Yapı İnşaat", "url": "https://betayapinsaat.com.tr"},
+  "category": "Konteyner Ev",
+  "image": "https://betayapinsaat.com.tr/images/konteyner-ev.jpg",
+  "url": "https://betayapinsaat.com.tr/konteyner-ev-canakkale/",
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "TRY",
+    "lowPrice": "350000",
+    "highPrice": "1800000",
+    "offerCount": "6",
+    "availability": "https://schema.org/InStock",
+    "seller": {"@type": "Organization", "name": "Beta Yapı İnşaat"}
+  },
+  "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.7", "reviewCount": "93", "bestRating": "5"},
+  "additionalProperty": [
+    {"@type": "PropertyValue", "name": "Gövde Malzemesi", "value": "2 mm Galvanizli Çelik Sac"},
+    {"@type": "PropertyValue", "name": "Yalıtım", "value": "Taş Yünü + Buhar Bariyeri"},
+    {"@type": "PropertyValue", "name": "Taşınabilirlik", "value": "Evet – Vinç ve Tır ile"},
+    {"@type": "PropertyValue", "name": "Kurulum Süresi", "value": "7-15 Gün"}
+  ]
+}

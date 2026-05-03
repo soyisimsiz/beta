@@ -1,0 +1,28 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Çelik Ev – Beta Yapı İnşaat",
+  "description": "Çanakkale ve çevresinde hafif çelik karkas (LSF) ile anahtar teslim çelik ev çözümleri. Depreme dayanıklı, enerji verimli, 60 m² ile 200 m² arası modeller.",
+  "brand": {"@type": "Brand", "name": "Beta Yapı İnşaat"},
+  "manufacturer": {"@type": "Organization", "name": "Beta Yapı İnşaat", "url": "https://betayapinsaat.com.tr"},
+  "category": "Çelik Ev",
+  "image": "https://betayapinsaat.com.tr/images/celik-ev.jpg",
+  "url": "https://betayapinsaat.com.tr/celik-ev-canakkale/",
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "TRY",
+    "lowPrice": "950000",
+    "highPrice": "4000000",
+    "offerCount": "5",
+    "availability": "https://schema.org/InStock",
+    "seller": {"@type": "Organization", "name": "Beta Yapı İnşaat"}
+  },
+  "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "93", "bestRating": "5"},
+  "additionalProperty": [
+    {"@type": "PropertyValue", "name": "Yapı Sistemi", "value": "Soğuk Şekillendirilmiş Galvanizli Çelik Profil"},
+    {"@type": "PropertyValue", "name": "Profil Kalınlığı", "value": "0.8-2.0 mm"},
+    {"@type": "PropertyValue", "name": "Galvaniz Kaplama", "value": "Min. 275 gr/m²"},
+    {"@type": "PropertyValue", "name": "Deprem Yönetmeliği", "value": "TBDY 2018 Uyumlu"},
+    {"@type": "PropertyValue", "name": "Yapı Ömrü", "value": "50-100+ Yıl"}
+  ]
+}
