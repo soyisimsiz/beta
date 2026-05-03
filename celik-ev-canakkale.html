@@ -40,7 +40,7 @@
         header {
             background: var(--ana-renk); color: var(--beyaz); padding: 1rem 5%;
             display: flex; justify-content: space-between; align-items: center;
-            position: fixed; width: 90%; left: 0; right: 0; margin: auto; top: 0;
+            position: fixed; width: 100%; box-sizing: border-box;; left: 0; right: 0; margin: auto; top: 0;
             z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.3); flex-wrap: wrap;
         }
         .logo { display: flex; align-items: center; gap: 15px; }
@@ -140,8 +140,33 @@
         .whatsapp-float:hover { transform: scale(1.1); }
 
         /* Mobil */
-        @media (max-width: 768px) {
-            header { width: 90%; padding: 1rem 5%; }
+        
+        /* Dropdown */
+        .dropdown { position: relative; }
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: var(--ana-renk);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 6px;
+            min-width: 180px;
+            z-index: 1000;
+            padding: 0.4rem 0;
+        }
+        .dropdown-menu li { margin: 0; }
+        .dropdown-menu a {
+            display: block;
+            padding: 0.6rem 1.2rem;
+            font-size: 0.9rem;
+            color: var(--beyaz);
+            white-space: nowrap;
+        }
+        .dropdown-menu a:hover { color: var(--vurgu-renk); background: rgba(255,255,255,0.05); }
+        .dropdown:hover .dropdown-menu { display: block; }
+@media (max-width: 768px) {
+            header { width: 100%; box-sizing: border-box;; padding: 1rem 5%; }
             .page-hero h1 { font-size: 1.8rem; }
             .logo span { font-size: 1.1rem; }
             .menu-toggle { display: block; }
@@ -189,12 +214,17 @@
             <span>BETA YAPI İNŞAAT</span>
         </a>
         <div class="menu-toggle" onclick="menuyuAcKapa()"><i class="fas fa-bars"></i></div>
-        <nav id="ana-menu" aria-label="Ana menü">
+                <nav id="ana-menu" aria-label="Ana menü">
             <ul>
                 <li><a href="index.html">Anasayfa</a></li>
-                <li><a href="prefabrik-ev-canakkale.html">Prefabrik Ev</a></li>
-                <li><a href="celik-ev-canakkale.html" style="color:var(--vurgu-renk);">Çelik Ev</a></li>
-                <li><a href="konteyner-ev-canakkale.html">Konteyner Ev</a></li>
+                <li class="dropdown">
+                    <a href="#" onclick="toggleDropdown(event)" style="color:var(--vurgu-renk);">Hizmetlerimiz ▾</a>
+                    <ul class="dropdown-menu" id="hizmetler-menu">
+                        <li><a href="prefabrik-ev-canakkale.html">Prefabrik Ev</a></li>
+                        <li><a href="celik-ev-canakkale.html" style="color:var(--vurgu-renk);">Çelik Ev</a></li>
+                        <li><a href="konteyner-ev-canakkale.html">Konteyner Ev</a></li>
+                    </ul>
+                </li>
                 <li><a href="projeler.html">Projelerimiz</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="iletisim.html">İletişim</a></li>
@@ -294,3 +324,62 @@
         <h2>Çanakkale İklimi ve Çelik Ev Uyumu</h2>
         <p>Çanakkale, üç tarafı denizle çevrili coğrafyası nedeniyle yüksek nem oranına sahiptir. Kışın Boğaz'dan esen kuvvetli poyraz rüzgârları yapılara ciddi yük bindirir. Yazın ise Akdeniz ikliminin etkisiyle sıcaklıklar 35°C'yi aşabilir.</p>
         <p>Çelik ev
+    </div><!-- /content-wrap -->
+
+    <!-- FOOTER -->
+    <footer class="footer" id="iletisim">
+        <h2>Bize Ulaşın</h2>
+        <p style="margin-bottom:28px;">Sorularınız ve proje talepleriniz için 7/24 hizmetinizdeyiz.</p>
+        <div class="contact-info">
+            <div class="contact-item"><i class="fas fa-phone"></i><p><a href="tel:+905335537529" style="color:inherit;">+90 533 553 75 29</a></p></div>
+            <div class="contact-item"><i class="fas fa-envelope"></i><p><a href="mailto:info@betayapinsaat.com.tr" style="color:inherit;">info@betayapinsaat.com.tr</a></p></div>
+            <div class="contact-item"><i class="fas fa-map-marker-alt"></i><p>Çanakkale / Merkez</p></div>
+        </div>
+        <div class="footer-links">
+            <div>
+                <h4>Hizmetlerimiz</h4>
+                <ul>
+                    <li><a href="prefabrik-ev-canakkale.html">Prefabrik Ev Çanakkale</a></li>
+                    <li><a href="celik-ev-canakkale.html">Çelik Ev Çanakkale</a></li>
+                    <li><a href="konteyner-ev-canakkale.html">Konteyner Ev Çanakkale</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Hizmet Bölgelerimiz</h4>
+                <ul>
+                    <li><a href="/biga-prefabrik-ev/">Biga</a></li>
+                    <li><a href="/gelibolu-prefabrik-ev/">Gelibolu</a></li>
+                    <li><a href="/ezine-prefabrik-ev/">Ezine</a></li>
+                    <li><a href="/ayvacik-prefabrik-ev/">Ayvacık</a></li>
+                    <li><a href="index.html#ilceler-grid" style="color:var(--vurgu-renk);font-weight:600;">Tümünü Gör →</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">© 2026 Beta Yapı İnşaat. Tüm Hakları Saklıdır.</div>
+    </footer>
+
+    <a href="https://wa.me/905335537529" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp ile iletişime geçin"><i class="fab fa-whatsapp"></i></a>
+
+    <script>
+    function menuyuAcKapa() {
+        var menu = document.getElementById("ana-menu");
+        menu.classList.toggle("aktif");
+    }
+    function toggleDropdown(e) {
+        e.preventDefault();
+        var li = e.currentTarget.parentElement;
+        li.classList.toggle("open");
+        var sub = document.getElementById("hizmetler-menu");
+        if (sub) sub.style.display = li.classList.contains("open") ? "block" : "";
+    }
+    document.addEventListener("click", function(e) {
+        var dd = document.querySelector(".dropdown");
+        if (dd && !dd.contains(e.target)) {
+            dd.classList.remove("open");
+            var sub = document.getElementById("hizmetler-menu");
+            if (sub) sub.style.display = "";
+        }
+    });
+</script>
+</body>
+</html>
