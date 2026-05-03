@@ -1,52 +1,166 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LH5TFSY70G"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-LH5TFSY70G');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Çelik Ev Çanakkale | Beta Yapı İnşaat - Depreme Dayanıklı</title>
     <meta name="description" content="Çanakkale'de çelik ev yapımı. Depreme dayanıklı, enerji verimli hafif çelik yapılar. 93+ proje deneyimi. Ücretsiz keşif için arayın!">
-    <link rel="canonical" href="https://betayapinsaat.com.tr/celik-ev-canakkale/">
+    <link rel="canonical" href="https://betayapinsaat.com.tr/celik-ev-canakkale.html">
     <meta property="og:title" content="Çelik Ev Çanakkale | Beta Yapı İnşaat">
     <meta property="og:description" content="Çanakkale'de çelik ev yapımı. Depreme dayanıklı, enerji verimli. 93+ proje deneyimi. Ücretsiz keşif için arayın!">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://betayapinsaat.com.tr/celik-ev-canakkale/">
+    <meta property="og:url" content="https://betayapinsaat.com.tr/celik-ev-canakkale.html">
     <meta property="og:locale" content="tr_TR">
     <meta property="og:site_name" content="Beta Yapı İnşaat">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        :root{--primary:#1a5276;--accent:#e67e22;--bg:#f9f9f9;--text:#333}
-        *{margin:0;padding:0;box-sizing:border-box}
-        body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;color:var(--text);line-height:1.7;background:var(--bg)}
-        .container{max-width:960px;margin:0 auto;padding:0 20px}
-        h1{font-size:2rem;color:var(--primary);margin:30px 0 15px}
-        h2{font-size:1.5rem;color:var(--primary);margin:25px 0 12px;border-bottom:2px solid var(--accent);padding-bottom:6px}
-        h3{font-size:1.2rem;color:var(--primary);margin:18px 0 8px}
-        p{margin:10px 0}
-        table{width:100%;border-collapse:collapse;margin:15px 0}
-        th,td{border:1px solid #ddd;padding:10px;text-align:left}
-        th{background:var(--primary);color:#fff}
-        tr:nth-child(even){background:#f2f2f2}
-        .cta-box{background:var(--accent);color:#fff;padding:20px;border-radius:8px;text-align:center;margin:25px 0}
-        .cta-box a{color:#fff;font-weight:bold;text-decoration:underline}
-        ol,ul{margin:10px 0 10px 25px}
-        li{margin:5px 0}
-        .faq-item{margin:15px 0;padding:10px;background:#fff;border-radius:6px;border-left:4px solid var(--accent)}
-        .faq-item h3{margin-top:0}
-        .internal-links{display:flex;flex-wrap:wrap;gap:8px;margin:15px 0}
-        .internal-links a{background:var(--primary);color:#fff;padding:6px 14px;border-radius:4px;text-decoration:none;font-size:.9rem}
-        .internal-links a:hover{background:var(--accent)}
-        footer{background:var(--primary);color:#fff;padding:30px 0;margin-top:40px;text-align:center}
-        footer a{color:var(--accent)}
+        /* === ANA SİTE DEĞİŞKENLERİ & GENEL === */
+        :root {
+            --ana-renk: #0f172a;
+            --vurgu-renk: #f59e0b;
+            --beyaz: #ffffff;
+            --gri: #f3f4f6;
+            --whatsapp-yesili: #25d366;
+        }
+        * { box-sizing: border-box; }
+        body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #333; line-height: 1.7; background: var(--gri); overflow-x: hidden; }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; padding: 0; margin: 0; }
+
+        /* === HEADER === */
+        header {
+            background: var(--ana-renk); color: var(--beyaz); padding: 1rem 5%;
+            display: flex; justify-content: space-between; align-items: center;
+            position: fixed; width: 90%; left: 0; right: 0; margin: auto; top: 0;
+            z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.3); flex-wrap: wrap;
+        }
+        .logo { display: flex; align-items: center; gap: 15px; }
+        .logo img { height: 50px; width: auto; }
+        .logo span { font-size: 1.5rem; font-weight: bold; color: var(--vurgu-renk); text-transform: uppercase; letter-spacing: 1px; }
+        nav ul { display: flex; gap: 20px; }
+        nav a { font-weight: 500; transition: color 0.3s; color: var(--beyaz); }
+        nav a:hover { color: var(--vurgu-renk); }
+        .menu-toggle { display: none; font-size: 1.8rem; cursor: pointer; color: var(--vurgu-renk); }
+
+        /* === SAYFA HERO BANDI === */
+        .page-hero {
+            background: linear-gradient(rgba(15,23,42,0.82), rgba(15,23,42,0.82)),
+                        url('https://images.unsplash.com/photo-1541123437800-1bb1317badc2?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover; background-position: center;
+            padding: 140px 10% 70px;
+            color: var(--beyaz); text-align: center;
+        }
+        .page-hero h1 { font-size: 2.6rem; margin: 0 0 14px; text-shadow: 1px 1px 4px rgba(0,0,0,.5); }
+        .page-hero p { font-size: 1.15rem; max-width: 680px; margin: 0 auto 28px; opacity: .92; }
+        .btn {
+            background: var(--vurgu-renk); color: var(--ana-renk); padding: 14px 32px;
+            font-weight: bold; border-radius: 5px; transition: transform 0.3s, background 0.3s;
+            display: inline-block;
+        }
+        .btn:hover { transform: translateY(-3px); background: #d97706; }
+        .btn-outline {
+            border: 2px solid var(--vurgu-renk); color: var(--vurgu-renk); padding: 12px 28px;
+            font-weight: bold; border-radius: 5px; transition: all 0.3s; display: inline-block; margin-left: 12px;
+        }
+        .btn-outline:hover { background: var(--vurgu-renk); color: var(--ana-renk); }
+
+        /* === İÇERİK ALANI === */
+        .content-wrap { max-width: 960px; margin: 0 auto; padding: 60px 5% 80px; background: var(--beyaz); }
+
+        /* Başlıklar */
+        .content-wrap h2 {
+            font-size: 1.6rem; color: var(--ana-renk); margin: 40px 0 14px;
+            padding-bottom: 8px; border-bottom: 3px solid var(--vurgu-renk);
+        }
+        .content-wrap h3 { font-size: 1.15rem; color: var(--ana-renk); margin: 22px 0 8px; }
+        .content-wrap p { margin: 10px 0; color: #444; }
+        .content-wrap ol, .content-wrap ul { margin: 10px 0 10px 24px; color: #444; }
+        .content-wrap li { margin: 6px 0; }
+
+        /* Tablo */
+        .content-wrap table { width: 100%; border-collapse: collapse; margin: 18px 0; }
+        .content-wrap th, .content-wrap td { border: 1px solid #e5e7eb; padding: 11px 14px; text-align: left; }
+        .content-wrap th { background: var(--ana-renk); color: var(--beyaz); font-weight: 600; }
+        .content-wrap tr:nth-child(even) { background: var(--gri); }
+
+        /* CTA kutusu */
+        .cta-box {
+            background: var(--vurgu-renk); color: var(--ana-renk);
+            padding: 24px 30px; border-radius: 10px; text-align: center; margin: 30px 0;
+        }
+        .cta-box p { margin: 6px 0; font-weight: 600; color: var(--ana-renk); }
+        .cta-box a { color: var(--ana-renk); font-weight: 800; text-decoration: underline; }
+
+        /* FAQ kartları */
+        .faq-item {
+            margin: 16px 0; padding: 18px 20px;
+            background: var(--gri); border-radius: 8px;
+            border-left: 4px solid var(--vurgu-renk);
+        }
+        .faq-item h3 { margin-top: 0; color: var(--ana-renk); }
+        .faq-item p { margin: 6px 0; }
+
+        /* İç link butonları */
+        .internal-links { display: flex; flex-wrap: wrap; gap: 10px; margin: 16px 0; }
+        .internal-links a {
+            background: var(--ana-renk); color: var(--beyaz);
+            padding: 7px 16px; border-radius: 5px; font-size: .88rem;
+            transition: background 0.2s;
+        }
+        .internal-links a:hover { background: var(--vurgu-renk); color: var(--ana-renk); }
+
+        /* === FOOTER === */
+        .footer { background: var(--ana-renk); color: var(--beyaz); padding: 50px 10% 20px; text-align: center; }
+        .contact-info { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; margin-bottom: 30px; }
+        .contact-item i { color: var(--vurgu-renk); font-size: 1.4rem; margin-bottom: 8px; display: block; }
+        .footer-links { display: flex; justify-content: center; gap: 60px; flex-wrap: wrap; margin: 30px 0; text-align: left; }
+        .footer-links h4 { color: var(--vurgu-renk); font-size: 1rem; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 1px; }
+        .footer-links ul { line-height: 2.1; }
+        .footer-links a { color: #ccc; font-size: .9rem; }
+        .footer-links a:hover { color: var(--vurgu-renk); }
+        .copyright { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; font-size: .9rem; color: #aaa; margin-top: 20px; }
+
+        /* WhatsApp */
+        .whatsapp-float {
+            position: fixed; width: 60px; height: 60px; bottom: 25px; right: 25px;
+            background-color: var(--whatsapp-yesili); color: #FFF; border-radius: 50px;
+            text-align: center; font-size: 35px; box-shadow: 2px 2px 3px #999;
+            z-index: 10000; display: flex; align-items: center; justify-content: center;
+            transition: transform 0.3s;
+        }
+        .whatsapp-float:hover { transform: scale(1.1); }
+
+        /* Mobil */
+        @media (max-width: 768px) {
+            header { width: 90%; padding: 1rem 5%; }
+            .page-hero h1 { font-size: 1.8rem; }
+            .logo span { font-size: 1.1rem; }
+            .menu-toggle { display: block; }
+            nav { display: none; width: 100%; margin-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); }
+            nav.aktif { display: block; }
+            nav ul { flex-direction: column; align-items: center; gap: 15px; padding: 10px 0; }
+            .content-wrap { padding: 40px 5% 60px; }
+            .btn-outline { margin-left: 0; margin-top: 10px; }
+            .whatsapp-float { bottom: 20px; right: 20px; width: 50px; height: 50px; font-size: 28px; }
+        }
     </style>
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Product",
       "name": "Çelik Ev Çanakkale",
       "description": "Çanakkale ve çevresinde hafif çelik karkas ile anahtar teslim çelik ev çözümleri. Depreme dayanıklı, enerji verimli, modern tasarım.",
-      "brand": {
-        "@type": "Brand",
-        "name": "Beta Yapı İnşaat"
-      },
+      "brand": {"@type": "Brand", "name": "Beta Yapı İnşaat"},
       "offers": {
         "@type": "AggregateOffer",
         "priceCurrency": "TRY",
@@ -55,11 +169,7 @@
         "offerCount": "10",
         "availability": "https://schema.org/InStock"
       },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "93"
-      }
+      "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "93"}
     }
     </script>
     <script type="application/ld+json">
@@ -67,280 +177,235 @@
       "@context": "https://schema.org",
       "@type": "FAQPage",
       "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Çelik ev ile prefabrik ev arasındaki fark nedir?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Çelik ev, taşıyıcı sistemi tamamen hafif çelik profillerden oluşan yapılardır. Prefabrik ev ise fabrikada üretilip sahada montajlanan tüm yapı tiplerinin genel adıdır. Çelik evler, prefabrik yapıların en dayanıklı ve uzun ömürlü alt kategorisini oluşturur."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Çelik ev fiyatları 2026'da ne kadar?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "2026 yılında Çanakkale'de çelik ev fiyatları metrekareye göre 950.000 TL ile 4.000.000 TL arasında değişmektedir. Fiyat; çelik profil kalınlığı, yalıtım paketi, iç donanım ve arazi koşullarına bağlıdır."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Çelik ev kaç yılda kendini amorte eder?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Çelik evlerin üstün yalıtım performansı sayesinde enerji tasarrufu yıllık %30-40 civarındadır. Geleneksel yapıya kıyasla düşük yapım maliyeti ve enerji tasarrufu birleştiğinde, ortalama 5-8 yıl içinde yatırımınızı amorte edebilirsiniz."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Çelik ev yapımında hangi malzemeler kullanılır?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Taşıyıcı sistemde galvanizli soğuk şekillendirilmiş çelik profiller, duvarlarda sandwich panel veya OSB+yalıtım+alçıpan katmanları, çatıda trapez sac veya sandwich panel, temelde betonarme plak kullanılır."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Çelik ev Çanakkale'nin nemli havasından etkilenir mi?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Hayır. Galvanizli çelik profiller minimum 275 gr/m² çinko kaplama ile korozyona karşı korunur. Buhar bariyeri ve havalandırma detayları ile nem kontrolü sağlanır. Çanakkale'nin deniz havasına karşı ek koruma katmanları uygulanır."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Çelik eve kat çıkılabilir mi?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Evet. Hafif çelik karkas sistem, çift kata kadar rahatlıkla çıkılmasına olanak tanır. Statik hesaplar doğrultusunda 3 kata kadar yapı inşa edilebilir. Mevcut çelik eve sonradan kat ekleme de mümkündür."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Çelik ev ses yalıtımı nasıl sağlanır?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Duvar katmanları arasına yerleştirilen taş yünü hem ısı hem ses yalıtımı sağlar. Çift cam PVC pencereler, ses geçirmeyen alçıpan uygulamaları ve elastik bant kullanımıyla ses yalıtımı optimize edilir."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Çelik ev sigortalanabilir mi?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Evet. İskan belgeli çelik evler, konut sigortası kapsamına girer. DASK (Zorunlu Deprem Sigortası) da yaptırılabilir. Çelik yapıların deprem dayanıklılığı nedeniyle bazı sigorta şirketleri daha uygun primler sunabilir."
-          }
-        }
+        {"@type":"Question","name":"Çelik ev ile prefabrik ev arasındaki fark nedir?","acceptedAnswer":{"@type":"Answer","text":"Çelik ev, taşıyıcı sistemi tamamen hafif çelik profillerden oluşan yapılardır. Prefabrik ev ise fabrikada üretilip sahada montajlanan tüm yapı tiplerinin genel adıdır. Çelik evler, prefabrik yapıların en dayanıklı ve uzun ömürlü alt kategorisini oluşturur."}},
+        {"@type":"Question","name":"Çelik ev fiyatları 2026'da ne kadar?","acceptedAnswer":{"@type":"Answer","text":"2026 yılında Çanakkale'de çelik ev fiyatları metrekareye göre 950.000 TL ile 4.000.000 TL arasında değişmektedir."}},
+        {"@type":"Question","name":"Çelik ev kaç yılda kendini amorte eder?","acceptedAnswer":{"@type":"Answer","text":"Ortalama 5-8 yıl içinde yatırımınızı amorte edebilirsiniz."}},
+        {"@type":"Question","name":"Çelik ev yapımında hangi malzemeler kullanılır?","acceptedAnswer":{"@type":"Answer","text":"Galvanizli soğuk şekillendirilmiş çelik profiller, sandwich panel veya OSB+yalıtım+alçıpan katmanları, trapez sac veya sandwich panel çatı, betonarme plak temel kullanılır."}},
+        {"@type":"Question","name":"Çelik ev Çanakkale'nin nemli havasından etkilenir mi?","acceptedAnswer":{"@type":"Answer","text":"Hayır. Galvanizli çelik profiller minimum 275 gr/m² çinko kaplama ile korozyona karşı korunur."}},
+        {"@type":"Question","name":"Çelik eve kat çıkılabilir mi?","acceptedAnswer":{"@type":"Answer","text":"Evet. Statik hesaplar doğrultusunda 3 kata kadar yapı inşa edilebilir."}},
+        {"@type":"Question","name":"Çelik ev ses yalıtımı nasıl sağlanır?","acceptedAnswer":{"@type":"Answer","text":"Duvar katmanları arasına yerleştirilen taş yünü hem ısı hem ses yalıtımı sağlar."}},
+        {"@type":"Question","name":"Çelik ev sigortalanabilir mi?","acceptedAnswer":{"@type":"Answer","text":"Evet. İskan belgeli çelik evler konut sigortası kapsamına girer, DASK da yaptırılabilir."}}
       ]
     }
     </script>
 </head>
 <body>
-<div class="container">
 
-<h1>Çelik Ev Çanakkale – Depreme Dayanıklı Hafif Çelik Yapılar</h1>
+    <!-- HEADER -->
+    <header>
+        <a href="index.html" class="logo" style="text-decoration:none;color:inherit;display:flex;align-items:center;gap:15px;">
+            <img src="image_1.png" alt="BETA YAPI İNŞAAT Logo" style="height:50px;width:auto;">
+            <span>BETA YAPI İNŞAAT</span>
+        </a>
+        <div class="menu-toggle" onclick="menuyuAcKapa()"><i class="fas fa-bars"></i></div>
+        <nav id="ana-menu" aria-label="Ana menü">
+            <ul>
+                <li><a href="index.html">Anasayfa</a></li>
+                <li><a href="prefabrik-ev-canakkale.html">Prefabrik Ev</a></li>
+                <li><a href="celik-ev-canakkale.html" style="color:var(--vurgu-renk);">Çelik Ev</a></li>
+                <li><a href="konteyner-ev-canakkale.html">Konteyner Ev</a></li>
+                <li><a href="projeler.html">Projelerimiz</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="iletisim.html">İletişim</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<p><strong>Çanakkale'de çelik ev</strong> yaptırmak, güvenli ve modern bir yaşam alanına kavuşmanın en akıllı yoludur. Beta Yapı İnşaat olarak 93'ü aşkın tamamlanmış projemizle Çanakkale ve tüm ilçelerinde hafif çelik karkas sistemle anahtar teslim çelik ev hizmeti sunuyoruz. Çelik evler, geleneksel betonarme yapılara göre deprem performansı, enerji verimliliği ve yapım hızı açısından öne çıkar.</p>
-
-<p>Çanakkale, Kuzey Anadolu Fay Hattı'nın batı uzantısına yakınlığıyla 1. derece deprem bölgesinde yer alır. Bu durum, yapı malzemesi seçimini hayati derecede önemli kılar. Hafif çelik karkas evler, düşük ağırlıkları ve esnek yapıları sayesinde deprem kuvvetlerini verimli şekilde sönümler. Beta Yapı İnşaat olarak Çanakkale'nin nemli deniz iklimi, rüzgâr yükleri ve deprem riski gibi tüm bölgesel faktörleri göz önünde bulundurarak yapılarımızı tasarlıyoruz.</p>
-
-<div class="cta-box">
-    <p>Çelik ev projeniz için ücretsiz keşif ve fiyat teklifi alın!</p>
-    <p><a href="tel:+905335537529">+90 533 553 75 29</a> | <a href="https://wa.me/905335537529" target="_blank">WhatsApp ile Yazın</a></p>
-</div>
-
-<h2>Neden Çelik Ev? Neden Beta Yapı İnşaat?</h2>
-
-<h3>Üstün Deprem Performansı</h3>
-<p>Hafif çelik karkas yapılar, betonarme yapılara göre 3-4 kat daha hafiftir. Bu düşük ağırlık, deprem sırasında yapıya etkiyen kuvvetleri dramatik şekilde azaltır. Çelik profillerinin elastik davranışı, enerjiyi dağıtarak yapısal hasarı önler. Çanakkale gibi deprem riski yüksek bölgelerde çelik ev, aile güvenliğiniz için en doğru tercihlerden biridir.</p>
-
-<h3>Hızlı Yapım Süreci</h3>
-<p>Çelik ev yapım süresi, geleneksel inşaata kıyasla %60-70 daha kısadır. Fabrikada önceden üretilen yapı elemanları şantiyede hızla monte edilir. Kuru inşaat sistemi olduğu için hava koşullarından daha az etkilenir. Çanakkale'nin yağışlı kış aylarında bile çelik ev montajı aksamadan devam edebilir.</p>
-
-<h3>Enerji Verimliliği</h3>
-<p>Çelik evlerin duvar kalınlığı geleneksel yapılara göre daha ince olmasına rağmen, yalıtım performansı çok daha yüksektir. Sandviç panel duvar sistemi ve sürekli yalıtım kabuğu sayesinde ısı köprüsü oluşmaz. Bu durum, Çanakkale kışlarında ısıtma maliyetlerinizi %30-40 oranında düşürür.</p>
-
-<h3>Çevre Dostu Yapı</h3>
-<p>Çelik %100 geri dönüştürülebilir bir malzemedir. Kuru inşaat sistemi sayesinde şantiyede su tüketimi ve atık miktarı minimize edilir. Daha az malzeme kullanımı ve hafif yapı nedeniyle temel boyutları küçülür, doğaya müdahale azalır. Çanakkale'nin doğal güzelliklerini koruyarak yapılaşmak isteyenler için ideal seçenektir.</p>
-
-<h3>Uzun Ömür ve Düşük Bakım</h3>
-<p>Galvanizli çelik profillerin ömrü 100 yılı aşar. Nem, böcek ve küflenme gibi sorunlar çelik yapılarda görülmez. Çanakkale'nin nemli ikliminde ahşap yapıların maruz kaldığı çürüme riski, çelik evlerde söz konusu değildir. Yıllık bakım maliyeti geleneksel yapılara göre çok düşüktür.</p>
-
-<h3>Beta Yapı İnşaat Farkı</h3>
-<p>Çanakkale merkezli yerel firmamız, bölgenin zemin yapısını, iklim koşullarını ve imar yönetmeliklerini yakından bilir. 93'ü aşkın tamamlanmış projemiz, binlerce metrekare üretim kapasitemiz ve uzman mühendis kadromuzla sektörün güvenilir isimlerinden biriyiz. Arazi keşfinden anahtar teslime kadar her aşamada yanınızdayız.</p>
-
-<h2>Çelik Ev Modelleri ve Fiyat Aralıkları</h2>
-
-<p>Her bütçeye ve ihtiyaca uygun çelik ev modelleri sunuyoruz. İşte en popüler modellerimiz:</p>
-
-<table>
-    <thead>
-        <tr>
-            <th>Model</th>
-            <th>Alan (m²)</th>
-            <th>Oda</th>
-            <th>Fiyat Aralığı (TL)</th>
-            <th>Öne Çıkan Özellik</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Çelik Compact</td>
-            <td>60 m²</td>
-            <td>1+1</td>
-            <td>950.000 – 1.250.000</td>
-            <td>Tek katlı, müstakil veya yazlık</td>
-        </tr>
-        <tr>
-            <td>Çelik Aile</td>
-            <td>90 m²</td>
-            <td>2+1</td>
-            <td>1.250.000 – 1.700.000</td>
-            <td>Tek katlı, geniş salon + balkon</td>
-        </tr>
-        <tr>
-            <td>Çelik Konfor</td>
-            <td>120 m²</td>
-            <td>3+1</td>
-            <td>1.700.000 – 2.400.000</td>
-            <td>Tek veya çift kat, ebeveyn banyosu</td>
-        </tr>
-        <tr>
-            <td>Çelik Lüks</td>
-            <td>160 m²</td>
-            <td>4+1</td>
-            <td>2.400.000 – 3.200.000</td>
-            <td>Çift kat, geniş mutfak, çift banyo</td>
-        </tr>
-        <tr>
-            <td>Çelik Villa</td>
-            <td>200 m²</td>
-            <td>5+1</td>
-            <td>3.200.000 – 4.000.000</td>
-            <td>Çift kat villa, teras, garaj</td>
-        </tr>
-    </tbody>
-</table>
-
-<p><em>Fiyatlar 2026 yılı güncel tarifesidir. Çelik profil kalınlığı, yalıtım paketi, iç donanım ve nakliye mesafesine göre değişiklik gösterebilir.</em></p>
-
-<h2>Çelik Ev Kurulum Süreci</h2>
-
-<ol>
-    <li><strong>Ücretsiz Keşif:</strong> Araziniz yerinde incelenir. Zemin yapısı, eğim, altyapı erişimi ve imar durumu değerlendirilir.</li>
-    <li><strong>Mimari Proje:</strong> İhtiyaçlarınıza göre çelik ev projesi hazırlanır. 3D görsellerle tasarımı onaylamanız sağlanır.</li>
-    <li><strong>Statik Hesap:</strong> Çanakkale'nin deprem bölgesi parametrelerine göre yapısal hesaplar gerçekleştirilir. Rüzgâr ve kar yükleri de hesaba katılır.</li>
-    <li><strong>Ruhsat İşlemleri:</strong> Yapı ruhsatı ve gerekli izinler tarafımızca takip edilir.</li>
-    <li><strong>Temel İnşaatı:</strong> Zemin etüdüne uygun betonarme temel yapılır. Ankraj noktaları hassas ölçümlerle belirlenir.</li>
-    <li><strong>Çelik Karkas Montajı:</strong> Fabrikada kesilen ve delinmiş çelik profiller sahada vidalarla birleştirilir. Kaynak gerektirmez, hassas ve hızlı montaj sağlanır.</li>
-    <li><strong>Panel ve Yalıtım:</strong> Dış cephe panelleri, iç duvar kaplamaları ve çok katmanlı yalıtım sistemi uygulanır.</li>
-    <li><strong>Çatı ve Dış Cephe:</strong> Çatı sistemi kurulur ve dış cephe kaplaması tamamlanır.</li>
-    <li><strong>Tesisat ve İç Donanım:</strong> Elektrik, su, ısıtma tesisatı döşenir. İç mekan donanımı (mutfak, banyo, zemin) tamamlanır.</li>
-    <li><strong>Anahtar Teslim:</strong> Son kontroller yapılır, yapı kullanma izin belgesi alınır ve eviniz size teslim edilir.</li>
-</ol>
-
-<h2>Teknik Özellikler</h2>
-
-<h3>Çelik Karkas Sistemi</h3>
-<p>Soğuk şekillendirilmiş galvanizli çelik profiller (C ve U profil) kullanılır. Profil kalınlığı 0.8 mm ile 2.0 mm arasında değişir. Minimum 275 gr/m² sıcak daldırma galvaniz kaplama ile 100 yıl üzeri korozyon direnci sağlanır. Tüm birleşimler özel vida ve köşe bağlantı elemanlarıyla yapılır.</p>
-
-<h3>Duvar Sistemi</h3>
-<p>Dıştan içe doğru: dış cephe kaplaması → hava boşluğu → rüzgâr bariyeri → çelik karkas arası taş yünü (100 mm) → buhar bariyeri → iç cephe alçıpan. Toplam duvar U değeri: 0.25 W/m²K (yönetmelik sınırı: 0.60 W/m²K). Çanakkale'nin soğuk kış geceleri için fazlasıyla yeterli yalıtım performansı.</p>
-
-<h3>Çatı Sistemi</h3>
-<p>Çelik makaslar üzerine sandwich panel veya taş yünü dolgulu çatı sistemi. Çift eğimli çatıda 150 mm yalıtım kalınlığı. EPDM membran veya bitümlü örtü ile su yalıtımı. Çatı altı havalandırma sistemi yaz aylarında aşırı ısınmayı önler.</p>
-
-<h3>Döşeme Sistemi</h3>
-<p>Betonarme temel üzeri XPS yalıtım + şap + zemin kaplaması. İkinci katta çelik kiriş üzeri trapez sac + beton şap uygulaması ile yüksek yük taşıma kapasitesi ve ses yalıtımı sağlanır.</p>
-
-<h2>Sertifikalar ve Garanti</h2>
-
-<p>Çelik profillerimiz CE belgeli olup Avrupa standartlarına uygundur. TSE onaylı malzemeler kullanıyoruz. Üretim sürecimiz ISO 9001 çerçevesinde denetlenir. Tüm yapılarımız TBDY 2018 deprem yönetmeliğini karşılar. Yangın güvenliği testlerinden geçmiş A1 sınıfı yalıtım malzemeleri tercih ediyoruz. 2 yıl yapısal garanti ve ömür boyu teknik destek sunuyoruz.</p>
-
-<h2>Çanakkale İklimi ve Çelik Ev Uyumu</h2>
-
-<p>Çanakkale, üç tarafı denizle çevrili coğrafyası nedeniyle yüksek nem oranına sahiptir. Kışın Boğaz'dan esen kuvvetli poyraz rüzgârları yapılara ciddi yük bindirir. Yazın ise Akdeniz ikliminin etkisiyle sıcaklıklar 35°C'yi aşabilir. Bu çok yönlü iklim koşulları, yapı malzemesi seçiminde titizlik gerektirir.</p>
-
-<p>Çelik evler, bu koşullara karşı doğal avantajlara sahiptir: galvanizli çelik profiller neme ve tuzlu havaya dayanıklıdır; hafif yapı rüzgâr yüklerine esnek davranır; üstün yalıtım sistemi hem kışın ısı kaybını hem yazın ısı kazanımını önler; havalandırma detayları nem yoğuşmasını engeller. Özellikle Bozcaada, Gökçeada ve sahil bölgelerindeki projelerde deniz havasına karşı ek koruyucu uygulamalar yapıyoruz.</p>
-
-<h2>Sıkça Sorulan Sorular</h2>
-
-<div class="faq-item">
-    <h3>Çelik ev ile prefabrik ev arasındaki fark nedir?</h3>
-    <p>Çelik ev, taşıyıcı sistemi tamamen hafif çelik profillerden oluşan yapılardır. Prefabrik ev ise fabrikada üretilip sahada montajlanan tüm yapı tiplerinin genel adıdır. Çelik evler, prefabrik yapıların en dayanıklı ve uzun ömürlü alt kategorisini oluşturur. Beta Yapı İnşaat'ta her iki seçeneği de değerlendirebilirsiniz.</p>
-</div>
-
-<div class="faq-item">
-    <h3>Çelik ev fiyatları 2026'da ne kadar?</h3>
-    <p>2026 yılında Çanakkale'de çelik ev fiyatları 950.000 TL ile 4.000.000 TL arasında değişmektedir. Fiyatı belirleyen faktörler: metrekare, çelik profil kalınlığı, yalıtım paketi, iç donanım ve arazi koşullarıdır. Kesin fiyat için ücretsiz keşif talep edin.</p>
-</div>
-
-<div class="faq-item">
-    <h3>Çelik ev kaç yılda kendini amorte eder?</h3>
-    <p>Üstün yalıtım performansı sayesinde yıllık enerji tasarrufu %30-40 civarındadır. Düşük yapım maliyeti ve enerji tasarrufu birleştiğinde, ortalama 5-8 yıl içinde yatırımınızı amorte edebilirsiniz. Uzun vadede geleneksel yapıya göre çok daha avantajlıdır.</p>
-</div>
-
-<div class="faq-item">
-    <h3>Çelik ev yapımında hangi malzemeler kullanılır?</h3>
-    <p>Taşıyıcı sistemde galvanizli soğuk şekillendirilmiş çelik profiller kullanılır. Duvarlarda OSB panel, taş yünü yalıtım ve alçıpan katmanları yer alır. Çatıda sandwich panel veya trapez sac, temelde betonarme plak uygulanır. Tüm malzemeler TSE ve CE belgeli olup sertifikalıdır.</p>
-</div>
-
-<div class="faq-item">
-    <h3>Çelik ev Çanakkale'nin nemli havasından etkilenir mi?</h3>
-    <p>Hayır. Galvanizli çelik profiller minimum 275 gr/m² çinko kaplama ile korozyona karşı korunur. Buhar bariyeri ve havalandırma detayları ile nem kontrolü sağlanır. Çanakkale'nin deniz havasına karşı ek koruma katmanları uygulanır. Düzenli bakımla yapınız onlarca yıl sorunsuz kullanılır.</p>
-</div>
-
-<div class="faq-item">
-    <h3>Çelik eve kat çıkılabilir mi?</h3>
-    <p>Evet. Hafif çelik karkas sistem çift kata kadar rahatlıkla çıkılmasına olanak tanır. Statik hesaplar doğrultusunda 3 kata kadar yapı inşa edilebilir. Mevcut çelik eve sonradan kat ekleme de mümkündür. Kat çıkma projesi için detaylı statik analiz yapılır.</p>
-</div>
-
-<div class="faq-item">
-    <h3>Çelik ev ses yalıtımı nasıl sağlanır?</h3>
-    <p>Duvar katmanları arasına yerleştirilen taş yünü hem ısı hem ses yalıtımı sağlar. Çift cam PVC pencereler, ses yalıtımlı alçıpan uygulamaları ve elastik bant kullanımıyla ses geçişi minimize edilir. Döşemelerde ise beton şap ve akustik keçe uygulamasıyla kat arası ses iletimi önlenir.</p>
-</div>
-
-<div class="faq-item">
-    <h3>Çelik ev sigortalanabilir mi?</h3>
-    <p>Evet. İskan belgeli çelik evler, konut sigortası kapsamına girer. DASK (Zorunlu Deprem Sigortası) da yaptırılabilir. Çelik yapıların üstün deprem performansı nedeniyle bazı sigorta şirketleri daha uygun primler sunabilir.</p>
-</div>
-
-<h2>Çanakkale İlçelerinde Çelik Ev Hizmeti</h2>
-
-<p>Beta Yapı İnşaat olarak Çanakkale merkez ve tüm ilçelerinde çelik ev kurulum hizmeti veriyoruz. Bölgenin deprem riski ve iklim koşullarını bilen yerel bir firma olarak her ilçeye özel çözümler sunuyoruz.</p>
-
-<div class="internal-links">
-    <a href="/merkez-prefabrik-ev/">Merkez</a>
-    <a href="/biga-prefabrik-ev/">Biga</a>
-    <a href="/gelibolu-prefabrik-ev/">Gelibolu</a>
-    <a href="/ezine-prefabrik-ev/">Ezine</a>
-    <a href="/ayvacik-prefabrik-ev/">Ayvacık</a>
-    <a href="/lapseki-prefabrik-ev/">Lapseki</a>
-    <a href="/can-celik-ev/">Çan</a>
-    <a href="/bayramic-celik-ev/">Bayramiç</a>
-    <a href="/yenice-celik-ev/">Yenice</a>
-    <a href="/eceabat-konteyner-ev/">Eceabat</a>
-    <a href="/bozcaada-konteyner-ev/">Bozcaada</a>
-    <a href="/gokceada-konteyner-ev/">Gökçeada</a>
-</div>
-
-<p>Diğer hizmetlerimiz: <a href="/prefabrik-ev-canakkale/">Prefabrik Ev Çanakkale</a> | <a href="/konteyner-ev-canakkale/">Konteyner Ev Çanakkale</a></p>
-
-<div class="cta-box">
-    <p><strong>Çanakkale'de Çelik Ev Projenizi Başlatın!</strong></p>
-    <p>93+ proje deneyimimizle depreme dayanıklı, enerji verimli çelik evinizi birlikte tasarlayalım.</p>
-    <p><a href="tel:+905335537529">+90 533 553 75 29</a> | <a href="https://wa.me/905335537529" target="_blank">WhatsApp ile Ücretsiz Teklif Alın</a></p>
-</div>
-
-</div>
-
-<footer>
-    <div class="container">
-        <p><strong>Beta Yapı İnşaat</strong> – Çanakkale Çelik Ev, Prefabrik Ev ve Konteyner Ev Çözümleri</p>
-        <p>Telefon: <a href="tel:+905335537529">+90 533 553 75 29</a> | <a href="https://wa.me/905335537529" target="_blank">WhatsApp</a></p>
-        <p>&copy; 2026 Beta Yapı İnşaat. Tüm hakları saklıdır.</p>
+    <!-- SAYFA HERO -->
+    <div class="page-hero">
+        <h1><i class="fas fa-home" style="color:var(--vurgu-renk);margin-right:12px;"></i>Çelik Ev Çanakkale</h1>
+        <p>Depreme dayanıklı, enerji verimli ve uzun ömürlü hafif çelik yapılar. 93+ tamamlanan projemizle anahtar teslim hizmet.</p>
+        <a href="teklif.html" class="btn"><i class="fas fa-paper-plane"></i> Ücretsiz Teklif Al</a>
+        <a href="tel:+905335537529" class="btn-outline"><i class="fas fa-phone"></i> Hemen Ara</a>
     </div>
-</footer>
 
+    <!-- İÇERİK -->
+    <div class="content-wrap">
+
+        <p><strong>Çanakkale'de çelik ev</strong> yaptırmak, güvenli ve modern bir yaşam alanına kavuşmanın en akıllı yoludur. Beta Yapı İnşaat olarak 93'ü aşkın tamamlanmış projemizle Çanakkale ve tüm ilçelerinde hafif çelik karkas sistemle anahtar teslim çelik ev hizmeti sunuyoruz. Çelik evler, geleneksel betonarme yapılara göre deprem performansı, enerji verimliliği ve yapım hızı açısından öne çıkar.</p>
+
+        <p>Çanakkale, Kuzey Anadolu Fay Hattı'nın batı uzantısına yakınlığıyla 1. derece deprem bölgesinde yer alır. Bu durum, yapı malzemesi seçimini hayati derecede önemli kılar. Hafif çelik karkas evler, düşük ağırlıkları ve esnek yapıları sayesinde deprem kuvvetlerini verimli şekilde sönümler. Beta Yapı İnşaat olarak Çanakkale'nin nemli deniz iklimi, rüzgâr yükleri ve deprem riski gibi tüm bölgesel faktörleri göz önünde bulundurarak yapılarımızı tasarlıyoruz.</p>
+
+        <div class="cta-box">
+            <p>Çelik ev projeniz için ücretsiz keşif ve fiyat teklifi alın!</p>
+            <p><a href="tel:+905335537529">+90 533 553 75 29</a> &nbsp;|&nbsp; <a href="https://wa.me/905335537529" target="_blank">WhatsApp ile Yazın</a></p>
+        </div>
+
+        <h2>Neden Çelik Ev? Neden Beta Yapı İnşaat?</h2>
+
+        <h3>Üstün Deprem Performansı</h3>
+        <p>Hafif çelik karkas yapılar, betonarme yapılara göre 3-4 kat daha hafiftir. Bu düşük ağırlık, deprem sırasında yapıya etkiyen kuvvetleri dramatik şekilde azaltır. Çelik profillerinin elastik davranışı, enerjiyi dağıtarak yapısal hasarı önler. Çanakkale gibi deprem riski yüksek bölgelerde çelik ev, aile güvenliğiniz için en doğru tercihlerden biridir.</p>
+
+        <h3>Hızlı Yapım Süreci</h3>
+        <p>Çelik ev yapım süresi, geleneksel inşaata kıyasla %60-70 daha kısadır. Fabrikada önceden üretilen yapı elemanları şantiyede hızla monte edilir. Kuru inşaat sistemi olduğu için hava koşullarından daha az etkilenir. Çanakkale'nin yağışlı kış aylarında bile çelik ev montajı aksamadan devam edebilir.</p>
+
+        <h3>Enerji Verimliliği</h3>
+        <p>Çelik evlerin duvar kalınlığı geleneksel yapılara göre daha ince olmasına rağmen, yalıtım performansı çok daha yüksektir. Sandviç panel duvar sistemi ve sürekli yalıtım kabuğu sayesinde ısı köprüsü oluşmaz. Bu durum, Çanakkale kışlarında ısıtma maliyetlerinizi %30-40 oranında düşürür.</p>
+
+        <h3>Çevre Dostu Yapı</h3>
+        <p>Çelik %100 geri dönüştürülebilir bir malzemedir. Kuru inşaat sistemi sayesinde şantiyede su tüketimi ve atık miktarı minimize edilir. Daha az malzeme kullanımı ve hafif yapı nedeniyle temel boyutları küçülür, doğaya müdahale azalır. Çanakkale'nin doğal güzelliklerini koruyarak yapılaşmak isteyenler için ideal seçenektir.</p>
+
+        <h3>Uzun Ömür ve Düşük Bakım</h3>
+        <p>Galvanizli çelik profillerin ömrü 100 yılı aşar. Nem, böcek ve küflenme gibi sorunlar çelik yapılarda görülmez. Çanakkale'nin nemli ikliminde ahşap yapıların maruz kaldığı çürüme riski, çelik evlerde söz konusu değildir. Yıllık bakım maliyeti geleneksel yapılara göre çok düşüktür.</p>
+
+        <h3>Beta Yapı İnşaat Farkı</h3>
+        <p>Çanakkale merkezli yerel firmamız, bölgenin zemin yapısını, iklim koşullarını ve imar yönetmeliklerini yakından bilir. 93'ü aşkın tamamlanmış projemiz ve uzman mühendis kadromuzla sektörün güvenilir isimlerinden biriyiz. Arazi keşfinden anahtar teslime kadar her aşamada yanınızdayız.</p>
+
+        <h2>Çelik Ev Modelleri ve Fiyat Aralıkları</h2>
+        <p>Her bütçeye ve ihtiyaca uygun çelik ev modelleri sunuyoruz. İşte en popüler modellerimiz:</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Model</th><th>Alan (m²)</th><th>Oda</th><th>Fiyat Aralığı (TL)</th><th>Öne Çıkan Özellik</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Çelik Compact</td><td>60 m²</td><td>1+1</td><td>950.000 – 1.250.000</td><td>Tek katlı, müstakil veya yazlık</td></tr>
+                <tr><td>Çelik Aile</td><td>90 m²</td><td>2+1</td><td>1.250.000 – 1.700.000</td><td>Tek katlı, geniş salon + balkon</td></tr>
+                <tr><td>Çelik Konfor</td><td>120 m²</td><td>3+1</td><td>1.700.000 – 2.400.000</td><td>Tek veya çift kat, ebeveyn banyosu</td></tr>
+                <tr><td>Çelik Lüks</td><td>160 m²</td><td>4+1</td><td>2.400.000 – 3.200.000</td><td>Çift kat, geniş mutfak, çift banyo</td></tr>
+                <tr><td>Çelik Villa</td><td>200 m²</td><td>5+1</td><td>3.200.000 – 4.000.000</td><td>Çift kat villa, teras, garaj</td></tr>
+            </tbody>
+        </table>
+        <p><em>Fiyatlar 2026 yılı güncel tarifesidir. Çelik profil kalınlığı, yalıtım paketi, iç donanım ve nakliye mesafesine göre değişiklik gösterebilir.</em></p>
+
+        <h2>Çelik Ev Kurulum Süreci</h2>
+        <ol>
+            <li><strong>Ücretsiz Keşif:</strong> Araziniz yerinde incelenir. Zemin yapısı, eğim, altyapı erişimi ve imar durumu değerlendirilir.</li>
+            <li><strong>Mimari Proje:</strong> İhtiyaçlarınıza göre çelik ev projesi hazırlanır. 3D görsellerle tasarımı onaylamanız sağlanır.</li>
+            <li><strong>Statik Hesap:</strong> Çanakkale'nin deprem bölgesi parametrelerine göre yapısal hesaplar gerçekleştirilir. Rüzgâr ve kar yükleri de hesaba katılır.</li>
+            <li><strong>Ruhsat İşlemleri:</strong> Yapı ruhsatı ve gerekli izinler tarafımızca takip edilir.</li>
+            <li><strong>Temel İnşaatı:</strong> Zemin etüdüne uygun betonarme temel yapılır. Ankraj noktaları hassas ölçümlerle belirlenir.</li>
+            <li><strong>Çelik Karkas Montajı:</strong> Fabrikada kesilen ve delinmiş çelik profiller sahada vidalarla birleştirilir. Kaynak gerektirmez, hassas ve hızlı montaj sağlanır.</li>
+            <li><strong>Panel ve Yalıtım:</strong> Dış cephe panelleri, iç duvar kaplamaları ve çok katmanlı yalıtım sistemi uygulanır.</li>
+            <li><strong>Çatı ve Dış Cephe:</strong> Çatı sistemi kurulur ve dış cephe kaplaması tamamlanır.</li>
+            <li><strong>Tesisat ve İç Donanım:</strong> Elektrik, su, ısıtma tesisatı döşenir. İç mekan donanımı tamamlanır.</li>
+            <li><strong>Anahtar Teslim:</strong> Son kontroller yapılır, yapı kullanma izin belgesi alınır ve eviniz size teslim edilir.</li>
+        </ol>
+
+        <h2>Teknik Özellikler</h2>
+
+        <h3>Çelik Karkas Sistemi</h3>
+        <p>Soğuk şekillendirilmiş galvanizli çelik profiller (C ve U profil) kullanılır. Profil kalınlığı 0.8 mm ile 2.0 mm arasında değişir. Minimum 275 gr/m² sıcak daldırma galvaniz kaplama ile 100 yıl üzeri korozyon direnci sağlanır. Tüm birleşimler özel vida ve köşe bağlantı elemanlarıyla yapılır.</p>
+
+        <h3>Duvar Sistemi</h3>
+        <p>Dıştan içe doğru: dış cephe kaplaması → hava boşluğu → rüzgâr bariyeri → çelik karkas arası taş yünü (100 mm) → buhar bariyeri → iç cephe alçıpan. Toplam duvar U değeri: 0.25 W/m²K (yönetmelik sınırı: 0.60 W/m²K).</p>
+
+        <h3>Çatı Sistemi</h3>
+        <p>Çelik makaslar üzerine sandwich panel veya taş yünü dolgulu çatı sistemi. Çift eğimli çatıda 150 mm yalıtım kalınlığı. EPDM membran veya bitümlü örtü ile su yalıtımı.</p>
+
+        <h3>Döşeme Sistemi</h3>
+        <p>Betonarme temel üzeri XPS yalıtım + şap + zemin kaplaması. İkinci katta çelik kiriş üzeri trapez sac + beton şap uygulaması.</p>
+
+        <h2>Sertifikalar ve Garanti</h2>
+        <p>Çelik profillerimiz CE belgeli olup Avrupa standartlarına uygundur. TSE onaylı malzemeler kullanıyoruz. Üretim sürecimiz ISO 9001 çerçevesinde denetlenir. Tüm yapılarımız TBDY 2018 deprem yönetmeliğini karşılar. Yangın güvenliği testlerinden geçmiş A1 sınıfı yalıtım malzemeleri tercih ediyoruz. 2 yıl yapısal garanti ve ömür boyu teknik destek sunuyoruz.</p>
+
+        <h2>Çanakkale İklimi ve Çelik Ev Uyumu</h2>
+        <p>Çanakkale, üç tarafı denizle çevrili coğrafyası nedeniyle yüksek nem oranına sahiptir. Kışın Boğaz'dan esen kuvvetli poyraz rüzgârları yapılara ciddi yük bindirir. Yazın ise Akdeniz ikliminin etkisiyle sıcaklıklar 35°C'yi aşabilir.</p>
+        <p>Çelik evler, bu koşullara karşı doğal avantajlara sahiptir: galvanizli çelik profiller neme ve tuzlu havaya dayanıklıdır; hafif yapı rüzgâr yüklerine esnek davranır; üstün yalıtım sistemi hem kışın ısı kaybını hem yazın ısı kazanımını önler. Özellikle Bozcaada, Gökçeada ve sahil bölgelerindeki projelerde deniz havasına karşı ek koruyucu uygulamalar yapıyoruz.</p>
+
+        <h2>Sıkça Sorulan Sorular</h2>
+
+        <div class="faq-item">
+            <h3>Çelik ev ile prefabrik ev arasındaki fark nedir?</h3>
+            <p>Çelik ev, taşıyıcı sistemi tamamen hafif çelik profillerden oluşan yapılardır. Prefabrik ev ise fabrikada üretilip sahada montajlanan tüm yapı tiplerinin genel adıdır. Çelik evler, prefabrik yapıların en dayanıklı ve uzun ömürlü alt kategorisini oluşturur.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Çelik ev fiyatları 2026'da ne kadar?</h3>
+            <p>2026 yılında Çanakkale'de çelik ev fiyatları 950.000 TL ile 4.000.000 TL arasında değişmektedir. Fiyatı belirleyen faktörler: metrekare, çelik profil kalınlığı, yalıtım paketi, iç donanım ve arazi koşullarıdır.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Çelik ev kaç yılda kendini amorte eder?</h3>
+            <p>Üstün yalıtım performansı sayesinde yıllık enerji tasarrufu %30-40 civarındadır. Düşük yapım maliyeti ve enerji tasarrufu birleştiğinde, ortalama 5-8 yıl içinde yatırımınızı amorte edebilirsiniz.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Çelik ev yapımında hangi malzemeler kullanılır?</h3>
+            <p>Taşıyıcı sistemde galvanizli soğuk şekillendirilmiş çelik profiller kullanılır. Duvarlarda OSB panel, taş yünü yalıtım ve alçıpan katmanları yer alır. Çatıda sandwich panel veya trapez sac, temelde betonarme plak uygulanır.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Çelik ev Çanakkale'nin nemli havasından etkilenir mi?</h3>
+            <p>Hayır. Galvanizli çelik profiller minimum 275 gr/m² çinko kaplama ile korozyona karşı korunur. Buhar bariyeri ve havalandırma detayları ile nem kontrolü sağlanır.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Çelik eve kat çıkılabilir mi?</h3>
+            <p>Evet. Hafif çelik karkas sistem çift kata kadar rahatlıkla çıkılmasına olanak tanır. Statik hesaplar doğrultusunda 3 kata kadar yapı inşa edilebilir.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Çelik ev ses yalıtımı nasıl sağlanır?</h3>
+            <p>Duvar katmanları arasına yerleştirilen taş yünü hem ısı hem ses yalıtımı sağlar. Çift cam PVC pencereler, ses yalıtımlı alçıpan uygulamaları ve elastik bant kullanımıyla ses geçişi minimize edilir.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Çelik ev sigortalanabilir mi?</h3>
+            <p>Evet. İskan belgeli çelik evler, konut sigortası kapsamına girer. DASK (Zorunlu Deprem Sigortası) da yaptırılabilir.</p>
+        </div>
+
+        <h2>Çanakkale İlçelerinde Çelik Ev Hizmeti</h2>
+        <p>Beta Yapı İnşaat olarak Çanakkale merkez ve tüm ilçelerinde çelik ev kurulum hizmeti veriyoruz.</p>
+
+        <div class="internal-links">
+            <a href="/merkez-prefabrik-ev/">Merkez</a>
+            <a href="/biga-prefabrik-ev/">Biga</a>
+            <a href="/gelibolu-prefabrik-ev/">Gelibolu</a>
+            <a href="/ezine-prefabrik-ev/">Ezine</a>
+            <a href="/ayvacik-prefabrik-ev/">Ayvacık</a>
+            <a href="/lapseki-prefabrik-ev/">Lapseki</a>
+            <a href="/can-celik-ev/">Çan</a>
+            <a href="/bayramic-celik-ev/">Bayramiç</a>
+            <a href="/yenice-celik-ev/">Yenice</a>
+            <a href="/eceabat-konteyner-ev/">Eceabat</a>
+            <a href="/bozcaada-konteyner-ev/">Bozcaada</a>
+            <a href="/gokceada-konteyner-ev/">Gökçeada</a>
+        </div>
+
+        <p>Diğer hizmetlerimiz: <a href="prefabrik-ev-canakkale.html" style="color:var(--vurgu-renk);font-weight:600;">Prefabrik Ev Çanakkale</a> &nbsp;|&nbsp; <a href="konteyner-ev-canakkale.html" style="color:var(--vurgu-renk);font-weight:600;">Konteyner Ev Çanakkale</a></p>
+
+        <div class="cta-box">
+            <p><strong>Çanakkale'de Çelik Ev Projenizi Başlatın!</strong></p>
+            <p>93+ proje deneyimimizle depreme dayanıklı, enerji verimli çelik evinizi birlikte tasarlayalım.</p>
+            <p><a href="tel:+905335537529">+90 533 553 75 29</a> &nbsp;|&nbsp; <a href="https://wa.me/905335537529" target="_blank">WhatsApp ile Ücretsiz Teklif Alın</a></p>
+        </div>
+
+    </div><!-- /content-wrap -->
+
+    <!-- FOOTER -->
+    <footer class="footer" id="iletisim">
+        <h2>Bize Ulaşın</h2>
+        <p style="margin-bottom:28px;">Sorularınız ve proje talepleriniz için 7/24 hizmetinizdeyiz.</p>
+        <div class="contact-info">
+            <div class="contact-item"><i class="fas fa-phone"></i><p><a href="tel:+905335537529" style="color:inherit;">+90 533 553 75 29</a></p></div>
+            <div class="contact-item"><i class="fas fa-envelope"></i><p><a href="mailto:info@betayapinsaat.com.tr" style="color:inherit;">info@betayapinsaat.com.tr</a></p></div>
+            <div class="contact-item"><i class="fas fa-map-marker-alt"></i><p>Çanakkale / Merkez</p></div>
+        </div>
+        <div class="footer-links">
+            <div>
+                <h4>Hizmetlerimiz</h4>
+                <ul>
+                    <li><a href="prefabrik-ev-canakkale.html">Prefabrik Ev Çanakkale</a></li>
+                    <li><a href="celik-ev-canakkale.html">Çelik Ev Çanakkale</a></li>
+                    <li><a href="konteyner-ev-canakkale.html">Konteyner Ev Çanakkale</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Hizmet Bölgelerimiz</h4>
+                <ul>
+                    <li><a href="/biga-prefabrik-ev/">Biga</a></li>
+                    <li><a href="/gelibolu-prefabrik-ev/">Gelibolu</a></li>
+                    <li><a href="/ezine-prefabrik-ev/">Ezine</a></li>
+                    <li><a href="/ayvacik-prefabrik-ev/">Ayvacık</a></li>
+                    <li><a href="index.html#ilceler-grid" style="color:var(--vurgu-renk);font-weight:600;">Tümünü Gör →</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">© 2026 Beta Yapı İnşaat. Tüm Hakları Saklıdır.</div>
+    </footer>
+
+    <a href="https://wa.me/905335537529" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp ile iletişime geçin"><i class="fab fa-whatsapp"></i></a>
+
+    <script>
+        function menuyuAcKapa() {
+            document.getElementById("ana-menu").classList.toggle("aktif");
+        }
+    </script>
 </body>
 </html>

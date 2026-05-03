@@ -1,52 +1,147 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LH5TFSY70G"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-LH5TFSY70G');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Konteyner Ev Çanakkale | Beta Yapı İnşaat - Ekonomik Çözüm</title>
     <meta name="description" content="Çanakkale'de konteyner ev çözümleri. Ekonomik, hızlı kurulum, taşınabilir yapılar. 93+ proje. Ücretsiz teklif için hemen arayın!">
-    <link rel="canonical" href="https://betayapinsaat.com.tr/konteyner-ev-canakkale/">
+    <link rel="canonical" href="https://betayapinsaat.com.tr/konteyner-ev-canakkale.html">
     <meta property="og:title" content="Konteyner Ev Çanakkale | Beta Yapı İnşaat">
     <meta property="og:description" content="Çanakkale'de konteyner ev çözümleri. Ekonomik, hızlı kurulum, taşınabilir. Ücretsiz teklif için arayın!">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://betayapinsaat.com.tr/konteyner-ev-canakkale/">
+    <meta property="og:url" content="https://betayapinsaat.com.tr/konteyner-ev-canakkale.html">
     <meta property="og:locale" content="tr_TR">
     <meta property="og:site_name" content="Beta Yapı İnşaat">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        :root{--primary:#1a5276;--accent:#e67e22;--bg:#f9f9f9;--text:#333}
-        *{margin:0;padding:0;box-sizing:border-box}
-        body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;color:var(--text);line-height:1.7;background:var(--bg)}
-        .container{max-width:960px;margin:0 auto;padding:0 20px}
-        h1{font-size:2rem;color:var(--primary);margin:30px 0 15px}
-        h2{font-size:1.5rem;color:var(--primary);margin:25px 0 12px;border-bottom:2px solid var(--accent);padding-bottom:6px}
-        h3{font-size:1.2rem;color:var(--primary);margin:18px 0 8px}
-        p{margin:10px 0}
-        table{width:100%;border-collapse:collapse;margin:15px 0}
-        th,td{border:1px solid #ddd;padding:10px;text-align:left}
-        th{background:var(--primary);color:#fff}
-        tr:nth-child(even){background:#f2f2f2}
-        .cta-box{background:var(--accent);color:#fff;padding:20px;border-radius:8px;text-align:center;margin:25px 0}
-        .cta-box a{color:#fff;font-weight:bold;text-decoration:underline}
-        ol,ul{margin:10px 0 10px 25px}
-        li{margin:5px 0}
-        .faq-item{margin:15px 0;padding:10px;background:#fff;border-radius:6px;border-left:4px solid var(--accent)}
-        .faq-item h3{margin-top:0}
-        .internal-links{display:flex;flex-wrap:wrap;gap:8px;margin:15px 0}
-        .internal-links a{background:var(--primary);color:#fff;padding:6px 14px;border-radius:4px;text-decoration:none;font-size:.9rem}
-        .internal-links a:hover{background:var(--accent)}
-        footer{background:var(--primary);color:#fff;padding:30px 0;margin-top:40px;text-align:center}
-        footer a{color:var(--accent)}
+        :root {
+            --ana-renk: #0f172a;
+            --vurgu-renk: #f59e0b;
+            --beyaz: #ffffff;
+            --gri: #f3f4f6;
+            --whatsapp-yesili: #25d366;
+        }
+        * { box-sizing: border-box; }
+        body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #333; line-height: 1.7; background: var(--gri); overflow-x: hidden; }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; padding: 0; margin: 0; }
+
+        header {
+            background: var(--ana-renk); color: var(--beyaz); padding: 1rem 5%;
+            display: flex; justify-content: space-between; align-items: center;
+            position: fixed; width: 90%; left: 0; right: 0; margin: auto; top: 0;
+            z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.3); flex-wrap: wrap;
+        }
+        .logo { display: flex; align-items: center; gap: 15px; }
+        .logo img { height: 50px; width: auto; }
+        .logo span { font-size: 1.5rem; font-weight: bold; color: var(--vurgu-renk); text-transform: uppercase; letter-spacing: 1px; }
+        nav ul { display: flex; gap: 20px; }
+        nav a { font-weight: 500; transition: color 0.3s; color: var(--beyaz); }
+        nav a:hover { color: var(--vurgu-renk); }
+        .menu-toggle { display: none; font-size: 1.8rem; cursor: pointer; color: var(--vurgu-renk); }
+
+        .page-hero {
+            background: linear-gradient(rgba(15,23,42,0.82), rgba(15,23,42,0.82)),
+                        url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover; background-position: center;
+            padding: 140px 10% 70px;
+            color: var(--beyaz); text-align: center;
+        }
+        .page-hero h1 { font-size: 2.6rem; margin: 0 0 14px; text-shadow: 1px 1px 4px rgba(0,0,0,.5); }
+        .page-hero p { font-size: 1.15rem; max-width: 680px; margin: 0 auto 28px; opacity: .92; }
+        .btn {
+            background: var(--vurgu-renk); color: var(--ana-renk); padding: 14px 32px;
+            font-weight: bold; border-radius: 5px; transition: transform 0.3s, background 0.3s; display: inline-block;
+        }
+        .btn:hover { transform: translateY(-3px); background: #d97706; }
+        .btn-outline {
+            border: 2px solid var(--vurgu-renk); color: var(--vurgu-renk); padding: 12px 28px;
+            font-weight: bold; border-radius: 5px; transition: all 0.3s; display: inline-block; margin-left: 12px;
+        }
+        .btn-outline:hover { background: var(--vurgu-renk); color: var(--ana-renk); }
+
+        .content-wrap { max-width: 960px; margin: 0 auto; padding: 60px 5% 80px; background: var(--beyaz); }
+        .content-wrap h2 {
+            font-size: 1.6rem; color: var(--ana-renk); margin: 40px 0 14px;
+            padding-bottom: 8px; border-bottom: 3px solid var(--vurgu-renk);
+        }
+        .content-wrap h3 { font-size: 1.15rem; color: var(--ana-renk); margin: 22px 0 8px; }
+        .content-wrap p { margin: 10px 0; color: #444; }
+        .content-wrap ol, .content-wrap ul { margin: 10px 0 10px 24px; color: #444; }
+        .content-wrap li { margin: 6px 0; }
+        .content-wrap table { width: 100%; border-collapse: collapse; margin: 18px 0; }
+        .content-wrap th, .content-wrap td { border: 1px solid #e5e7eb; padding: 11px 14px; text-align: left; }
+        .content-wrap th { background: var(--ana-renk); color: var(--beyaz); font-weight: 600; }
+        .content-wrap tr:nth-child(even) { background: var(--gri); }
+
+        .cta-box {
+            background: var(--vurgu-renk); color: var(--ana-renk);
+            padding: 24px 30px; border-radius: 10px; text-align: center; margin: 30px 0;
+        }
+        .cta-box p { margin: 6px 0; font-weight: 600; color: var(--ana-renk); }
+        .cta-box a { color: var(--ana-renk); font-weight: 800; text-decoration: underline; }
+
+        .faq-item {
+            margin: 16px 0; padding: 18px 20px;
+            background: var(--gri); border-radius: 8px; border-left: 4px solid var(--vurgu-renk);
+        }
+        .faq-item h3 { margin-top: 0; color: var(--ana-renk); }
+
+        .internal-links { display: flex; flex-wrap: wrap; gap: 10px; margin: 16px 0; }
+        .internal-links a {
+            background: var(--ana-renk); color: var(--beyaz);
+            padding: 7px 16px; border-radius: 5px; font-size: .88rem; transition: background 0.2s;
+        }
+        .internal-links a:hover { background: var(--vurgu-renk); color: var(--ana-renk); }
+
+        .footer { background: var(--ana-renk); color: var(--beyaz); padding: 50px 10% 20px; text-align: center; }
+        .contact-info { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; margin-bottom: 30px; }
+        .contact-item i { color: var(--vurgu-renk); font-size: 1.4rem; margin-bottom: 8px; display: block; }
+        .footer-links { display: flex; justify-content: center; gap: 60px; flex-wrap: wrap; margin: 30px 0; text-align: left; }
+        .footer-links h4 { color: var(--vurgu-renk); font-size: 1rem; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 1px; }
+        .footer-links ul { line-height: 2.1; }
+        .footer-links a { color: #ccc; font-size: .9rem; }
+        .footer-links a:hover { color: var(--vurgu-renk); }
+        .copyright { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; font-size: .9rem; color: #aaa; margin-top: 20px; }
+
+        .whatsapp-float {
+            position: fixed; width: 60px; height: 60px; bottom: 25px; right: 25px;
+            background-color: var(--whatsapp-yesili); color: #FFF; border-radius: 50px;
+            text-align: center; font-size: 35px; box-shadow: 2px 2px 3px #999;
+            z-index: 10000; display: flex; align-items: center; justify-content: center; transition: transform 0.3s;
+        }
+        .whatsapp-float:hover { transform: scale(1.1); }
+
+        @media (max-width: 768px) {
+            header { width: 90%; padding: 1rem 5%; }
+            .page-hero h1 { font-size: 1.8rem; }
+            .logo span { font-size: 1.1rem; }
+            .menu-toggle { display: block; }
+            nav { display: none; width: 100%; margin-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); }
+            nav.aktif { display: block; }
+            nav ul { flex-direction: column; align-items: center; gap: 15px; padding: 10px 0; }
+            .content-wrap { padding: 40px 5% 60px; }
+            .btn-outline { margin-left: 0; margin-top: 10px; }
+            .whatsapp-float { bottom: 20px; right: 20px; width: 50px; height: 50px; font-size: 28px; }
+        }
     </style>
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Product",
       "name": "Konteyner Ev Çanakkale",
       "description": "Çanakkale ve çevresinde ekonomik ve hızlı kurulumlu konteyner ev çözümleri. Taşınabilir, modüler, enerji verimli.",
-      "brand": {
-        "@type": "Brand",
-        "name": "Beta Yapı İnşaat"
-      },
+      "brand": {"@type": "Brand", "name": "Beta Yapı İnşaat"},
       "offers": {
         "@type": "AggregateOffer",
         "priceCurrency": "TRY",
@@ -55,11 +150,7 @@
         "offerCount": "8",
         "availability": "https://schema.org/InStock"
       },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.7",
-        "reviewCount": "93"
-      }
+      "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.7", "reviewCount": "93"}
     }
     </script>
     <script type="application/ld+json">
@@ -67,272 +158,245 @@
       "@context": "https://schema.org",
       "@type": "FAQPage",
       "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Konteyner ev fiyatları ne kadar?",
-          "acceptedAnswer": {"@type": "Answer", "text": "2026 yılında Çanakkale'de konteyner ev fiyatları 350.000 TL ile 1.800.000 TL arasında değişmektedir. Tek konteyner birimler daha ekonomik olup, birleşik modüler sistemler daha geniş yaşam alanı sunar."}
-        },
-        {
-          "@type": "Question",
-          "name": "Konteyner ev için ruhsat gerekli mi?",
-          "acceptedAnswer": {"@type": "Answer", "text": "Sabit konumda kalıcı olarak kullanılacak konteyner evler için belediyeden yapı ruhsatı alınması gerekir. Geçici kullanım ve tarımsal amaçlı bazı durumlar istisna kapsamında olabilir. Ruhsat sürecinde destek sağlıyoruz."}
-        },
-        {
-          "@type": "Question",
-          "name": "Konteyner ev kışın soğuk olur mu?",
-          "acceptedAnswer": {"@type": "Answer", "text": "Yalıtımsız konteynerler ısı yalıtımı açısından yetersiz kalır. Ancak Beta Yapı İnşaat konteyner evleri iç ve dış yalıtımlı olarak üretilir. Sandwich panel, taş yünü ve buhar bariyeri ile Çanakkale kışlarında konforlu bir iç ortam sağlanır."}
-        },
-        {
-          "@type": "Question",
-          "name": "Konteyner ev taşınabilir mi?",
-          "acceptedAnswer": {"@type": "Answer", "text": "Evet, konteyner evlerin en büyük avantajlarından biri taşınabilir olmasıdır. Vinç ve tır ile kolayca taşınabilir. Bu özellik, arazi değişikliği veya geçici kullanım durumlarında büyük esneklik sağlar."}
-        },
-        {
-          "@type": "Question",
-          "name": "Konteyner evde yoğuşma problemi olur mu?",
-          "acceptedAnswer": {"@type": "Answer", "text": "Doğru yalıtım ve havalandırma uygulanmadığında konteyner evlerde yoğuşma görülebilir. Beta Yapı İnşaat olarak Çanakkale'nin yüksek nemine özel buhar bariyeri, mekanik havalandırma ve çift cam pencere sistemi uyguluyoruz."}
-        },
-        {
-          "@type": "Question",
-          "name": "Konteyner evler birleştirilebilir mi?",
-          "acceptedAnswer": {"@type": "Answer", "text": "Evet. Birden fazla konteyner birimi yan yana veya üst üste birleştirilerek daha geniş yaşam alanları oluşturulabilir. 2-3-4 konteyner birleştirilerek 3+1 eve kadar genişletilebilir."}
-        },
-        {
-          "@type": "Question",
-          "name": "Konteyner ev ömrü ne kadardır?",
-          "acceptedAnswer": {"@type": "Answer", "text": "Kaliteli malzeme ve düzenli bakımla konteyner evlerin ömrü 25-30 yıldır. Galvanizli çelik gövde ve koruyucu boya ile bu süre uzatılabilir. Çanakkale'nin nemli ikliminde periyodik bakım özellikle önemlidir."}
-        },
-        {
-          "@type": "Question",
-          "name": "Konteyner eve kredi kullanılabilir mi?",
-          "acceptedAnswer": {"@type": "Answer", "text": "İskan belgesi alınabilen sabit konteyner yapılar için bazı bankalar kredi kullandırabilir. Taşınır nitelikteki konteyner evler için ise tüketici kredisi veya ihtiyaç kredisi alternatifleri değerlendirilebilir."}
-        }
+        {"@type":"Question","name":"Konteyner ev fiyatları ne kadar?","acceptedAnswer":{"@type":"Answer","text":"2026 yılında Çanakkale'de konteyner ev fiyatları 350.000 TL ile 1.800.000 TL arasında değişmektedir."}},
+        {"@type":"Question","name":"Konteyner ev için ruhsat gerekli mi?","acceptedAnswer":{"@type":"Answer","text":"Sabit konumda kalıcı olarak kullanılacak konteyner evler için belediyeden yapı ruhsatı alınması gerekir."}},
+        {"@type":"Question","name":"Konteyner ev kışın soğuk olur mu?","acceptedAnswer":{"@type":"Answer","text":"Beta Yapı İnşaat konteyner evleri iç ve dış yalıtımlı olarak üretilir. Sandwich panel ve taş yünü ile konforlu iç ortam sağlanır."}},
+        {"@type":"Question","name":"Konteyner ev taşınabilir mi?","acceptedAnswer":{"@type":"Answer","text":"Evet, vinç ve tır ile kolayca taşınabilir."}},
+        {"@type":"Question","name":"Konteyner evde yoğuşma problemi olur mu?","acceptedAnswer":{"@type":"Answer","text":"Doğru yalıtım ve havalandırma ile yoğuşma önlenir. Buhar bariyeri, mekanik havalandırma ve çift cam pencere sistemi uyguluyoruz."}},
+        {"@type":"Question","name":"Konteyner evler birleştirilebilir mi?","acceptedAnswer":{"@type":"Answer","text":"Evet. 2-3-4 konteyner birimi yan yana veya üst üste birleştirilerek daha geniş yaşam alanları oluşturulabilir."}},
+        {"@type":"Question","name":"Konteyner ev ömrü ne kadardır?","acceptedAnswer":{"@type":"Answer","text":"Kaliteli malzeme ve düzenli bakımla konteyner evlerin ömrü 25-30 yıldır."}},
+        {"@type":"Question","name":"Konteyner eve kredi kullanılabilir mi?","acceptedAnswer":{"@type":"Answer","text":"İskan belgeli sabit konteyner yapılar için bazı bankalar kredi kullandırabilir."}}
       ]
     }
     </script>
 </head>
 <body>
-<div class="container">
 
-<h1>Konteyner Ev Çanakkale – Ekonomik ve Hızlı Modüler Yaşam</h1>
+    <!-- HEADER -->
+    <header>
+        <a href="index.html" class="logo" style="text-decoration:none;color:inherit;display:flex;align-items:center;gap:15px;">
+            <img src="image_1.png" alt="BETA YAPI İNŞAAT Logo" style="height:50px;width:auto;">
+            <span>BETA YAPI İNŞAAT</span>
+        </a>
+        <div class="menu-toggle" onclick="menuyuAcKapa()"><i class="fas fa-bars"></i></div>
+        <nav id="ana-menu" aria-label="Ana menü">
+            <ul>
+                <li><a href="index.html">Anasayfa</a></li>
+                <li><a href="prefabrik-ev-canakkale.html">Prefabrik Ev</a></li>
+                <li><a href="celik-ev-canakkale.html">Çelik Ev</a></li>
+                <li><a href="konteyner-ev-canakkale.html" style="color:var(--vurgu-renk);">Konteyner Ev</a></li>
+                <li><a href="projeler.html">Projelerimiz</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="iletisim.html">İletişim</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<p><strong>Çanakkale'de konteyner ev</strong> arayanlar için Beta Yapı İnşaat, ekonomik, hızlı kurulumlu ve modern tasarımlı konteyner ev çözümleri sunuyor. 93'ü aşkın tamamlanmış projemizle Çanakkale merkez ve tüm ilçelerinde konteyner ev hizmeti veriyoruz. Konteyner evler, düşük maliyeti, taşınabilirliği ve modüler yapısıyla özellikle yazlık, hobi evi, tarla evi ve küçük işletme ihtiyaçları için ideal bir seçenektir.</p>
-
-<p>Çanakkale, tarımsal üretim alanları, zeytinlikler, bağlar ve sahil bölgeleriyle konteyner ev kullanımına en uygun illerden biridir. Bozcaada'da bağ evi, Gökçeada'da tatil evi, kırsal bölgelerde çiftlik yapısı veya şehir merkezinde ek yaşam alanı olarak konteyner evler giderek daha fazla tercih edilmektedir. Beta Yapı İnşaat olarak Çanakkale'nin nemli deniz iklimi ve rüzgâr koşullarına uygun yalıtım ve dayanıklılık standartlarıyla üretim yapıyoruz.</p>
-
-<div class="cta-box">
-    <p>Konteyner ev projeniz için ücretsiz keşif ve fiyat teklifi!</p>
-    <p><a href="tel:+905335537529">+90 533 553 75 29</a> | <a href="https://wa.me/905335537529" target="_blank">WhatsApp ile Yazın</a></p>
-</div>
-
-<h2>Neden Konteyner Ev? Neden Beta Yapı İnşaat?</h2>
-
-<h3>Ekonomik Çözüm</h3>
-<p>Konteyner evler, geleneksel inşaat ve prefabrik yapılara göre en ekonomik konut çözümüdür. Düşük üretim maliyeti, hızlı kurulum ve minimal temel gereksinimi sayesinde toplam yatırım tutarı oldukça makul kalır. Bütçesi sınırlı aileler, yeni çiftçiler ve küçük işletme sahipleri için ideal bir başlangıç noktasıdır.</p>
-
-<h3>Hızlı Kurulum</h3>
-<p>Konteyner evler fabrikada komple olarak üretilir ve şantiyeye hazır gelir. Temel hazırlığı dahil kurulum süresi 7-15 gün gibi kısa bir sürede tamamlanır. Bu hız, acil barınma ihtiyacı, sezonluk kullanım veya hızlı yatırım gerektiren durumlarda büyük avantaj sağlar.</p>
-
-<h3>Taşınabilirlik</h3>
-<p>Konteyner evlerin en ayırt edici özelliği taşınabilir olmasıdır. Vinç ve tır ile başka bir lokasyona kolayca taşınabilir. Arazi değişikliği, mevsimlik kullanım veya yeniden konumlandırma ihtiyacında esneklik sunar. Çanakkale'nin farklı ilçelerindeki arazileriniz arasında bile taşınabilir.</p>
-
-<h3>Modüler Genişleme</h3>
-<p>İhtiyacınız arttıkça konteyner birimler ekleyerek yaşam alanınızı genişletebilirsiniz. Yan yana, L şeklinde veya üst üste yerleştirme seçenekleriyle istediğiniz büyüklükte ve biçimde yapı oluşturabilirsiniz. Başlangıçta tek birimle başlayıp zamanla büyüyen bir eve dönüştürebilirsiniz.</p>
-
-<h3>Çevre Dostu</h3>
-<p>Konteyner evler, geri dönüştürülmüş nakliye konteynerlerinin yeniden kullanımına dayalı sürdürülebilir bir yapı çözümüdür. Minimum inşaat atığı üretir, arazi üzerinde kalıcı hasar bırakmaz. Çanakkale'nin doğal güzelliklerini koruyarak yapılaşmak isteyenler için bilinçli bir tercih.</p>
-
-<h3>Beta Yapı İnşaat Güvencesi</h3>
-<p>Çanakkale merkezli firmamız, bölgenin iklim koşullarını ve yerel yönetmelikleri bilen deneyimli bir ekiple çalışır. Konteyner evlerimiz endüstriyel konteynerden dönüştürülmüş veya sıfırdan üretilmiş olsun, profesyonel yalıtım, tesisat ve iç donanımla size teslim edilir.</p>
-
-<h2>Konteyner Ev Modelleri ve Fiyat Aralıkları</h2>
-
-<table>
-    <thead>
-        <tr>
-            <th>Model</th>
-            <th>Boyut</th>
-            <th>Alan (m²)</th>
-            <th>Fiyat Aralığı (TL)</th>
-            <th>Kullanım Alanı</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Mini Konteyner</td>
-            <td>3×6 m</td>
-            <td>18 m²</td>
-            <td>350.000 – 500.000</td>
-            <td>Bekçi evi, ofis, depo</td>
-        </tr>
-        <tr>
-            <td>Standart Konteyner</td>
-            <td>3×7 m</td>
-            <td>21 m²</td>
-            <td>450.000 – 650.000</td>
-            <td>Stüdyo ev, yazlık, tarla evi</td>
-        </tr>
-        <tr>
-            <td>Geniş Konteyner</td>
-            <td>3×9 m</td>
-            <td>27 m²</td>
-            <td>550.000 – 800.000</td>
-            <td>1+0 ev, bağ evi, hobi alanı</td>
-        </tr>
-        <tr>
-            <td>Çift Konteyner</td>
-            <td>6×7 m</td>
-            <td>42 m²</td>
-            <td>750.000 – 1.100.000</td>
-            <td>1+1 ev, küçük kafe, ofis</td>
-        </tr>
-        <tr>
-            <td>Üçlü Modül</td>
-            <td>9×7 m</td>
-            <td>63 m²</td>
-            <td>1.000.000 – 1.400.000</td>
-            <td>2+1 ev, pansiyon odası</td>
-        </tr>
-        <tr>
-            <td>Villa Konteyner</td>
-            <td>12×7 m</td>
-            <td>84 m²</td>
-            <td>1.300.000 – 1.800.000</td>
-            <td>3+1 ev, butik otel ünitesi</td>
-        </tr>
-    </tbody>
-</table>
-
-<p><em>Fiyatlar 2026 yılı itibarıyladır. Yalıtım paketi, iç donanım seviyesi ve nakliye mesafesine göre değişiklik gösterebilir.</em></p>
-
-<h2>Konteyner Ev Kurulum Süreci</h2>
-
-<ol>
-    <li><strong>İhtiyaç Analizi:</strong> Kullanım amacınız, bütçeniz ve arazi bilgileriniz değerlendirilir. Size en uygun konteyner model ve boyut önerilir.</li>
-    <li><strong>Arazi Keşfi:</strong> Araziniz yerinde incelenir. Zemin düzlüğü, erişim yolu (tır giriş imkânı), vinç çalışma alanı ve altyapı bağlantı noktaları kontrol edilir.</li>
-    <li><strong>Tasarım ve Onay:</strong> İç mekan planı, pencere-kapı yerleşimi, yalıtım paketi ve dış cephe renk seçimi yapılır.</li>
-    <li><strong>Fabrikada Üretim:</strong> Konteyner birimi fabrikada komple olarak üretilir. Çelik gövde, yalıtım, iç kaplama, tesisat ve donanım eksiksiz monte edilir.</li>
-    <li><strong>Temel Hazırlığı:</strong> Arazide konteyner oturum alanına uygun basit temel (beton ayaklar veya düz plak) hazırlanır. Tam betonarme temel gerektirmez.</li>
-    <li><strong>Nakliye ve Yerleştirme:</strong> Tır ile taşınan konteyner, vinç yardımıyla temel üzerine yerleştirilir. Bu işlem genellikle birkaç saat sürer.</li>
-    <li><strong>Bağlantılar:</strong> Elektrik, su ve kanalizasyon bağlantıları yapılır. İsteğe bağlı güneş paneli veya jeneratör sistemi kurulur.</li>
-    <li><strong>Son Kontrol ve Teslimat:</strong> Tüm sistemler test edilir ve eviniz kullanıma hazır olarak size teslim edilir.</li>
-</ol>
-
-<h2>Teknik Özellikler</h2>
-
-<h3>Gövde Yapısı</h3>
-<p>Konteyner evlerimiz 2 mm kalınlığında galvanizli çelik sacdan üretilir. Taşıyıcı köşe kolonnları ve taban traversleri ağır yük taşıma kapasitesine sahiptir. Üst üste istifleme için güçlendirilmiş köşe bağlantı noktaları mevcuttur. Dış yüzey antipas + polyester boya ile kaplanır.</p>
-
-<h3>Yalıtım Sistemi</h3>
-<p>Çanakkale'nin nemli iklimi için özel tasarlanmış yalıtım paketi: iç duvarlarda 50 mm taş yünü veya EPS, tavanda 75 mm yalıtım, tabanda XPS plaka. Tüm iç yüzeylerde buhar bariyeri uygulanır. Bu sistem, metalik yapının doğal dezavantajı olan ısı iletkenliğini minimize eder ve yoğuşmayı önler.</p>
-
-<h3>İç Mekan</h3>
-<p>Duvarlar PVC panel veya alçıpan kaplama, zemin laminat parke veya PVC yer döşemesi, tavan PVC panel. Mutfak ve banyo bölümlerinde fayans/seramik uygulama. Kompakt ve fonksiyonel mutfak dolabı, duş kabin, lavabo ve klozet standart donanım olarak gelir.</p>
-
-<h3>Kapı ve Pencereler</h3>
-<p>Çift cam PVC pencereler ve çelik kapı standart donanımdır. Farklı pencere boyutları ve sürgülü kapı seçenekleri mevcuttur. Sineklik ve panjur isteğe bağlı eklenebilir.</p>
-
-<h3>Elektrik ve Tesisat</h3>
-<p>Sıva altı elektrik tesisatı, sigorta panosu, aydınlatma armatürleri, priz noktaları ve klima prizi hazır gelir. PPR boru ile sıhhi tesisat döşenir. Elektrikli şofben veya termosifon seçeneği sunulur.</p>
-
-<h2>Konteyner Ev Kullanım Alanları</h2>
-
-<h3>Konut</h3>
-<p>Ekonomik ev, yazlık ev, müstakil konut, öğrenci evi, emekli evi olarak kullanılabilir. Modüler yapısı sayesinde aile büyüdükçe ek birimler eklenebilir.</p>
-
-<h3>Tarımsal Kullanım</h3>
-<p>Çanakkale'nin verimli tarım arazilerinde tarla evi, bağ evi, zeytin bahçesi barınağı, çiftlik ofisi olarak idealdir. Sezonluk kullanım için maliyet açısından en uygun çözümdür.</p>
-
-<h3>Ticari Kullanım</h3>
-<p>Küçük ofis, satış noktası, kafe, market, kuaför salonu, sergi alanı ve showroom olarak kullanılabilir. Çanakkale'nin turizm bölgelerinde sezonluk işletmeler için mükemmel çözüm.</p>
-
-<h3>Turizm ve Konaklama</h3>
-<p>Butik otel odası, pansiyon ünitesi, glamping yapısı ve kamp alanı barınağı olarak değerlendirilir. Bozcaada ve Gökçeada'daki turizm projelerinde konteyner konaklama tesisleri giderek popülerleşmektedir.</p>
-
-<h2>Çanakkale İklimi ve Konteyner Ev</h2>
-
-<p>Çanakkale'nin Akdeniz-karasal geçiş iklimi, konteyner ev tasarımında özel dikkat gerektirir. Yaz aylarında metalik gövde aşırı ısınabilir; bu nedenle çatıya yansıtıcı boya ve çatı altı havalandırma uygulanır. Kış aylarında ise yoğuşma riski doğar; buhar bariyeri ve mekanik havalandırma ile bu sorun çözülür.</p>
-
-<p>Deniz kenarı ve ada bölgelerinde (Bozcaada, Gökçeada, Eceabat) tuzlu hava çelik gövdeyi etkileyebilir. Bu bölgelerdeki projelerimizde ek koruyucu kaplama ve galvaniz takviyesi uyguluyoruz. Rüzgâr yüküne karşı konteyner ankraj sistemi ile güvenli sabitleme sağlanır.</p>
-
-<h2>Sıkça Sorulan Sorular</h2>
-
-<div class="faq-item">
-    <h3>Konteyner ev fiyatları ne kadar?</h3>
-    <p>2026 yılında Çanakkale'de konteyner ev fiyatları 350.000 TL ile 1.800.000 TL arasında değişmektedir. Tek konteyner birimler en ekonomik seçenek olup, birden fazla birimi birleştirerek daha geniş yaşam alanları oluşturabilirsiniz. Kesin fiyat için ücretsiz keşif talep edin.</p>
-</div>
-
-<div class="faq-item">
-    <h3>Konteyner ev için ruhsat gerekli mi?</h3>
-    <p>Kalıcı kullanım için yapı ruhsatı gereklidir. Geçici veya tarımsal amaçlı bazı kullanımlar istisna kapsamında olabilir ancak bu durum ilçeden ilçeye değişir. Çanakkale merkez ve ilçelerindeki ruhsat süreçlerinde size rehberlik ediyoruz.</p>
-</div>
-
-<div class="faq-item">
-    <h3>Konteyner ev kışın soğuk olur mu?</h3>
-    <p>Yalıtımsız konteynerler evet, soğuk olur. Ancak Beta Yapı İnşaat konteyner evleri profesyonel iç ve dış yalıtımlıdır. Taş yünü, buhar bariyeri ve çift cam pencerelerle Çanakkale kışlarında konforlu bir iç ortam sağlanır. Klima veya kombi ile ısıtma yapılabilir.</p>
-</div>
-
-<div class="faq-item">
-    <h3>Konteyner ev taşınabilir mi?</h3>
-    <p>Evet. Vinç ve tır ile başka bir lokasyona kolayca taşınabilir. Bu özellik, konteyner evin en büyük avantajlarından biridir. Arazi değişikliğinde yatırımınızı kaybetmezsiniz.</p>
-</div>
-
-<div class="faq-item">
-    <h3>Konteyner evde yoğuşma problemi olur mu?</h3>
-    <p>Doğru yalıtım ve havalandırma uygulanmadığında yoğuşma görülebilir. Biz tüm konteyner evlerimizde buhar bariyeri, mekanik havalandırma ve uygun pencere yerleşimi ile yoğuşmayı önlüyoruz. Çanakkale'nin %70+ nem oranı için bu detaylar kritik önem taşır.</p>
-</div>
-
-<div class="faq-item">
-    <h3>Konteyner evler birleştirilebilir mi?</h3>
-    <p>Evet. 2, 3, 4 veya daha fazla konteyner birimi yan yana ve üst üste birleştirilebilir. Ara duvarlar kaldırılarak geniş açık alanlar elde edilir. L, T veya U şeklinde yerleşim planları oluşturulabilir.</p>
-</div>
-
-<div class="faq-item">
-    <h3>Konteyner ev ömrü ne kadardır?</h3>
-    <p>Kaliteli malzeme ve düzenli bakımla 25-30 yıl sorunsuz kullanılabilir. Galvanizli çelik gövde ve koruyucu boya uygulamaları ömrü uzatır. Çanakkale'nin nemli ikliminde 3-5 yılda bir dış boya yenilenmesi tavsiye edilir.</p>
-</div>
-
-<div class="faq-item">
-    <h3>Konteyner eve kredi kullanılabilir mi?</h3>
-    <p>İskan belgeli sabit konteyner yapılar için bazı bankalar konut kredisi kullandırabilir. Taşınır nitelikteki konteynerler için tüketici kredisi veya ihtiyaç kredisi alternatifleri değerlendirilebilir. Kredi süreçlerinde danışmanlık desteği sunuyoruz.</p>
-</div>
-
-<h2>Çanakkale İlçelerinde Konteyner Ev Hizmeti</h2>
-
-<p>Çanakkale'nin tüm ilçelerinde konteyner ev kurulum ve teslimat hizmeti sunuyoruz. Her bölgenin coğrafi koşullarına uygun çözümler üretiyoruz.</p>
-
-<div class="internal-links">
-    <a href="/merkez-prefabrik-ev/">Merkez</a>
-    <a href="/biga-prefabrik-ev/">Biga</a>
-    <a href="/gelibolu-prefabrik-ev/">Gelibolu</a>
-    <a href="/ezine-prefabrik-ev/">Ezine</a>
-    <a href="/ayvacik-prefabrik-ev/">Ayvacık</a>
-    <a href="/lapseki-prefabrik-ev/">Lapseki</a>
-    <a href="/can-celik-ev/">Çan</a>
-    <a href="/bayramic-celik-ev/">Bayramiç</a>
-    <a href="/yenice-celik-ev/">Yenice</a>
-    <a href="/eceabat-konteyner-ev/">Eceabat</a>
-    <a href="/bozcaada-konteyner-ev/">Bozcaada</a>
-    <a href="/gokceada-konteyner-ev/">Gökçeada</a>
-</div>
-
-<p>Diğer hizmetlerimiz: <a href="/prefabrik-ev-canakkale/">Prefabrik Ev Çanakkale</a> | <a href="/celik-ev-canakkale/">Çelik Ev Çanakkale</a></p>
-
-<div class="cta-box">
-    <p><strong>Çanakkale'de Konteyner Ev Projenize Bugün Başlayın!</strong></p>
-    <p>Ekonomik, hızlı ve modern konteyner ev çözümleri için Beta Yapı İnşaat yanınızda.</p>
-    <p><a href="tel:+905335537529">+90 533 553 75 29</a> | <a href="https://wa.me/905335537529" target="_blank">WhatsApp ile Ücretsiz Teklif Alın</a></p>
-</div>
-
-</div>
-
-<footer>
-    <div class="container">
-        <p><strong>Beta Yapı İnşaat</strong> – Çanakkale Konteyner Ev, Prefabrik Ev ve Çelik Ev Çözümleri</p>
-        <p>Telefon: <a href="tel:+905335537529">+90 533 553 75 29</a> | <a href="https://wa.me/905335537529" target="_blank">WhatsApp</a></p>
-        <p>&copy; 2026 Beta Yapı İnşaat. Tüm hakları saklıdır.</p>
+    <!-- SAYFA HERO -->
+    <div class="page-hero">
+        <h1><i class="fas fa-box" style="color:var(--vurgu-renk);margin-right:12px;"></i>Konteyner Ev Çanakkale</h1>
+        <p>Ekonomik, hızlı kurulum ve modüler tasarım. Çanakkale ve tüm ilçelerinde 93+ proje deneyimiyle konteyner ev çözümleri.</p>
+        <a href="teklif.html" class="btn"><i class="fas fa-paper-plane"></i> Ücretsiz Teklif Al</a>
+        <a href="tel:+905335537529" class="btn-outline"><i class="fas fa-phone"></i> Hemen Ara</a>
     </div>
-</footer>
 
+    <!-- İÇERİK -->
+    <div class="content-wrap">
+
+        <p><strong>Çanakkale'de konteyner ev</strong> arayanlar için Beta Yapı İnşaat, ekonomik, hızlı kurulumlu ve modern tasarımlı konteyner ev çözümleri sunuyor. 93'ü aşkın tamamlanmış projemizle Çanakkale merkez ve tüm ilçelerinde konteyner ev hizmeti veriyoruz. Konteyner evler, düşük maliyeti, taşınabilirliği ve modüler yapısıyla özellikle yazlık, hobi evi, tarla evi ve küçük işletme ihtiyaçları için ideal bir seçenektir.</p>
+
+        <p>Çanakkale, tarımsal üretim alanları, zeytinlikler, bağlar ve sahil bölgeleriyle konteyner ev kullanımına en uygun illerden biridir. Bozcaada'da bağ evi, Gökçeada'da tatil evi, kırsal bölgelerde çiftlik yapısı olarak konteyner evler giderek daha fazla tercih edilmektedir. Beta Yapı İnşaat olarak Çanakkale'nin nemli deniz iklimi ve rüzgâr koşullarına uygun yalıtım ve dayanıklılık standartlarıyla üretim yapıyoruz.</p>
+
+        <div class="cta-box">
+            <p>Konteyner ev projeniz için ücretsiz keşif ve fiyat teklifi!</p>
+            <p><a href="tel:+905335537529">+90 533 553 75 29</a> &nbsp;|&nbsp; <a href="https://wa.me/905335537529" target="_blank">WhatsApp ile Yazın</a></p>
+        </div>
+
+        <h2>Neden Konteyner Ev? Neden Beta Yapı İnşaat?</h2>
+
+        <h3>Ekonomik Çözüm</h3>
+        <p>Konteyner evler, geleneksel inşaat ve prefabrik yapılara göre en ekonomik konut çözümüdür. Düşük üretim maliyeti, hızlı kurulum ve minimal temel gereksinimi sayesinde toplam yatırım tutarı oldukça makul kalır. Bütçesi sınırlı aileler, yeni çiftçiler ve küçük işletme sahipleri için ideal bir başlangıç noktasıdır.</p>
+
+        <h3>Hızlı Kurulum</h3>
+        <p>Konteyner evler fabrikada komple olarak üretilir ve şantiyeye hazır gelir. Temel hazırlığı dahil kurulum süresi 7-15 gün gibi kısa bir sürede tamamlanır. Acil barınma ihtiyacı, sezonluk kullanım veya hızlı yatırım gerektiren durumlarda büyük avantaj sağlar.</p>
+
+        <h3>Taşınabilirlik</h3>
+        <p>Konteyner evlerin en ayırt edici özelliği taşınabilir olmasıdır. Vinç ve tır ile başka bir lokasyona kolayca taşınabilir. Çanakkale'nin farklı ilçelerindeki arazileriniz arasında bile taşınabilir.</p>
+
+        <h3>Modüler Genişleme</h3>
+        <p>İhtiyacınız arttıkça konteyner birimler ekleyerek yaşam alanınızı genişletebilirsiniz. Yan yana, L şeklinde veya üst üste yerleştirme seçenekleriyle istediğiniz büyüklükte yapı oluşturabilirsiniz.</p>
+
+        <h3>Çevre Dostu</h3>
+        <p>Konteyner evler, geri dönüştürülmüş nakliye konteynerlerinin yeniden kullanımına dayalı sürdürülebilir bir yapı çözümüdür. Minimum inşaat atığı üretir, arazi üzerinde kalıcı hasar bırakmaz.</p>
+
+        <h3>Beta Yapı İnşaat Güvencesi</h3>
+        <p>Çanakkale merkezli firmamız, bölgenin iklim koşullarını ve yerel yönetmelikleri bilen deneyimli bir ekiple çalışır. Konteyner evlerimiz profesyonel yalıtım, tesisat ve iç donanımla size teslim edilir.</p>
+
+        <h2>Konteyner Ev Modelleri ve Fiyat Aralıkları</h2>
+
+        <table>
+            <thead>
+                <tr><th>Model</th><th>Boyut</th><th>Alan (m²)</th><th>Fiyat Aralığı (TL)</th><th>Kullanım Alanı</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Mini Konteyner</td><td>3×6 m</td><td>18 m²</td><td>350.000 – 500.000</td><td>Bekçi evi, ofis, depo</td></tr>
+                <tr><td>Standart Konteyner</td><td>3×7 m</td><td>21 m²</td><td>450.000 – 650.000</td><td>Stüdyo ev, yazlık, tarla evi</td></tr>
+                <tr><td>Geniş Konteyner</td><td>3×9 m</td><td>27 m²</td><td>550.000 – 800.000</td><td>1+0 ev, bağ evi, hobi alanı</td></tr>
+                <tr><td>Çift Konteyner</td><td>6×7 m</td><td>42 m²</td><td>750.000 – 1.100.000</td><td>1+1 ev, küçük kafe, ofis</td></tr>
+                <tr><td>Üçlü Modül</td><td>9×7 m</td><td>63 m²</td><td>1.000.000 – 1.400.000</td><td>2+1 ev, pansiyon odası</td></tr>
+                <tr><td>Villa Konteyner</td><td>12×7 m</td><td>84 m²</td><td>1.300.000 – 1.800.000</td><td>3+1 ev, butik otel ünitesi</td></tr>
+            </tbody>
+        </table>
+        <p><em>Fiyatlar 2026 yılı itibarıyladır. Yalıtım paketi, iç donanım seviyesi ve nakliye mesafesine göre değişiklik gösterebilir.</em></p>
+
+        <h2>Konteyner Ev Kurulum Süreci</h2>
+        <ol>
+            <li><strong>İhtiyaç Analizi:</strong> Kullanım amacınız, bütçeniz ve arazi bilgileriniz değerlendirilir. Size en uygun konteyner model ve boyut önerilir.</li>
+            <li><strong>Arazi Keşfi:</strong> Araziniz yerinde incelenir. Zemin düzlüğü, erişim yolu ve altyapı bağlantı noktaları kontrol edilir.</li>
+            <li><strong>Tasarım ve Onay:</strong> İç mekan planı, pencere-kapı yerleşimi, yalıtım paketi ve dış cephe renk seçimi yapılır.</li>
+            <li><strong>Fabrikada Üretim:</strong> Konteyner birimi fabrikada komple olarak üretilir. Çelik gövde, yalıtım, iç kaplama, tesisat ve donanım eksiksiz monte edilir.</li>
+            <li><strong>Temel Hazırlığı:</strong> Arazide konteyner oturum alanına uygun basit temel (beton ayaklar veya düz plak) hazırlanır.</li>
+            <li><strong>Nakliye ve Yerleştirme:</strong> Tır ile taşınan konteyner, vinç yardımıyla temel üzerine yerleştirilir.</li>
+            <li><strong>Bağlantılar:</strong> Elektrik, su ve kanalizasyon bağlantıları yapılır. İsteğe bağlı güneş paneli veya jeneratör sistemi kurulur.</li>
+            <li><strong>Son Kontrol ve Teslimat:</strong> Tüm sistemler test edilir ve eviniz kullanıma hazır olarak size teslim edilir.</li>
+        </ol>
+
+        <h2>Teknik Özellikler</h2>
+
+        <h3>Gövde Yapısı</h3>
+        <p>Konteyner evlerimiz 2 mm kalınlığında galvanizli çelik sacdan üretilir. Taşıyıcı köşe kolonnları ve taban traversleri ağır yük taşıma kapasitesine sahiptir. Üst üste istifleme için güçlendirilmiş köşe bağlantı noktaları mevcuttur. Dış yüzey antipas + polyester boya ile kaplanır.</p>
+
+        <h3>Yalıtım Sistemi</h3>
+        <p>Çanakkale'nin nemli iklimi için özel tasarlanmış yalıtım paketi: iç duvarlarda 50 mm taş yünü veya EPS, tavanda 75 mm yalıtım, tabanda XPS plaka. Tüm iç yüzeylerde buhar bariyeri uygulanır. Bu sistem, metalik yapının doğal dezavantajı olan ısı iletkenliğini minimize eder ve yoğuşmayı önler.</p>
+
+        <h3>İç Mekan</h3>
+        <p>Duvarlar PVC panel veya alçıpan kaplama, zemin laminat parke veya PVC yer döşemesi, tavan PVC panel. Kompakt ve fonksiyonel mutfak dolabı, duş kabin, lavabo ve klozet standart donanım olarak gelir.</p>
+
+        <h3>Kapı ve Pencereler</h3>
+        <p>Çift cam PVC pencereler ve çelik kapı standart donanımdır. Farklı pencere boyutları ve sürgülü kapı seçenekleri mevcuttur. Sineklik ve panjur isteğe bağlı eklenebilir.</p>
+
+        <h3>Elektrik ve Tesisat</h3>
+        <p>Sıva altı elektrik tesisatı, sigorta panosu, aydınlatma armatürleri ve priz noktaları hazır gelir. PPR boru ile sıhhi tesisat döşenir. Elektrikli şofben veya termosifon seçeneği sunulur.</p>
+
+        <h2>Konteyner Ev Kullanım Alanları</h2>
+
+        <h3>Konut</h3>
+        <p>Ekonomik ev, yazlık ev, müstakil konut, öğrenci evi, emekli evi olarak kullanılabilir. Modüler yapısı sayesinde aile büyüdükçe ek birimler eklenebilir.</p>
+
+        <h3>Tarımsal Kullanım</h3>
+        <p>Çanakkale'nin verimli tarım arazilerinde tarla evi, bağ evi, zeytin bahçesi barınağı, çiftlik ofisi olarak idealdir. Sezonluk kullanım için maliyet açısından en uygun çözümdür.</p>
+
+        <h3>Ticari Kullanım</h3>
+        <p>Küçük ofis, satış noktası, kafe, market, kuaför salonu, sergi alanı ve showroom olarak kullanılabilir. Çanakkale'nin turizm bölgelerinde sezonluk işletmeler için mükemmel çözüm.</p>
+
+        <h3>Turizm ve Konaklama</h3>
+        <p>Butik otel odası, pansiyon ünitesi, glamping yapısı ve kamp alanı barınağı olarak değerlendirilir. Bozcaada ve Gökçeada'daki turizm projelerinde konteyner konaklama tesisleri giderek popülerleşmektedir.</p>
+
+        <h2>Çanakkale İklimi ve Konteyner Ev</h2>
+        <p>Çanakkale'nin Akdeniz-karasal geçiş iklimi, konteyner ev tasarımında özel dikkat gerektirir. Yaz aylarında metalik gövde aşırı ısınabilir; bu nedenle çatıya yansıtıcı boya ve çatı altı havalandırma uygulanır. Kış aylarında ise yoğuşma riski doğar; buhar bariyeri ve mekanik havalandırma ile bu sorun çözülür.</p>
+        <p>Deniz kenarı ve ada bölgelerinde (Bozcaada, Gökçeada, Eceabat) tuzlu hava çelik gövdeyi etkileyebilir. Bu bölgelerdeki projelerimizde ek koruyucu kaplama ve galvaniz takviyesi uyguluyoruz. Rüzgâr yüküne karşı konteyner ankraj sistemi ile güvenli sabitleme sağlanır.</p>
+
+        <h2>Sıkça Sorulan Sorular</h2>
+
+        <div class="faq-item">
+            <h3>Konteyner ev fiyatları ne kadar?</h3>
+            <p>2026 yılında Çanakkale'de konteyner ev fiyatları 350.000 TL ile 1.800.000 TL arasında değişmektedir. Tek konteyner birimler en ekonomik seçenek olup, birden fazla birimi birleştirerek daha geniş yaşam alanları oluşturabilirsiniz.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Konteyner ev için ruhsat gerekli mi?</h3>
+            <p>Kalıcı kullanım için yapı ruhsatı gereklidir. Geçici veya tarımsal amaçlı bazı kullanımlar istisna kapsamında olabilir. Çanakkale merkez ve ilçelerindeki ruhsat süreçlerinde size rehberlik ediyoruz.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Konteyner ev kışın soğuk olur mu?</h3>
+            <p>Yalıtımsız konteynerler evet, soğuk olur. Ancak Beta Yapı İnşaat konteyner evleri profesyonel iç ve dış yalıtımlıdır. Taş yünü, buhar bariyeri ve çift cam pencerelerle Çanakkale kışlarında konforlu bir iç ortam sağlanır.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Konteyner ev taşınabilir mi?</h3>
+            <p>Evet. Vinç ve tır ile başka bir lokasyona kolayca taşınabilir. Bu özellik, konteyner evin en büyük avantajlarından biridir. Arazi değişikliğinde yatırımınızı kaybetmezsiniz.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Konteyner evde yoğuşma problemi olur mu?</h3>
+            <p>Doğru yalıtım ve havalandırma uygulanmadığında yoğuşma görülebilir. Biz tüm konteyner evlerimizde buhar bariyeri, mekanik havalandırma ve uygun pencere yerleşimi ile yoğuşmayı önlüyoruz.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Konteyner evler birleştirilebilir mi?</h3>
+            <p>Evet. 2, 3, 4 veya daha fazla konteyner birimi yan yana ve üst üste birleştirilebilir. L, T veya U şeklinde yerleşim planları oluşturulabilir.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Konteyner ev ömrü ne kadardır?</h3>
+            <p>Kaliteli malzeme ve düzenli bakımla 25-30 yıl sorunsuz kullanılabilir. Çanakkale'nin nemli ikliminde 3-5 yılda bir dış boya yenilenmesi tavsiye edilir.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Konteyner eve kredi kullanılabilir mi?</h3>
+            <p>İskan belgeli sabit konteyner yapılar için bazı bankalar konut kredisi kullandırabilir. Taşınır nitelikteki konteynerler için tüketici kredisi veya ihtiyaç kredisi alternatifleri değerlendirilebilir.</p>
+        </div>
+
+        <h2>Çanakkale İlçelerinde Konteyner Ev Hizmeti</h2>
+        <p>Çanakkale'nin tüm ilçelerinde konteyner ev kurulum ve teslimat hizmeti sunuyoruz.</p>
+
+        <div class="internal-links">
+            <a href="/merkez-prefabrik-ev/">Merkez</a>
+            <a href="/biga-prefabrik-ev/">Biga</a>
+            <a href="/gelibolu-prefabrik-ev/">Gelibolu</a>
+            <a href="/ezine-prefabrik-ev/">Ezine</a>
+            <a href="/ayvacik-prefabrik-ev/">Ayvacık</a>
+            <a href="/lapseki-prefabrik-ev/">Lapseki</a>
+            <a href="/can-celik-ev/">Çan</a>
+            <a href="/bayramic-celik-ev/">Bayramiç</a>
+            <a href="/yenice-celik-ev/">Yenice</a>
+            <a href="/eceabat-konteyner-ev/">Eceabat</a>
+            <a href="/bozcaada-konteyner-ev/">Bozcaada</a>
+            <a href="/gokceada-konteyner-ev/">Gökçeada</a>
+        </div>
+
+        <p>Diğer hizmetlerimiz: <a href="prefabrik-ev-canakkale.html" style="color:var(--vurgu-renk);font-weight:600;">Prefabrik Ev Çanakkale</a> &nbsp;|&nbsp; <a href="celik-ev-canakkale.html" style="color:var(--vurgu-renk);font-weight:600;">Çelik Ev Çanakkale</a></p>
+
+        <div class="cta-box">
+            <p><strong>Çanakkale'de Konteyner Ev Projenize Bugün Başlayın!</strong></p>
+            <p>Ekonomik, hızlı ve modern konteyner ev çözümleri için Beta Yapı İnşaat yanınızda.</p>
+            <p><a href="tel:+905335537529">+90 533 553 75 29</a> &nbsp;|&nbsp; <a href="https://wa.me/905335537529" target="_blank">WhatsApp ile Ücretsiz Teklif Alın</a></p>
+        </div>
+
+    </div><!-- /content-wrap -->
+
+    <!-- FOOTER -->
+    <footer class="footer" id="iletisim">
+        <h2>Bize Ulaşın</h2>
+        <p style="margin-bottom:28px;">Sorularınız ve proje talepleriniz için 7/24 hizmetinizdeyiz.</p>
+        <div class="contact-info">
+            <div class="contact-item"><i class="fas fa-phone"></i><p><a href="tel:+905335537529" style="color:inherit;">+90 533 553 75 29</a></p></div>
+            <div class="contact-item"><i class="fas fa-envelope"></i><p><a href="mailto:info@betayapinsaat.com.tr" style="color:inherit;">info@betayapinsaat.com.tr</a></p></div>
+            <div class="contact-item"><i class="fas fa-map-marker-alt"></i><p>Çanakkale / Merkez</p></div>
+        </div>
+        <div class="footer-links">
+            <div>
+                <h4>Hizmetlerimiz</h4>
+                <ul>
+                    <li><a href="prefabrik-ev-canakkale.html">Prefabrik Ev Çanakkale</a></li>
+                    <li><a href="celik-ev-canakkale.html">Çelik Ev Çanakkale</a></li>
+                    <li><a href="konteyner-ev-canakkale.html">Konteyner Ev Çanakkale</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Hizmet Bölgelerimiz</h4>
+                <ul>
+                    <li><a href="/biga-prefabrik-ev/">Biga</a></li>
+                    <li><a href="/gelibolu-prefabrik-ev/">Gelibolu</a></li>
+                    <li><a href="/ezine-prefabrik-ev/">Ezine</a></li>
+                    <li><a href="/ayvacik-prefabrik-ev/">Ayvacık</a></li>
+                    <li><a href="index.html#ilceler-grid" style="color:var(--vurgu-renk);font-weight:600;">Tümünü Gör →</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">© 2026 Beta Yapı İnşaat. Tüm Hakları Saklıdır.</div>
+    </footer>
+
+    <a href="https://wa.me/905335537529" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp ile iletişime geçin"><i class="fab fa-whatsapp"></i></a>
+
+    <script>
+        function menuyuAcKapa() {
+            document.getElementById("ana-menu").classList.toggle("aktif");
+        }
+    </script>
 </body>
 </html>
