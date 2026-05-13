@@ -55,13 +55,6 @@
     {"@type": "AdministrativeArea", "name": "Gökçeada"},
     {"@type": "AdministrativeArea", "name": "Çanakkale Merkez"}
   ],
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.8",
-    "reviewCount": "93",
-    "bestRating": "5",
-    "worstRating": "1"
-  },
   "sameAs": [
     "https://www.facebook.com/beta.yapi17",
     "https://www.instagram.com/beta.yapi17"

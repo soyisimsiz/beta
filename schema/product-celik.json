@@ -17,7 +17,6 @@
     "availability": "https://schema.org/InStock",
     "seller": {"@type": "Organization", "name": "Beta Yapı İnşaat"}
   },
-  "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "93", "bestRating": "5"},
   "additionalProperty": [
     {"@type": "PropertyValue", "name": "Yapı Sistemi", "value": "Soğuk Şekillendirilmiş Galvanizli Çelik Profil"},
     {"@type": "PropertyValue", "name": "Profil Kalınlığı", "value": "0.8-2.0 mm"},

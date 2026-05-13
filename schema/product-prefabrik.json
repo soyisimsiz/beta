@@ -27,12 +27,6 @@
       "name": "Beta Yapı İnşaat"
     }
   },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.8",
-    "reviewCount": "93",
-    "bestRating": "5"
-  },
   "additionalProperty": [
     {"@type": "PropertyValue", "name": "Yapı Sistemi", "value": "Hafif Çelik Karkas"},
     {"@type": "PropertyValue", "name": "Deprem Yönetmeliği", "value": "TBDY 2018 Uyumlu"},

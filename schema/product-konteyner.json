@@ -17,7 +17,6 @@
     "availability": "https://schema.org/InStock",
     "seller": {"@type": "Organization", "name": "Beta Yapı İnşaat"}
   },
-  "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.7", "reviewCount": "93", "bestRating": "5"},
   "additionalProperty": [
     {"@type": "PropertyValue", "name": "Gövde Malzemesi", "value": "2 mm Galvanizli Çelik Sac"},
     {"@type": "PropertyValue", "name": "Yalıtım", "value": "Taş Yünü + Buhar Bariyeri"},
