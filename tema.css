@@ -377,3 +377,80 @@ body > .container { max-width: 880px !important; }
     .stat-item h3 { font-size: 2.3rem !important; }
     body > .container { padding: 0 18px !important; }
 }
+
+/* ---------- MARKA LOGOSU (koyu başlık ve alt bilgide kireç beyazı) ---------- */
+.site-logo { height: 46px; width: auto; display: block; }
+.site-logo-sm { height: 34px; }
+.logo, .marka { display: inline-flex !important; align-items: center; }
+@media (max-width: 600px) {
+    .site-logo { height: 38px; }
+    .site-logo-sm { height: 30px; }
+}
+
+/* ---------- BETA STUDIO: menü sekmesi ---------- */
+nav a.nav-studio {
+    background: var(--vurgu-renk);
+    color: var(--ana-renk) !important;
+    font-weight: 700;
+}
+nav a.nav-studio:hover {
+    background: var(--vurgu-acik);
+    color: var(--ana-renk) !important;
+}
+
+/* ---------- BETA STUDIO: ana sayfa tanıtım bölümü ---------- */
+.studio-tanitim {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+    gap: 48px;
+    align-items: center;
+    padding: 90px 10%;
+    background: radial-gradient(ellipse at 80% 30%, var(--ana-acik), var(--ana-renk) 70%);
+    color: #e2e8f0;
+}
+.studio-etiket {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 14px;
+    padding: 6px 14px;
+    border-radius: 999px;
+    background: rgba(245, 158, 11, .14);
+    color: var(--vurgu-acik);
+    font-weight: 700;
+    font-size: .92rem;
+}
+.studio-tanitim h2 {
+    margin: 0 0 16px;
+    color: #fff;
+    font-size: clamp(1.8rem, 3.4vw, 2.6rem);
+    line-height: 1.15;
+}
+.studio-tanitim p { color: #cbd5e1; }
+.studio-liste { list-style: none; padding: 0; margin: 22px 0 28px; display: grid; gap: 10px; }
+.studio-liste li { display: flex; align-items: center; gap: 12px; color: #e2e8f0; font-weight: 600; }
+.studio-liste i { color: var(--vurgu-renk); width: 20px; text-align: center; }
+.studio-butonlar { display: flex; flex-wrap: wrap; gap: 12px; }
+.studio-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 24px;
+    border-radius: 12px;
+    background: var(--vurgu-renk);
+    color: var(--ana-renk) !important;
+    font-weight: 700;
+    text-decoration: none;
+    transition: var(--gecis);
+}
+.studio-btn:hover { background: var(--vurgu-acik); transform: translateY(-2px); }
+.studio-btn.ikincil { background: transparent; color: #fff !important; border: 1.5px solid rgba(255, 255, 255, .35); }
+.studio-btn.ikincil:hover { border-color: var(--vurgu-renk); color: var(--vurgu-acik) !important; }
+.studio-not { margin-top: 14px; font-size: .9rem; color: #94a3b8 !important; }
+.studio-gorsel { display: block; border-radius: 18px; overflow: hidden; box-shadow: var(--golge-lg); border: 1px solid rgba(245, 158, 11, .25); }
+.studio-gorsel img { display: block; width: 100%; height: auto; transition: transform .6s ease; }
+.studio-gorsel:hover img { transform: scale(1.03); }
+@media (max-width: 900px) {
+    .studio-tanitim { grid-template-columns: 1fr; padding: 64px 6%; gap: 32px; }
+    .studio-gorsel { order: -1; }
+}

@@ -13,6 +13,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teklif Alın | Beta Yapı İnşaat</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="favicon.png" type="image/png" sizes="48x48">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <meta name="description" content="Çelik, prefabrik ya da konteyner eviniz için ücretsiz keşif ve fiyat teklifi alın. Formu doldurun, Beta Yapı İnşaat sizi arasın.">
+    <link rel="canonical" href="https://betayapinsaat.com.tr/teklif.html">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://betayapinsaat.com.tr/teklif.html">
+    <meta property="og:title" content="Teklif Alın | Beta Yapı İnşaat">
+    <meta property="og:description" content="Çelik, prefabrik ya da konteyner eviniz için ücretsiz keşif ve fiyat teklifi alın. Formu doldurun, Beta Yapı İnşaat sizi arasın.">
+    <meta property="og:image" content="https://betayapinsaat.com.tr/og-image.jpg">
+    <meta property="og:locale" content="tr_TR">
+    <meta property="og:site_name" content="Beta Yapı İnşaat">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://betayapinsaat.com.tr/og-image.jpg">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         :root { --ana-renk: #0f172a; --vurgu-renk: #f59e0b; --beyaz: #ffffff; --gri: #f3f4f6; --whatsapp-yesili: #25d366; }
@@ -35,7 +49,7 @@
         .menu-toggle { display: none; font-size: 1.8rem; cursor: pointer; color: var(--vurgu-renk); }
 
         .container { max-width: 600px; margin: 110px auto 50px; background: var(--beyaz); padding: 40px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
-        h2 { text-align: center; color: var(--ana-renk); margin-bottom: 20px; }
+        h1, h2 { text-align: center; color: var(--ana-renk); margin-bottom: 20px; }
         p.description { text-align: center; margin-bottom: 30px; color: #666; }
         .form-group { margin-bottom: 20px; }
         label { display: block; margin-bottom: 8px; font-weight: bold; }
@@ -75,8 +89,7 @@
 <body>
    <header>
     <a href="index.html" class="logo" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 15px;">
-        <img src="image_1.png" alt="BETA YAPI İNŞAAT Logo" style="height: 50px; width: auto;">
-        <span style="font-size: 1.5rem; font-weight: bold; color: #f59e0b; text-transform: uppercase; letter-spacing: 1px;">BETA YAPI İNŞAAT</span>
+        <img src="logo.png" alt="BETA YAPI İnşaat" class="site-logo" width="418" height="150">
     </a>
 
     <div class="menu-toggle" onclick="menuyuAcKapa()">
@@ -88,13 +101,14 @@
                 <li><a href="hesapla.html">Fiyat Hesapla</a></li>
                 <li><a href="sss.html">SSS</a></li>
             <li><a href="blog.html">Blog</a></li>
+                <li><a href="studio/" class="nav-studio">BETA Studio</a></li>
                 <li><a href="iletisim.html">İletişim</a></li>
                 <li><a href="projeler.html" >Projelerimiz</a></li>
             </ul>
         </nav>
 </header>
     <div class="container">
-        <h2>Sizi Arayalım</h2>
+        <h1>Sizi Arayalım</h1>
         <p class="description">Projeniz hakkında detaylı bilgi ve fiyat teklifi almak için formu doldurun, uzman ekibimiz en kısa sürede size dönüş yapsın.</p>
         
         <form action="https://formsubmit.co/talha_kucukkartal@outlook.com" method="POST">
@@ -110,7 +124,7 @@
     <input type="checkbox" id="kvkkOnay" name="kvkk_onay" required
            style="margin-top: 4px; accent-color: #f59e0b;">
     <label for="kvkkOnay" style="font-size: 0.85rem; color: #64748b; line-height: 1.5;">
-        <a href="gizlilik-politikasi.html" target="_blank" style="color: #f59e0b; text-decoration: underline;">
+        <a href="gizlilik-politikasi.html" target="_blank" rel="noopener" style="color: #f59e0b; text-decoration: underline;">
         Gizlilik Politikası ve KVKK Aydınlatma Metni</a>'ni okudum ve kabul ediyorum.
     </label>
 </div><button type="submit">Gönder</button>
